@@ -5,7 +5,8 @@
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
     p1:id="@+id/relativeLayout1"
-    p1:background="@drawable/family">
+    p1:background="@drawable/family"
+    p1:alpha="0.8">
     <LinearLayout
         p1:orientation="vertical"
         p1:minWidth="25px"
@@ -46,82 +47,90 @@
             p1:id="@+id/linearLayout2"
             p1:layout_marginBottom="297.5dp" />
         <LinearLayout
-            p1:orientation="horizontal"
-            p1:layout_width="match_parent"
-            p1:layout_height="wrap_content"
-            p1:id="@+id/linearLayout3">
-            <Button
-                p1:text="Make a claim"
-                p1:layout_width="wrap_content"
-                p1:layout_height="wrap_content"
-                p1:id="@+id/button1"
-                p1:drawableTop="@drawable/icon"
-                p1:layout_weight="1"
-                p1:background="@drawable/homebutton"
-                p1:textColor="@android:color/white"
-                p1:textStyle="bold"
-                p1:textAllCaps="false"
-                p1:fontFamily="open-sands" />
-            <Button
-                p1:text="Button"
-                p1:layout_width="wrap_content"
-                p1:layout_height="wrap_content"
-                p1:id="@+id/button2"
-                p1:drawableTop="@drawable/icon"
-                p1:layout_weight="1"
-                p1:background="@drawable/homebutton"
-                p1:fontFamily="open-sands"
-                p1:textColor="@android:color/white"
-                p1:textAllCaps="false"
-                p1:textStyle="bold" />
-            <Button
-                p1:text="Button"
-                p1:layout_width="wrap_content"
-                p1:layout_height="wrap_content"
-                p1:id="@+id/button3"
-                p1:drawableTop="@drawable/icon"
-                p1:layout_weight="1"
-                p1:background="@drawable/homebutton"
-                p1:fontFamily="open-sands"
-                p1:textColor="@android:color/white"
-                p1:textAllCaps="false"
-                p1:textStyle="bold" />
-        </LinearLayout>
-        <LinearLayout
-            p1:orientation="horizontal"
+            p1:orientation="vertical"
             p1:layout_width="match_parent"
             p1:layout_height="match_parent"
-            p1:id="@+id/linearLayout4">
-            <Button
-                p1:text="Button"
+            p1:id="@+id/linearLayout5">
+            <LinearLayout
+                p1:orientation="horizontal"
                 p1:layout_width="match_parent"
                 p1:layout_height="match_parent"
-                p1:id="@+id/button4"
-                p1:background="@drawable/homebutton"
-                p1:drawableTop="@drawable/icon"
-                p1:layout_weight="1"
-                p1:textColor="@android:color/white"
-                p1:textAllCaps="false" />
-            <Button
-                p1:text="Button"
+                p1:id="@+id/linearLayout3"
+                p1:layout_weight="1">
+                <Button
+                    p1:text="Make a claim"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/button1"
+                    p1:drawableTop="@drawable/pencil"
+                    p1:layout_weight="1"
+                    p1:background="@drawable/homebutton"
+                    p1:textColor="@android:color/white"
+                    p1:textStyle="bold"
+                    p1:textAllCaps="false"
+                    p1:fontFamily="open-sands" />
+                <Button
+                    p1:text="Accident history"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/button2"
+                    p1:drawableTop="@drawable/calender"
+                    p1:layout_weight="1"
+                    p1:fontFamily="open-sands"
+                    p1:textColor="@android:color/white"
+                    p1:textAllCaps="false"
+                    p1:textStyle="bold"
+                    p1:background="@drawable/homebutton" />
+                <Button
+                    p1:text="Find a branch"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/button3"
+                    p1:drawableTop="@drawable/map"
+                    p1:layout_weight="1"
+                    p1:background="@drawable/homebutton"
+                    p1:fontFamily="open-sands"
+                    p1:textColor="@android:color/white"
+                    p1:textAllCaps="false"
+                    p1:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
                 p1:layout_width="match_parent"
                 p1:layout_height="match_parent"
-                p1:id="@+id/button5"
-                p1:background="@drawable/homebutton"
-                p1:drawableTop="@drawable/icon"
-                p1:layout_weight="1"
-                p1:textColor="@android:color/white"
-                p1:textAllCaps="false" />
-            <Button
-                p1:text="Button"
-                p1:layout_width="match_parent"
-                p1:layout_height="match_parent"
-                p1:id="@+id/button6"
-                p1:background="@drawable/homebutton"
-                p1:drawableTop="@drawable/icon"
-                p1:layout_weight="1"
-                p1:textColor="@android:color/white"
-                p1:textAllCaps="false" />
+                p1:id="@+id/linearLayout4"
+                p1:layout_weight="1">
+                <Button
+                    p1:text="My details"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/button4"
+                    p1:background="@drawable/homebutton"
+                    p1:drawableTop="@drawable/user"
+                    p1:layout_weight="1"
+                    p1:textColor="@android:color/white"
+                    p1:textAllCaps="false" />
+                <Button
+                    p1:text="Towing required"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/button5"
+                    p1:background="@drawable/homebutton"
+                    p1:drawableTop="@drawable/towtruck"
+                    p1:layout_weight="1"
+                    p1:textColor="@android:color/white"
+                    p1:textAllCaps="false" />
+                <Button
+                    p1:text="Contact us"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/button6"
+                    p1:background="@drawable/homebutton"
+                    p1:layout_weight="1"
+                    p1:textColor="@android:color/white"
+                    p1:textAllCaps="false"
+                    p1:drawableTop="@drawable/phone" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
