@@ -123,17 +123,26 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
-			// aapt resource value: 0x7f040005
-			public const int imageButton1 = 2130968581;
-			
 			// aapt resource value: 0x7f040009
-			public const int imageButton2 = 2130968585;
+			public const int button1 = 2130968585;
 			
 			// aapt resource value: 0x7f04000a
-			public const int imageButton3 = 2130968586;
+			public const int button2 = 2130968586;
 			
 			// aapt resource value: 0x7f04000b
-			public const int imageButton4 = 2130968587;
+			public const int button3 = 2130968587;
+			
+			// aapt resource value: 0x7f04000d
+			public const int button4 = 2130968589;
+			
+			// aapt resource value: 0x7f04000e
+			public const int button5 = 2130968590;
+			
+			// aapt resource value: 0x7f04000f
+			public const int button6 = 2130968591;
+			
+			// aapt resource value: 0x7f040005
+			public const int imageButton1 = 2130968581;
 			
 			// aapt resource value: 0x7f040006
 			public const int imageView1 = 2130968582;
@@ -146,6 +155,9 @@ namespace SCRecover.Droid
 			
 			// aapt resource value: 0x7f040008
 			public const int linearLayout3 = 2130968584;
+			
+			// aapt resource value: 0x7f04000c
+			public const int linearLayout4 = 2130968588;
 			
 			// aapt resource value: 0x7f040004
 			public const int linearLayoutStatusBar = 2130968580;
