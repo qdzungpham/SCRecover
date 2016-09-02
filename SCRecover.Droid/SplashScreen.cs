@@ -7,7 +7,7 @@ namespace SCRecover.Droid
     [Activity(
         Label = "SCRecover.Droid"
         , MainLauncher = true
-        , Icon = "@mipmap/icon"
+        //, Icon = "@mipmap/icon"
         , Theme = "@style/Theme.Splash"
         , NoHistory = true
         , ScreenOrientation = ScreenOrientation.Portrait)]
