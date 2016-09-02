@@ -90,16 +90,19 @@ namespace SCRecover.Droid
 			public const int family = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Icon = 2130837505;
+			public const int homeButton = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int logo = 2130837506;
+			public const int Icon = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int menu = 2130837507;
+			public const int logo = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int splash = 2130837508;
+			public const int menu = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int splash = 2130837509;
 			
 			static Drawable()
 			{
@@ -120,14 +123,32 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
-			// aapt resource value: 0x7f040004
-			public const int imageButton1 = 2130968580;
-			
 			// aapt resource value: 0x7f040005
-			public const int imageView1 = 2130968581;
+			public const int imageButton1 = 2130968581;
+			
+			// aapt resource value: 0x7f040009
+			public const int imageButton2 = 2130968585;
+			
+			// aapt resource value: 0x7f04000a
+			public const int imageButton3 = 2130968586;
+			
+			// aapt resource value: 0x7f04000b
+			public const int imageButton4 = 2130968587;
+			
+			// aapt resource value: 0x7f040006
+			public const int imageView1 = 2130968582;
 			
 			// aapt resource value: 0x7f040003
 			public const int linearLayout1 = 2130968579;
+			
+			// aapt resource value: 0x7f040007
+			public const int linearLayout2 = 2130968583;
+			
+			// aapt resource value: 0x7f040008
+			public const int linearLayout3 = 2130968584;
+			
+			// aapt resource value: 0x7f040004
+			public const int linearLayoutStatusBar = 2130968580;
 			
 			// aapt resource value: 0x7f040002
 			public const int relativeLayout1 = 2130968578;
