@@ -137,6 +137,14 @@
     <AndroidResource Include="Resources\drawable\clock.png" />
     <AndroidResource Include="Resources\drawable\checked.png" />
     <AndroidResource Include="Resources\drawable\blankCircle.png" />
+    <AndroidResource Include="Resources\drawable\wheel.png" />
+    <AndroidResource Include="Resources\drawable\car.png" />
+    <AndroidResource Include="Resources\drawable\group.png" />
+    <AndroidResource Include="Resources\drawable\maker.png" />
+    <AndroidResource Include="Resources\drawable\multimedia.png" />
+    <AndroidResource Include="Resources\drawable\question.png" />
+    <AndroidResource Include="Resources\drawable\traffic1.png" />
+    <AndroidResource Include="Resources\drawable\user1.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
