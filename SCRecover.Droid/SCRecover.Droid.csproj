@@ -132,6 +132,11 @@
     <AndroidResource Include="Resources\drawable\map.png" />
     <AndroidResource Include="Resources\drawable\Pencil.png" />
     <AndroidResource Include="Resources\drawable\phone.png" />
+    <AndroidResource Include="Resources\drawable\save.png" />
+    <AndroidResource Include="Resources\drawable\back.png" />
+    <AndroidResource Include="Resources\drawable\clock.png" />
+    <AndroidResource Include="Resources\drawable\checked.png" />
+    <AndroidResource Include="Resources\drawable\blankCircle.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

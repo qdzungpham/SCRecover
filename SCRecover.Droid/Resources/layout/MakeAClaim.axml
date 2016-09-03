@@ -1,7 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px" />
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/linearLayout1">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayoutTopBar"
+            p1:background="#006863">
+            <ImageButton
+                p1:src="@drawable/back"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageButton1"
+                p1:background="#006863"
+                p1:layout_weight="0.2"
+                p1:layout_marginTop="7dp"
+                p1:layout_marginBottom="6dp" />
+            <TextView
+                p1:text="Make a Claim"
+                p1:textAppearance="?android:attr/textAppearanceMedium"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView1"
+                p1:textColor="@android:color/white"
+                p1:fontFamily="open-sands"
+                p1:textStyle="bold"
+                p1:layout_weight="1"
+                p1:layout_gravity="center" />
+            <ImageButton
+                p1:src="@drawable/save"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageButton2"
+                p1:background="#006863"
+                p1:layout_gravity="center"
+                p1:layout_weight="0.2" />
+        </LinearLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/linearLayout2">
+            <LinearLayout
+                p1:orientation="vertical"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayoutTheEvent">
+                <TextView
+                    p1:text="THE EVENT"
+                    p1:textAppearance="?android:attr/textAppearanceSmall"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/textView2"
+                    p1:fontFamily="open-sands"
+                    p1:textColor="#006863" />
+                <Button
+                    p1:text="When?"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonWhen"
+                    p1:drawableLeft="@drawable/clock"
+                    p1:drawableRight="@drawable/blankcircle"
+                    p1:textAllCaps="false"
+                    p1:textStyle="normal"
+                    p1:gravity="fill"
+                    p1:drawablePadding="10dp"
+                    p1:minHeight="20dp"
+                    p1:fontFamily="open-sands" />
+                <Button
+                    p1:text="When?"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonWhere"
+                    p1:drawableLeft="@drawable/clock"
+                    p1:drawableRight="@drawable/blankcircle"
+                    p1:textAllCaps="false"
+                    p1:textStyle="normal"
+                    p1:gravity="fill"
+                    p1:drawablePadding="10dp"
+                    p1:minHeight="20dp"
+                    p1:fontFamily="open-sands" />
+                <Button
+                    p1:text="When?"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonWhatHappened"
+                    p1:drawableLeft="@drawable/clock"
+                    p1:drawableRight="@drawable/blankcircle"
+                    p1:textAllCaps="false"
+                    p1:textStyle="normal"
+                    p1:gravity="fill"
+                    p1:drawablePadding="10dp"
+                    p1:minHeight="20dp"
+                    p1:fontFamily="open-sands" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="vertical"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayoutAtTheScreen">
+                <TextView
+                    p1:text="THE EVENT"
+                    p1:textAppearance="?android:attr/textAppearanceSmall"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/textView3"
+                    p1:fontFamily="open-sands"
+                    p1:textColor="#006863" />
+                <Button
+                    p1:text="When?"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonOtherDriver"
+                    p1:drawableLeft="@drawable/clock"
+                    p1:drawableRight="@drawable/blankcircle"
+                    p1:textAllCaps="false"
+                    p1:textStyle="normal"
+                    p1:gravity="fill"
+                    p1:drawablePadding="10dp"
+                    p1:minHeight="20dp"
+                    p1:fontFamily="open-sands" />
+                <Button
+                    p1:text="When?"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonOtherPeople"
+                    p1:drawableLeft="@drawable/clock"
+                    p1:drawableRight="@drawable/blankcircle"
+                    p1:textAllCaps="false"
+                    p1:textStyle="normal"
+                    p1:gravity="fill"
+                    p1:drawablePadding="10dp"
+                    p1:minHeight="20dp"
+                    p1:fontFamily="open-sands" />
+                <Button
+                    p1:text="When?"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonPhotos"
+                    p1:drawableLeft="@drawable/clock"
+                    p1:drawableRight="@drawable/blankcircle"
+                    p1:textAllCaps="false"
+                    p1:textStyle="normal"
+                    p1:gravity="fill"
+                    p1:drawablePadding="10dp"
+                    p1:minHeight="20dp"
+                    p1:fontFamily="open-sands" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="vertical"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout3">
+                <TextView
+                    p1:text="THE EVENT"
+                    p1:textAppearance="?android:attr/textAppearanceSmall"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/textView4"
+                    p1:fontFamily="open-sands"
+                    p1:textColor="#006863" />
+                <Button
+                    p1:text="When?"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonYourDetails"
+                    p1:drawableLeft="@drawable/clock"
+                    p1:drawableRight="@drawable/blankcircle"
+                    p1:textAllCaps="false"
+                    p1:textStyle="normal"
+                    p1:gravity="fill"
+                    p1:drawablePadding="10dp"
+                    p1:minHeight="20dp"
+                    p1:fontFamily="open-sands" />
+                <Button
+                    p1:text="When?"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonVehicle"
+                    p1:drawableLeft="@drawable/clock"
+                    p1:drawableRight="@drawable/blankcircle"
+                    p1:textAllCaps="false"
+                    p1:textStyle="normal"
+                    p1:gravity="fill"
+                    p1:drawablePadding="10dp"
+                    p1:minHeight="20dp"
+                    p1:fontFamily="open-sands" />
+                <Button
+                    p1:text="When?"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonDriver"
+                    p1:drawableLeft="@drawable/clock"
+                    p1:drawableRight="@drawable/blankcircle"
+                    p1:textAllCaps="false"
+                    p1:textStyle="normal"
+                    p1:gravity="fill"
+                    p1:drawablePadding="10dp"
+                    p1:minHeight="20dp"
+                    p1:fontFamily="open-sands" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="vertical"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout4">
+                <Button
+                    p1:text="vier summary"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonSummary" />
+                <Button
+                    p1:text="file claim"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/buttonClaim" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
