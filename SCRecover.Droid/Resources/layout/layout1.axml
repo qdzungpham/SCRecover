@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/linearLayout1">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayoutTopBar"
+            p1:background="#006863">
+            <ImageButton
+                p1:src="@drawable/back"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageButton1"
+                p1:background="#006863"
+                p1:layout_weight="0.2"
+                p1:layout_marginTop="7dp"
+                p1:layout_marginBottom="6dp" />
+            <TextView
+                p1:text="Make a Claim"
+                p1:textAppearance="?android:attr/textAppearanceMedium"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView1"
+                p1:textColor="@android:color/white"
+                p1:fontFamily="open-sands"
+                p1:textStyle="bold"
+                p1:layout_weight="1"
+                p1:layout_gravity="center" />
+        </LinearLayout>
+        <ImageView
+            p1:src="@drawable/contactuus"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/imageView1"
+            p1:adjustViewBounds="true" />
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/linearLayout2">
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayoutGeneral"
+                p1:layout_weight="1">
+                <LinearLayout
+                    p1:orientation="vertical"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/linearLayout4"
+                    p1:layout_gravity="center"
+                    p1:paddingLeft="10dp"
+                    p1:layout_weight="1">
+                    <TextView
+                        p1:text="General enquiries"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/textView2"
+                        p1:fontFamily="open-sands"
+                        p1:textStyle="bold" />
+                    <TextView
+                        p1:text="7am - 10pm, 7 days"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/textView3"
+                        p1:fontFamily="open-sands" />
+                </LinearLayout>
+                <Button
+                    p1:text="13 25 24"
+                    p1:layout_width="150dp"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/button1"
+                    p1:layout_gravity="center"
+                    p1:fontFamily="open-sands"
+                    p1:layout_marginRight="10dp"
+                    p1:background="#F6C600" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout5"
+                p1:layout_weight="1">
+                <LinearLayout
+                    p1:orientation="vertical"
+                    p1:minWidth="25px"
+                    p1:minHeight="25px"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/linearLayout6"
+                    p1:layout_weight="1"
+                    p1:layout_gravity="center"
+                    p1:paddingLeft="10dp">
+                    <TextView
+                        p1:text="Payments"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/textView4"
+                        p1:fontFamily="open-sands"
+                        p1:textStyle="bold" />
+                    <TextView
+                        p1:text="24 hours, 7 days"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/textView5"
+                        p1:fontFamily="open-sands" />
+                </LinearLayout>
+                <Button
+                    p1:text="113 113"
+                    p1:layout_width="150dp"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/button1"
+                    p1:layout_gravity="center"
+                    p1:fontFamily="open-sands"
+                    p1:layout_marginRight="10dp"
+                    p1:background="#F6C600" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout7"
+                p1:layout_weight="1">
+                <LinearLayout
+                    p1:orientation="vertical"
+                    p1:minWidth="25px"
+                    p1:minHeight="25px"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/linearLayout8"
+                    p1:layout_weight="1"
+                    p1:layout_gravity="center"
+                    p1:paddingLeft="10dp">
+                    <TextView
+                        p1:text="Not in Australia?"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/textView6"
+                        p1:fontFamily="open-sands"
+                        p1:textStyle="bold" />
+                    <TextView
+                        p1:text="24 hours, 7 days"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/textView7"
+                        p1:fontFamily="open-sands" />
+                </LinearLayout>
+                <Button
+                    p1:text="61 7 3362 1222"
+                    p1:layout_width="150dp"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/button1"
+                    p1:layout_gravity="center"
+                    p1:fontFamily="open-sands"
+                    p1:layout_marginRight="10dp"
+                    p1:background="#F6C600" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout9"
+                p1:layout_weight="1">
+                <LinearLayout
+                    p1:orientation="vertical"
+                    p1:minWidth="25px"
+                    p1:minHeight="25px"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/linearLayout10"
+                    p1:layout_weight="1"
+                    p1:layout_gravity="center"
+                    p1:layout_marginLeft="10dp">
+                    <TextView
+                        p1:text="Call for a tow truck"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/textView8"
+                        p1:fontFamily="open-sands"
+                        p1:textStyle="bold" />
+                    <TextView
+                        p1:text="24 hours, 7 days"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/textView9"
+                        p1:fontFamily="open-sands" />
+                </LinearLayout>
+                <Button
+                    p1:text="113 113"
+                    p1:layout_width="150dp"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/button1"
+                    p1:layout_gravity="center"
+                    p1:fontFamily="open-sands"
+                    p1:layout_marginRight="10dp"
+                    p1:background="#F6C600" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
