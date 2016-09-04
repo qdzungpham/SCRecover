@@ -100,7 +100,7 @@
     <AndroidResource Include="Resources\layout\MakeAClaim.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\layout1.axml">
+    <AndroidResource Include="Resources\layout\AboutUs.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
