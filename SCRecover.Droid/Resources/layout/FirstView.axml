@@ -43,14 +43,15 @@
             p1:minWidth="25px"
             p1:minHeight="25px"
             p1:layout_width="match_parent"
-            p1:layout_height="wrap_content"
+            p1:layout_height="match_parent"
             p1:id="@+id/linearLayout2"
-            p1:layout_marginBottom="297.5dp" />
+            p1:layout_weight="1" />
         <LinearLayout
             p1:orientation="vertical"
             p1:layout_width="match_parent"
+            p1:id="@+id/linearLayout5"
             p1:layout_height="match_parent"
-            p1:id="@+id/linearLayout5">
+            p1:layout_weight="1.5">
             <LinearLayout
                 p1:orientation="horizontal"
                 p1:layout_width="match_parent"
@@ -82,7 +83,7 @@
                     p1:textStyle="bold"
                     p1:background="@drawable/homebutton" />
                 <Button
-                    p1:text="Find a branch"
+                    p1:text="Find medical provider"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button3"
@@ -101,7 +102,7 @@
                 p1:id="@+id/linearLayout4"
                 p1:layout_weight="1">
                 <Button
-                    p1:text="My details"
+                    p1:text="My profile"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button4"
@@ -109,17 +110,19 @@
                     p1:drawableTop="@drawable/user"
                     p1:layout_weight="1"
                     p1:textColor="@android:color/white"
-                    p1:textAllCaps="false" />
+                    p1:textAllCaps="false"
+                    p1:textStyle="bold" />
                 <Button
-                    p1:text="Towing required"
+                    p1:text="Medical assistance"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button5"
                     p1:background="@drawable/homebutton"
-                    p1:drawableTop="@drawable/towtruck"
+                    p1:drawableTop="@drawable/aid"
                     p1:layout_weight="1"
                     p1:textColor="@android:color/white"
-                    p1:textAllCaps="false" />
+                    p1:textAllCaps="false"
+                    p1:textStyle="bold" />
                 <Button
                     p1:text="Contact us"
                     p1:layout_width="match_parent"
@@ -129,7 +132,8 @@
                     p1:layout_weight="1"
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
-                    p1:drawableTop="@drawable/phone" />
+                    p1:drawableTop="@drawable/phone"
+                    p1:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

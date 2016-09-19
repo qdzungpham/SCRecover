@@ -87,82 +87,106 @@ namespace SCRecover.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int back = 2130837504;
+			public const int aid = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int blankCircle = 2130837505;
+			public const int back = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int calender = 2130837506;
+			public const int blankCircle = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int car = 2130837507;
+			public const int blue_button = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int @checked = 2130837508;
+			public const int btn_style = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int clock = 2130837509;
+			public const int button_normal = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int contactUus = 2130837510;
+			public const int button_selected = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int family = 2130837511;
+			public const int calender = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int group = 2130837512;
+			public const int car = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int homeButton = 2130837513;
+			public const int @checked = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int Icon = 2130837514;
+			public const int clock = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int logo = 2130837515;
+			public const int contactUus = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int maker = 2130837516;
+			public const int family = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int map = 2130837517;
+			public const int grey_button = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int menu = 2130837518;
+			public const int group = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int multimedia = 2130837519;
+			public const int homeButton = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int Pencil = 2130837520;
+			public const int Icon = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int phone = 2130837521;
+			public const int logo = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int question = 2130837522;
+			public const int maker = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int save = 2130837523;
+			public const int map = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int splash = 2130837524;
+			public const int menu = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int towtruck = 2130837525;
+			public const int multimedia = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int traffic1 = 2130837526;
+			public const int Pencil = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int user = 2130837527;
+			public const int phone = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int user1 = 2130837528;
+			public const int question = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int wheel = 2130837529;
+			public const int ripple_effect = 2130837529;
+			
+			// aapt resource value: 0x7f02001a
+			public const int save = 2130837530;
+			
+			// aapt resource value: 0x7f02001b
+			public const int splash = 2130837531;
+			
+			// aapt resource value: 0x7f02001c
+			public const int towtruck = 2130837532;
+			
+			// aapt resource value: 0x7f02001d
+			public const int traffic1 = 2130837533;
+			
+			// aapt resource value: 0x7f02001e
+			public const int user = 2130837534;
+			
+			// aapt resource value: 0x7f02001f
+			public const int user1 = 2130837535;
+			
+			// aapt resource value: 0x7f020020
+			public const int wheel = 2130837536;
+			
+			// aapt resource value: 0x7f020021
+			public const int yellow_button = 2130837537;
 			
 			static Drawable()
 			{
@@ -390,8 +414,11 @@ namespace SCRecover.Droid
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f050001
+			public const int Theme_Splash = 2131034113;
+			
 			// aapt resource value: 0x7f050000
-			public const int Theme_Splash = 2131034112;
+			public const int button_text = 2131034112;
 			
 			static Style()
 			{

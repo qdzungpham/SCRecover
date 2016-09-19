@@ -56,7 +56,8 @@
                 p1:orientation="vertical"
                 p1:layout_width="match_parent"
                 p1:layout_height="match_parent"
-                p1:id="@+id/linearLayout2">
+                p1:id="@+id/linearLayout2"
+                p1:padding="5dp">
                 <LinearLayout
                     p1:orientation="vertical"
                     p1:layout_width="match_parent"
@@ -185,7 +186,7 @@
                     p1:layout_width="match_parent"
                     p1:layout_height="wrap_content"
                     p1:id="@+id/linearLayoutPhotos"
-                    p1:layout_margin="10px">
+                    p1:layout_marginBottom="10dp">
                     <TextView
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
@@ -202,16 +203,26 @@
                         p1:id="@+id/linearLayout3">
                         <Button
                             p1:text="Take photo"
-                            p1:layout_width="wrap_content"
+                            p1:layout_width="match_parent"
                             p1:layout_height="match_parent"
                             p1:id="@+id/button1"
-                            p1:layout_weight="1" />
+                            p1:background="@drawable/blue_button"
+                            p1:layout_weight="1"
+                            p1:layout_marginRight="10dp"
+                            p1:textColor="@android:color/white"
+                            p1:textStyle="bold"
+                            p1:fontFamily="open-sands" />
                         <Button
                             p1:text="From library"
-                            p1:layout_width="wrap_content"
+                            p1:layout_width="match_parent"
                             p1:layout_height="match_parent"
                             p1:id="@+id/button2"
-                            p1:layout_weight="1" />
+                            p1:layout_weight="1"
+                            p1:background="@drawable/blue_button"
+                            p1:layout_marginLeft="10dp"
+                            p1:textColor="@android:color/white"
+                            p1:textStyle="bold"
+                            p1:fontFamily="open-sands" />
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -224,13 +235,19 @@
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/buttonSummary"
-                        p1:layout_weight="1" />
+                        p1:layout_weight="1"
+                        p1:fontFamily="open-sands"
+                        p1:background="@drawable/grey_button"
+                        p1:layout_marginBottom="5dp" />
                     <Button
                         p1:text="file claim"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/buttonClaim"
-                        p1:layout_weight="1" />
+                        p1:layout_weight="1"
+                        p1:background="@drawable/yellow_button"
+                        p1:textStyle="bold"
+                        p1:fontFamily="open-sands" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

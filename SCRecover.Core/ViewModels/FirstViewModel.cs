@@ -11,5 +11,7 @@ namespace SCRecover.Core.ViewModels
             get { return _hello; }
             set { SetProperty (ref _hello, value); }
         }
+
+        
     }
 }

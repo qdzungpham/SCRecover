@@ -30,7 +30,7 @@
                 p1:layout_marginTop="7dp"
                 p1:layout_marginBottom="6dp" />
             <TextView
-                p1:text="Make a Claim"
+                p1:text="Contact us"
                 p1:textAppearance="?android:attr/textAppearanceMedium"
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                     p1:layout_gravity="center"
                     p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
-                    p1:background="#F6C600" />
+                    p1:background="@drawable/yellow_button" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -134,7 +134,7 @@
                     p1:layout_gravity="center"
                     p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
-                    p1:background="#F6C600" />
+                    p1:background="@drawable/yellow_button" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -176,7 +176,7 @@
                     p1:layout_gravity="center"
                     p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
-                    p1:background="#F6C600" />
+                    p1:background="@drawable/yellow_button" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -195,7 +195,7 @@
                     p1:layout_gravity="center"
                     p1:layout_marginLeft="10dp">
                     <TextView
-                        p1:text="Call for a tow truck"
+                        p1:text="Call for medical assistance"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
@@ -218,7 +218,7 @@
                     p1:layout_gravity="center"
                     p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
-                    p1:background="#F6C600" />
+                    p1:background="@drawable/yellow_button" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
