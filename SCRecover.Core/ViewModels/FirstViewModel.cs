@@ -1,17 +1,29 @@
 using MvvmCross.Core.ViewModels;
 
+using System;
+using System.Windows.Input;
+
 namespace SCRecover.Core.ViewModels
 {
     public class FirstViewModel 
         : MvxViewModel
     {
-        private string _hello = "Hello MvvmCross";
-        public string Hello
-        { 
-            get { return _hello; }
-            set { SetProperty (ref _hello, value); }
+        public ICommand GoCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<MakeAClaimViewModel>());
+            }
         }
 
-        
+        public ICommand ContactUsClick
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<ContactUsViewModel>());
+            }
+        }
+
+
     }
 }

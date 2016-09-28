@@ -88,7 +88,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="Views\ContactUsView.cs" />
     <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\MakeAClaimView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -102,7 +104,13 @@
     <AndroidResource Include="Resources\layout\MakeAClaim.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\AboutUs.axml">
+    <AndroidResource Include="Resources\layout\ContactUs.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\FindMedicalProvider.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\FindAMedicalProvider2.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -164,6 +172,11 @@
     <AndroidResource Include="Resources\drawable\yellow_button.xml" />
     <AndroidResource Include="Resources\drawable\grey_button.xml" />
     <AndroidResource Include="Resources\drawable\aid.png" />
+    <AndroidResource Include="Resources\drawable\dentist.png" />
+    <AndroidResource Include="Resources\drawable\hospital.png" />
+    <AndroidResource Include="Resources\drawable\massage.png" />
+    <AndroidResource Include="Resources\drawable\meditation.png" />
+    <AndroidResource Include="Resources\drawable\arrowright.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

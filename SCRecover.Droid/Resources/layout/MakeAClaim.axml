@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     p1:minWidth="25px"
     p1:minHeight="25px"
     p1:layout_width="match_parent"
@@ -134,7 +135,12 @@
                         p1:inputType="date"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextDate" />
+                        p1:id="@+id/editTextDate"
+                        local:MvxBind="Text Format('{0:dd MMM yyyy}',Date)" />
+                    <MvxDatePicker
+                        p1:layout_width="fill_parent"
+                        p1:layout_height="wrap_content"
+                        local:MvxBind="Value Date" />
                     <TextView
                         p1:text="Time"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -145,7 +151,12 @@
                         p1:inputType="time"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextTime" />
+                        p1:id="@+id/editTextTime"
+                        local:MvxBind="Text Format('{0:hhmm}',Time)" />
+                    <MvxTimePicker
+                        p1:layout_width="fill_parent"
+                        p1:layout_height="wrap_content"
+                        local:MvxBind="Value Time" />
                     <TextView
                         p1:text="Location"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -163,10 +174,22 @@
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView11" />
-                    <Spinner
+                    <MvxSpinner
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/spinner1" />
+                        p1:id="@+id/spinner1"
+                        local:MvxBind="ItemsSource Types;SelectedItem SelectedType" />
+                    <TextView
+                        p1:text="Specified Injury"
+                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/textView13" />
+                  <MvxSpinner
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/spinner2"
+                        local:MvxBind="ItemsSource Injuries;SelectedItem SelectedInjury" />
                     <TextView
                         p1:text="Comments"
                         p1:textAppearance="?android:attr/textAppearanceMedium"

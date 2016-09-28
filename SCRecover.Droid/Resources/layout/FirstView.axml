@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     p1:minWidth="25px"
     p1:minHeight="25px"
     p1:layout_width="match_parent"
@@ -69,7 +70,8 @@
                     p1:textColor="@android:color/white"
                     p1:textStyle="bold"
                     p1:textAllCaps="false"
-                    p1:fontFamily="open-sands" />
+                    p1:fontFamily="open-sands"
+                    local:MvxBind=" Click GoCommand" />
                 <Button
                     p1:text="Accident history"
                     p1:layout_width="match_parent"
@@ -133,7 +135,8 @@
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
                     p1:drawableTop="@drawable/phone"
-                    p1:textStyle="bold" />
+                    p1:textStyle="bold"
+                    local:MvxBind=" Click ContactUsClick" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -4,15 +4,15 @@ using MvvmCross.Droid.Views;
 
 namespace SCRecover.Droid.Views
 {
-    [Activity(Label = "Home screen")]
-    public class FirstView : MvxActivity
+    [Activity(Label = "Contact info")]
+    public class ContactUsView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.FirstView);
+            SetContentView(Resource.Layout.ContactUs);
 
-            
+
         }
     }
 }
