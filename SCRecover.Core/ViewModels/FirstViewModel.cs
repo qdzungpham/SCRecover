@@ -1,6 +1,4 @@
 using MvvmCross.Core.ViewModels;
-
-using System;
 using System.Windows.Input;
 
 namespace SCRecover.Core.ViewModels

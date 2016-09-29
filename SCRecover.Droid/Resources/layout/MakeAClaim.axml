@@ -79,7 +79,8 @@
                         p1:textAppearance="?android:attr/textAppearanceMedium"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView5" />
+                        p1:id="@+id/textView5"
+                        p1:fontFamily="open-sands" />
                     <EditText
                         p1:inputType="textPersonName"
                         p1:layout_width="match_parent"
@@ -90,7 +91,8 @@
                         p1:textAppearance="?android:attr/textAppearanceMedium"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView6" />
+                        p1:id="@+id/textView6"
+                        p1:fontFamily="open-sands" />
                     <EditText
                         p1:inputType="date"
                         p1:layout_width="match_parent"
@@ -101,7 +103,8 @@
                         p1:textAppearance="?android:attr/textAppearanceMedium"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView7" />
+                        p1:id="@+id/textView7"
+                        p1:fontFamily="open-sands" />
                     <EditText
                         p1:inputType="number"
                         p1:layout_width="match_parent"
@@ -130,7 +133,8 @@
                         p1:textAppearance="?android:attr/textAppearanceMedium"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView8" />
+                        p1:id="@+id/textView8"
+                        p1:fontFamily="open-sands" />
                     <EditText
                         p1:inputType="date"
                         p1:layout_width="match_parent"
@@ -146,7 +150,8 @@
                         p1:textAppearance="?android:attr/textAppearanceMedium"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView9" />
+                        p1:id="@+id/textView9"
+                        p1:fontFamily="open-sands" />
                     <EditText
                         p1:inputType="time"
                         p1:layout_width="match_parent"
@@ -162,7 +167,8 @@
                         p1:textAppearance="?android:attr/textAppearanceMedium"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView10" />
+                        p1:id="@+id/textView10"
+                        p1:fontFamily="open-sands" />
                     <EditText
                         p1:inputType="textMultiLine"
                         p1:layout_width="match_parent"
@@ -173,7 +179,8 @@
                         p1:textAppearance="?android:attr/textAppearanceMedium"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView11" />
+                        p1:id="@+id/textView11"
+                        p1:fontFamily="open-sands" />
                     <MvxSpinner
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
@@ -184,7 +191,8 @@
                         p1:textAppearance="?android:attr/textAppearanceMedium"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView13" />
+                        p1:id="@+id/textView13"
+                        p1:fontFamily="open-sands" />
                     <MvxSpinner
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
@@ -195,7 +203,8 @@
                         p1:textAppearance="?android:attr/textAppearanceMedium"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView12" />
+                        p1:id="@+id/textView12"
+                        p1:fontFamily="open-sands" />
                     <EditText
                         p1:inputType="textMultiLine"
                         p1:layout_width="match_parent"
@@ -268,7 +277,8 @@
                         p1:layout_weight="1"
                         p1:fontFamily="open-sands"
                         p1:background="@drawable/grey_button"
-                        p1:layout_marginBottom="5dp" />
+                        p1:layout_marginBottom="5dp" 
+                        local:MvxBind="Click ViewSummaryCommand"/>
                     <Button
                         p1:text="file claim"
                         p1:layout_width="match_parent"

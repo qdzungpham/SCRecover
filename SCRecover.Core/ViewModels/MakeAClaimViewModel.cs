@@ -3,7 +3,7 @@ using System.IO;
 using System;
 using System.Collections.Generic;
 using MvvmCross.Plugins.PictureChooser;
-using Plugin.Permissions.Abstractions;
+using System.Windows.Input;
 
 namespace SCRecover.Core.ViewModels
 {
@@ -192,7 +192,7 @@ namespace SCRecover.Core.ViewModels
 
         private MvxCommand _choosePictureCommand;
 
-        public System.Windows.Input.ICommand ChoosePictureCommand
+        public ICommand ChoosePictureCommand
         {
             get
             {
@@ -220,7 +220,22 @@ namespace SCRecover.Core.ViewModels
             pictureStream.CopyTo(memoryStream);
             Bytes = memoryStream.ToArray();
         }
-        
+
+        //=============================
+        public class DetailParameters
+        {
+            public string Type { get; set; }
+        }
+        public ICommand ViewSummaryCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<ClaimSummaryViewModel>(new {
+                    type = _selectedType.ToString(),
+                    injury = _selectedInjury.ToString()}));
+            }
+        }
+
 
 
     }

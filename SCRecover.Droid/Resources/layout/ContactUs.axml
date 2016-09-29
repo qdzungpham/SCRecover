@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     p1:minWidth="25px"
     p1:minHeight="25px"
     p1:layout_width="match_parent"
@@ -90,7 +91,8 @@
                     p1:layout_gravity="center"
                     p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
-                    p1:background="@drawable/yellow_button" />
+                    p1:background="@drawable/yellow_button"
+                    local:MvxBind="Click CallGeneralCommand" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -134,7 +136,8 @@
                     p1:layout_gravity="center"
                     p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
-                    p1:background="@drawable/yellow_button" />
+                    p1:background="@drawable/yellow_button"
+                    local:MvxBind="Click CallPaymentCommand" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -176,7 +179,8 @@
                     p1:layout_gravity="center"
                     p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
-                    p1:background="@drawable/yellow_button" />
+                    p1:background="@drawable/yellow_button"
+                    local:MvxBind="Click CallInterCommand" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -218,7 +222,8 @@
                     p1:layout_gravity="center"
                     p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
-                    p1:background="@drawable/yellow_button" />
+                    p1:background="@drawable/yellow_button"
+                    local:MvxBind="Click CallMedicalCommand" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
