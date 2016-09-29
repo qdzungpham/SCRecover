@@ -1,12 +1,17 @@
 ﻿using MvvmCross.Core.ViewModels;
+using System.IO;
 using System;
 using System.Collections.Generic;
+using MvvmCross.Plugins.PictureChooser;
+using Plugin.Permissions.Abstractions;
 
 namespace SCRecover.Core.ViewModels
 {
     public class MakeAClaimViewModel
         : MvxViewModel
     {
+
+        // Datepicker and timepicker
         private DateTime _date = DateTime.Now;
         private TimeSpan _time = DateTime.Now.TimeOfDay;
 
@@ -22,7 +27,7 @@ namespace SCRecover.Core.ViewModels
             set { _time = value; RaisePropertyChanged(() => Time); }
         }
 
-        //========
+        // Select type and specificed injury
         public class Thing
         {
             public Thing(string caption)
@@ -75,7 +80,7 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
-        //------
+        // -----------------------------
         private List<Thing> _none = new List<Thing>()
         {
             new Thing("None"),           
@@ -95,7 +100,11 @@ namespace SCRecover.Core.ViewModels
             new Thing("Wrist"),
             new Thing("Cheekbone"),
             new Thing("Coccyx"),
-            
+            new Thing("Eye socket"),
+            new Thing("Nose"),
+            new Thing("Rib or ribs"),
+            new Thing("Sacrum"),
+
         };
         private List<Thing> _dislocations = new List<Thing>()
         {
@@ -156,6 +165,62 @@ namespace SCRecover.Core.ViewModels
             get { return _selectedInjury; }
             set { _selectedInjury = value; RaisePropertyChanged(() => SelectedInjury); }
         }
+
+        // Take photo and choose photo
+        private readonly IMvxPictureChooserTask _pictureChooserTask;
+
+        public MakeAClaimViewModel(IMvxPictureChooserTask pictureChooserTask)
+        {
+            _pictureChooserTask = pictureChooserTask;
+        }
+
+        private MvxCommand _takePictureCommand;
+
+        public System.Windows.Input.ICommand TakePictureCommand
+        {
+            get
+            {
+                _takePictureCommand = _takePictureCommand ?? new MvxCommand(DoTakePicture);
+                return _takePictureCommand;
+            }
+        }
+
+        private void DoTakePicture()
+        {
+            _pictureChooserTask.TakePicture(400, 95, OnPicture, () => { });
+        }
+
+        private MvxCommand _choosePictureCommand;
+
+        public System.Windows.Input.ICommand ChoosePictureCommand
+        {
+            get
+            {
+                _choosePictureCommand = _choosePictureCommand ?? new MvxCommand(DoChoosePicture);
+                return _choosePictureCommand;
+            }
+        }
+
+        private void DoChoosePicture()
+        {
+            _pictureChooserTask.ChoosePictureFromLibrary(400, 95, OnPicture, () => { });
+        }
+
+        private byte[] _bytes;
+
+        public byte[] Bytes
+        {
+            get { return _bytes; }
+            set { _bytes = value; RaisePropertyChanged(() => Bytes); }
+        }
+
+        private void OnPicture(Stream pictureStream)
+        {
+            var memoryStream = new MemoryStream();
+            pictureStream.CopyTo(memoryStream);
+            Bytes = memoryStream.ToArray();
+        }
+        
 
 
     }

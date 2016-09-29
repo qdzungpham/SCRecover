@@ -185,7 +185,7 @@
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView13" />
-                  <MvxSpinner
+                    <MvxSpinner
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/spinner2"
@@ -234,7 +234,8 @@
                             p1:layout_marginRight="10dp"
                             p1:textColor="@android:color/white"
                             p1:textStyle="bold"
-                            p1:fontFamily="open-sands" />
+                            p1:fontFamily="open-sands"
+                            local:MvxBind="Click TakePictureCommand" />
                         <Button
                             p1:text="From library"
                             p1:layout_width="match_parent"
@@ -245,8 +246,14 @@
                             p1:layout_marginLeft="10dp"
                             p1:textColor="@android:color/white"
                             p1:textStyle="bold"
-                            p1:fontFamily="open-sands" />
+                            p1:fontFamily="open-sands"
+                            local:MvxBind="Click ChoosePictureCommand" />
                     </LinearLayout>
+                    <ImageView
+                        p1:layout_width="fill_parent"
+                        p1:layout_height="wrap_content"
+                        local:MvxBind="Bitmap Bytes,Converter=InMemoryImage"
+                        p1:paddingTop="10dp" />
                 </LinearLayout>
                 <LinearLayout
                     p1:orientation="vertical"
