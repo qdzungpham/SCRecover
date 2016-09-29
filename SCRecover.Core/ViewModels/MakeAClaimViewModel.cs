@@ -66,16 +66,19 @@ namespace SCRecover.Core.ViewModels
         }
 
         private Thing _selectedType = new Thing("None");
+        private Thing _selectedInjury;
         public Thing SelectedType
         {
             get { return _selectedType; }
-            set { _selectedType = value; RaisePropertyChanged(() => SelectedType); }
+            set { _selectedType = value; RaisePropertyChanged(() => SelectedType); RaisePropertyChanged(() => Injuries);
+                _selectedInjury = new Thing("None"); RaisePropertyChanged(() => SelectedInjury);
+            }
         }
 
         //------
         private List<Thing> _none = new List<Thing>()
         {
-            new Thing("1"),           
+            new Thing("None"),           
         };
         private List<Thing> _fractures = new List<Thing>()
         {
@@ -97,30 +100,57 @@ namespace SCRecover.Core.ViewModels
         private List<Thing> _dislocations = new List<Thing>()
         {
             new Thing("None"),
-            new Thing("hip"),
+            new Thing("Hip"),
             new Thing("Knee, ankle, wrist, elbow"),
             new Thing("Shoulder"),
             
 
         };
+        private List<Thing> _burns = new List<Thing>()
+        {
+            new Thing("None"),
+            new Thing("More than 20% of body surface or %0% of face"),
+            new Thing("At least 4% but less than 20% of body surface"),
+            new Thing("Hands to at least 50% of either hand surface"),
+
+
+        };
         public List<Thing> Injuries
         {
-            get { return _none; }
-            set { Update(); _none = value; RaisePropertyChanged(() => Injuries); }
+            get {
+                if (_selectedType.ToString() == "Fracture")
+                {
+                    return _fractures;
+                } else if (_selectedType.ToString() == "Dislocation")
+                {
+                    return _dislocations;
+                } else if (_selectedType.ToString() == "Burn")
+                {
+                    return _burns;
+                } else
+                {
+                    return _none;
+                }
+            }
+            set {
+                if (_selectedType.ToString() == "Fracture")
+                {
+                    _fractures = value; 
+                } else if (_selectedType.ToString() == "Dislocation")
+                {
+                    _dislocations = value; 
+                } else if (_selectedType.ToString() == "Burn")
+                {
+                    _burns = value; 
+                } else
+                {
+                    _none = value;
+                }
+                RaisePropertyChanged(() => Injuries);
+            }
         }
 
-        private void Update()
-        {
-            if (_selectedType.ToString() == "Fracture")
-            {
-                _none = _fractures;
-            }
-            else if (_selectedType == Types[2])
-            {
-                _none = _dislocations;
-            }
-        }
-        private Thing _selectedInjury;
+        
         public Thing SelectedInjury
         {
             get { return _selectedInjury; }
