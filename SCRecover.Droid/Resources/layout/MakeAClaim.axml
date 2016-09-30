@@ -85,7 +85,8 @@
                         p1:inputType="textPersonName"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextName" />
+                        p1:id="@+id/editTextName" 
+                  local:MvxBind="Text FullName"/>
                     <TextView
                         p1:text="Date of Birth"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -97,7 +98,8 @@
                         p1:inputType="date"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextDoB" />
+                        p1:id="@+id/editTextDoB" 
+                  local:MvxBind="Text DateOfBirth"/>
                     <TextView
                         p1:text="Policy Number"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -109,7 +111,8 @@
                         p1:inputType="number"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextPolicyNum" />
+                        p1:id="@+id/editTextPolicyNum" 
+                local:MvxBind="Text PolicyNum"/>
                 </LinearLayout>
                 <LinearLayout
                     p1:orientation="vertical"
@@ -144,6 +147,7 @@
                     <MvxDatePicker
                         p1:layout_width="fill_parent"
                         p1:layout_height="wrap_content"
+                        
                         local:MvxBind="Value Date" />
                     <TextView
                         p1:text="Time"
@@ -173,7 +177,8 @@
                         p1:inputType="textMultiLine"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextLocation" />
+                        p1:id="@+id/editTextLocation" 
+                  local:MvxBind="Text Location"/>
                     <TextView
                         p1:text="Accident Type"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -209,7 +214,8 @@
                         p1:inputType="textMultiLine"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextComments" />
+                        p1:id="@+id/editTextComments" 
+                local:MvxBind="Text Comment"/>
                 </LinearLayout>
                 <LinearLayout
                     p1:orientation="vertical"

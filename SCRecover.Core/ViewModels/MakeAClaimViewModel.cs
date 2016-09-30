@@ -222,17 +222,54 @@ namespace SCRecover.Core.ViewModels
         }
 
         //=============================
-        public class DetailParameters
+        private string _fullName = "";
+        public string FullName
         {
-            public string Type { get; set; }
+            get { return _fullName; }
+            set { _fullName = value; RaisePropertyChanged(() => FullName); }
+        }
+
+        private string _doB ="";
+        public string DateOfBirth
+        {
+            get { return _doB; }
+            set { _doB = value; RaisePropertyChanged(() => DateOfBirth); }
+        }
+
+        private string _policyNum = "";
+        public string PolicyNum
+        {
+            get { return _policyNum; }
+            set { _policyNum = value; RaisePropertyChanged(() => PolicyNum); }
+        }
+
+        private string _location = "";
+        public string Location
+        {
+            get { return _location; }
+            set { _location = value; RaisePropertyChanged(() => Location); }
+        }
+
+        private string _cmt = "";
+        public string Comment
+        {
+            get { return _cmt; }
+            set { _cmt = value; RaisePropertyChanged(() => Comment); }
         }
         public ICommand ViewSummaryCommand
         {
             get
             {
                 return new MvxCommand(() => ShowViewModel<ClaimSummaryViewModel>(new {
+                    fullName = _fullName.ToString(),
+                    doB = _doB.ToString(),
+                    policyNum = _policyNum.ToString(),
+                    date = _date.GetDateTimeFormats('d')[1],
+                    time = _time.ToString(),
+                    location = _location.ToString(),
                     type = _selectedType.ToString(),
-                    injury = _selectedInjury.ToString()}));
+                    injury = _selectedInjury.ToString(),
+                    cmt = _cmt.ToString()}));
             }
         }
 
