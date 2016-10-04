@@ -139,7 +139,15 @@ namespace SCRecover.Core.ViewModels
             set { _cmt = value; RaisePropertyChanged(() => Comment); }
         }
 
-        public void Init(string fullName, string doB, string policyNum, string date, string time, string location, string type, string injury, string cmt)
+        private byte[] _bytes;
+
+        public byte[] Bytes
+        {
+            get { return _bytes; }
+            set { _bytes = value; RaisePropertyChanged(() => Bytes); }
+        }
+
+        public void Init(string fullName, string doB, string policyNum, string date, string time, string location, string type, string injury, string cmt, byte[] bytes)
         {
             _fullName = fullName;
             _doB = doB;
@@ -150,6 +158,7 @@ namespace SCRecover.Core.ViewModels
             _type = type;
             _injury = injury;
             _cmt = cmt;
+            _bytes = bytes;
         }
         
 

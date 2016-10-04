@@ -269,7 +269,8 @@ namespace SCRecover.Core.ViewModels
                     location = _location.ToString(),
                     type = _selectedType.ToString(),
                     injury = _selectedInjury.ToString(),
-                    cmt = _cmt.ToString()}));
+                    cmt = _cmt.ToString(),
+                    bytes = _bytes}));
             }
         }
 
