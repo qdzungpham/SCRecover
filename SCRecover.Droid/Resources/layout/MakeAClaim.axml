@@ -48,7 +48,8 @@
                 p1:id="@+id/imageButton2"
                 p1:background="#006863"
                 p1:layout_gravity="center"
-                p1:layout_weight="0.2" />
+                p1:layout_weight="0.2"
+                local:MvxBind="Click SaveClaimCommand"/>
         </LinearLayout>
         <ScrollView
             p1:layout_width="fill_parent"
@@ -85,8 +86,8 @@
                         p1:inputType="textPersonName"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextName" 
-                  local:MvxBind="Text FullName"/>
+                        p1:id="@+id/editTextName"
+                        local:MvxBind="Text FullName" />
                     <TextView
                         p1:text="Date of Birth"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -98,8 +99,8 @@
                         p1:inputType="date"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextDoB" 
-                  local:MvxBind="Text DateOfBirth"/>
+                        p1:id="@+id/editTextDoB"
+                        local:MvxBind="Text DateOfBirth" />
                     <TextView
                         p1:text="Policy Number"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -111,8 +112,8 @@
                         p1:inputType="number"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextPolicyNum" 
-                local:MvxBind="Text PolicyNum"/>
+                        p1:id="@+id/editTextPolicyNum"
+                        local:MvxBind="Text PolicyNum" />
                 </LinearLayout>
                 <LinearLayout
                     p1:orientation="vertical"
@@ -138,17 +139,32 @@
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView8"
                         p1:fontFamily="open-sands" />
-                    <EditText
-                        p1:inputType="date"
+                    <LinearLayout
+                        p1:orientation="horizontal"
+                        p1:minWidth="25px"
+                        p1:minHeight="25px"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextDate"
-                        local:MvxBind="Text Format('{0:dd MMM yyyy}',Date)" />
+                        p1:id="@+id/linearLayoutDate">
+                        <EditText
+                            p1:inputType="date"
+                            p1:layout_width="match_parent"
+                            p1:layout_height="wrap_content"
+                            p1:id="@+id/editTextDate"
+                            local:MvxBind="Text Format('{0:dd MMM yyyy}',Date)"
+                            p1:layout_weight="1" />
+                        <Button
+                            p1:text="Done"
+                            p1:layout_width="match_parent"
+                            p1:layout_height="match_parent"
+                            p1:id="@+id/buttonDateDone"
+                            p1:layout_weight="3" />
+                    </LinearLayout>
                     <MvxDatePicker
                         p1:layout_width="fill_parent"
                         p1:layout_height="wrap_content"
-                        
-                        local:MvxBind="Value Date" />
+                        local:MvxBind="Value Date"
+                        p1:id="@+id/datePicker" />
                     <TextView
                         p1:text="Time"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -156,16 +172,32 @@
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView9"
                         p1:fontFamily="open-sands" />
-                    <EditText
-                        p1:inputType="time"
+                    <LinearLayout
+                        p1:orientation="horizontal"
+                        p1:minWidth="25px"
+                        p1:minHeight="25px"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextTime"
-                        local:MvxBind="Text Format('{0:hhmm}',Time)" />
+                        p1:id="@+id/linearLayoutTime">
+                        <EditText
+                            p1:inputType="time"
+                            p1:layout_width="match_parent"
+                            p1:layout_height="wrap_content"
+                            p1:id="@+id/editTextTime"
+                            p1:layout_weight="1"
+                            local:MvxBind="Text Format('{0:hhmm}',Time)" />
+                        <Button
+                            p1:text="Done"
+                            p1:layout_width="match_parent"
+                            p1:layout_height="match_parent"
+                            p1:id="@+id/buttonTimeDone"
+                            p1:layout_weight="3" />
+                    </LinearLayout>
                     <MvxTimePicker
                         p1:layout_width="fill_parent"
                         p1:layout_height="wrap_content"
-                        local:MvxBind="Value Time" />
+                        local:MvxBind="Value Time"
+                        p1:id="@+id/timePicker"/>
                     <TextView
                         p1:text="Location"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -177,8 +209,8 @@
                         p1:inputType="textMultiLine"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextLocation" 
-                  local:MvxBind="Text Location"/>
+                        p1:id="@+id/editTextLocation"
+                        local:MvxBind="Text Location" />
                     <TextView
                         p1:text="Accident Type"
                         p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -214,8 +246,8 @@
                         p1:inputType="textMultiLine"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/editTextComments" 
-                local:MvxBind="Text Comment"/>
+                        p1:id="@+id/editTextComments"
+                        local:MvxBind="Text Comment" />
                 </LinearLayout>
                 <LinearLayout
                     p1:orientation="vertical"
@@ -283,8 +315,8 @@
                         p1:layout_weight="1"
                         p1:fontFamily="open-sands"
                         p1:background="@drawable/grey_button"
-                        p1:layout_marginBottom="5dp" 
-                        local:MvxBind="Click ViewSummaryCommand"/>
+                        p1:layout_marginBottom="5dp"
+                        local:MvxBind="Click ViewSummaryCommand" />
                     <Button
                         p1:text="file claim"
                         p1:layout_width="match_parent"

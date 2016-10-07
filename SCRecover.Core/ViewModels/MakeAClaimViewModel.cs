@@ -4,6 +4,9 @@ using System;
 using System.Collections.Generic;
 using MvvmCross.Plugins.PictureChooser;
 using System.Windows.Input;
+using SCRecover.Core.Interfaces;
+using SCRecover.Core.Database;
+using SCRecover.Core.Models;
 
 namespace SCRecover.Core.ViewModels
 {
@@ -274,6 +277,44 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
+       
+        public ICommand SaveClaimCommand
+        {
+            get
+            {
+                return new MvxCommand(DoSave);
+            }
+        }
+                
+        
+
+        private ClaimDetails CreateNewClaim()
+        {
+            return new ClaimDetails()
+            {
+                FullName = _fullName.ToString(),
+                DoB = _doB.ToString(),
+                PolicyNum = _policyNum.ToString(),
+                Date = _date.ToString(),
+                Time = _time.ToString(),
+                Location = _location.ToString(),
+                Type = _selectedType.ToString(),
+                Injury = _selectedInjury.ToString(),
+                Cmt = _cmt.ToString(),
+                Bytes = _bytes
+            };
+        }
+        public async void DoSave()
+        {
+            var claim = CreateNewClaim();
+            await database1.SaveClaim(claim);
+        }
+
+        private readonly ISavedClaimsDatabase database1;
+        public MakeAClaimViewModel(ISavedClaimsDatabase data)
+        {
+            database1 = data;
+        }
 
 
     }

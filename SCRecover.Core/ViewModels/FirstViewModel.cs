@@ -22,6 +22,14 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
+        public ICommand FindProviderGoCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<FindProviderViewModel>());
+            }
+        }
+
 
     }
 }

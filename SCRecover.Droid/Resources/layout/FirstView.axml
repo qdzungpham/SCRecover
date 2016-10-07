@@ -95,7 +95,8 @@
                     p1:fontFamily="open-sands"
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
-                    p1:textStyle="bold" />
+                    p1:textStyle="bold"
+                    local:MvxBind="Click FindProviderGoCommand"/>
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"

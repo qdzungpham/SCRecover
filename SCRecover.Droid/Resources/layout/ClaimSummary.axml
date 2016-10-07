@@ -80,7 +80,7 @@
                     p1:id="@+id/textView4"
                     p1:layout_marginLeft="15dp"
                     p1:fontFamily="open-sands"
-                    local:MvxBind="Text FullName"/>
+                    local:MvxBind="Text FullName" />
                 <TextView
                     p1:text="Date of Birth"
                     p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -97,7 +97,7 @@
                     p1:id="@+id/textView6"
                     p1:layout_marginLeft="15dp"
                     p1:fontFamily="open-sands"
-                    local:MvxBind="Text DateOfBirth"/>
+                    local:MvxBind="Text DateOfBirth" />
                 <TextView
                     p1:text="Policy Number"
                     p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -114,7 +114,7 @@
                     p1:id="@+id/textView8"
                     p1:layout_marginLeft="15dp"
                     p1:fontFamily="open-sands"
-                    local:MvxBind="Text PolicyNum"/>
+                    local:MvxBind="Text PolicyNum" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="vertical"
@@ -146,7 +146,7 @@
                     p1:id="@+id/textView11"
                     p1:layout_marginLeft="15dp"
                     p1:fontFamily="open-sands"
-                    local:MvxBind="Text Date"/>
+                    local:MvxBind="Text Date" />
                 <TextView
                     p1:text="Time"
                     p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -163,7 +163,7 @@
                     p1:id="@+id/textView13"
                     p1:layout_marginLeft="15dp"
                     p1:fontFamily="open-sands"
-                    local:MvxBind="Text Time"/>
+                    local:MvxBind="Text Time" />
                 <TextView
                     p1:text="Location"
                     p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -180,7 +180,7 @@
                     p1:id="@+id/textView15"
                     p1:layout_marginLeft="15dp"
                     p1:fontFamily="open-sands"
-                    local:MvxBind="Text Location"/>
+                    local:MvxBind="Text Location" />
                 <TextView
                     p1:text="Accident Type"
                     p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -197,7 +197,7 @@
                     p1:id="@+id/textView17"
                     p1:layout_marginLeft="15dp"
                     p1:fontFamily="open-sands"
-                    local:MvxBind="Text Type"/>
+                    local:MvxBind="Text Type" />
                 <TextView
                     p1:text="Specified Injury"
                     p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -213,8 +213,8 @@
                     p1:layout_height="wrap_content"
                     p1:id="@+id/textView19"
                     p1:layout_marginLeft="15dp"
-                    p1:fontFamily="open-sands" 
-                    local:MvxBind="Text Injury"/>
+                    p1:fontFamily="open-sands"
+                    local:MvxBind="Text Injury" />
                 <TextView
                     p1:text="Comments"
                     p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -231,7 +231,7 @@
                     p1:id="@+id/textView21"
                     p1:layout_marginLeft="15dp"
                     p1:fontFamily="open-sands"
-                    local:MvxBind="Text Comment"/>
+                    local:MvxBind="Text Comment" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="vertical"

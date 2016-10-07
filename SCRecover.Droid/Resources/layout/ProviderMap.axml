@@ -42,12 +42,43 @@
                 p1:layout_weight="1"
                 p1:layout_gravity="center" />
         </LinearLayout>
-        <Button
-            p1:text="Acupuncturist"
+        <fragment
+            p1:id="@+id/map"
             p1:layout_width="match_parent"
-            p1:layout_height="wrap_content"
-            p1:id="@+id/button1"
-            p1:textAllCaps="false"
-            local:MvxBind="Click AcupuncturistGoCommand" />
+            p1:layout_height="match_parent"
+            class="com.google.android.gms.maps.MapFragment"
+            p1:layout_weight="1" />
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/linearLayout2"
+            p1:layout_weight="4">
+            <TextView
+                p1:text="Text"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView2"
+                local:MvxBind="Text ProviderName"/>
+            <TextView
+                p1:text="Small Text"
+                p1:textAppearance="?android:attr/textAppearanceSmall"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView3"
+                local:MvxBind="Text ProviderAddress"/>
+            <TextView
+                p1:text="Small Text"
+                p1:textAppearance="?android:attr/textAppearanceSmall"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView4" 
+                local:MvxBind="Text ProviderPhoneNum"/>
+            <Button
+                p1:text="Button"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/button1" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
