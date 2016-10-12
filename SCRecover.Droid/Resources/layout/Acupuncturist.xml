@@ -47,7 +47,7 @@
       p1:layout_width="fill_parent"
       p1:layout_height="wrap_content"
       
-      local:MvxBind="ItemsSource Forecasts; ItemClick ForecastDetailCommand"
+      local:MvxBind="ItemsSource Providers; ItemClick ForecastDetailCommand"
       local:MvxItemTemplate="@layout/providerlayout" />
     <Button
             p1:text="Text"

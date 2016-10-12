@@ -49,7 +49,7 @@
                 p1:background="#006863"
                 p1:layout_gravity="center"
                 p1:layout_weight="0.2"
-                local:MvxBind="Click SaveClaimCommand"/>
+                local:MvxBind="Click SaveClaimCommand" />
         </LinearLayout>
         <ScrollView
             p1:layout_width="fill_parent"
@@ -197,7 +197,7 @@
                         p1:layout_width="fill_parent"
                         p1:layout_height="wrap_content"
                         local:MvxBind="Value Time"
-                        p1:id="@+id/timePicker"/>
+                        p1:id="@+id/timePicker" />
                     <TextView
                         p1:text="Location"
                         p1:textAppearance="?android:attr/textAppearanceMedium"

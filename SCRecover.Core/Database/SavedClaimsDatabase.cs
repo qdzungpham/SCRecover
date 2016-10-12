@@ -1,9 +1,14 @@
-﻿using MvvmCross.Platform;
+﻿
+using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.Sync;
+using MvvmCross.Platform;
 using SCRecover.Core.Interfaces;
 using SCRecover.Core.Models;
 using SQLite.Net;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,23 +17,47 @@ namespace SCRecover.Core.Database
 {
     public class SavedClaimsDatabase : ISavedClaimsDatabase
     {
-        private SQLiteConnection database;
+        private MobileServiceClient azureDatabase;
+        private IMobileServiceSyncTable<ClaimDetails> azureSyncTable;
+
         public SavedClaimsDatabase()
         {
-            var sqlite = Mvx.Resolve<ISqlite>();
-            database = sqlite.GetConnection();
-            database.CreateTable<ClaimDetails>();
+            azureDatabase = Mvx.Resolve<IAzureDatabase>().GetMobileServiceClient();
+            azureSyncTable = azureDatabase.GetSyncTable<ClaimDetails>();
+        } 
+
+        public async Task<IEnumerable<ClaimDetails>> GetSavedClaims()
+        {
+            await SyncAsync(true);
+            var claims = await azureSyncTable.ToListAsync();
+            return claims;
         }
 
-        public async Task<IEnumerable<ClaimDetails>> GetClaimDetails()
+        public async Task<int> InsertClaim(ClaimDetails claim)
         {
-            return database.Table<ClaimDetails>().ToList();
+            await SyncAsync(true);
+            await azureSyncTable.InsertAsync(claim);
+            await SyncAsync();
+            return 1;
         }
-        public async Task<int> SaveClaim(ClaimDetails claim)
+
+        private async Task SyncAsync(bool pullData = false) 
         {
-            var num = database.Insert(claim);
-            database.Commit();
-            return num;
+            try
+            {
+                await azureDatabase.SyncContext.PushAsync();
+                
+                if (pullData)
+                {
+                    await azureSyncTable.PullAsync("allSavedClaims", azureSyncTable.CreateQuery());
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+            }
         }
     }
+
+    
 }

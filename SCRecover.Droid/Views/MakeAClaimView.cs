@@ -4,6 +4,7 @@ using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Droid.Views;
+using System;
 
 namespace SCRecover.Droid.Views
 {
@@ -54,6 +55,10 @@ namespace SCRecover.Droid.Views
                 _timePicker.Visibility = ViewStates.Gone;
                 _buttonTimeDone.Visibility = ViewStates.Gone;
             };
+
+
         }
+
+        
     }
 }

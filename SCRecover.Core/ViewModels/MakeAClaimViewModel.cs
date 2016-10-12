@@ -8,6 +8,8 @@ using SCRecover.Core.Interfaces;
 using SCRecover.Core.Database;
 using SCRecover.Core.Models;
 
+using System.Collections.ObjectModel;
+
 namespace SCRecover.Core.ViewModels
 {
     public class MakeAClaimViewModel
@@ -277,46 +279,44 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
-       
+        
+
+        //private MvxCommand _saveClaimCommand;
         public ICommand SaveClaimCommand
         {
             get
             {
-                return new MvxCommand(DoSave);
+
+                return new MvxCommand(SaveClaim);
             }
         }
-                
-        
 
-        private ClaimDetails CreateNewClaim()
+        public async void SaveClaim()
         {
-            return new ClaimDetails()
+            ClaimDetails newClaim = new ClaimDetails()      
             {
-                FullName = _fullName.ToString(),
-                DoB = _doB.ToString(),
-                PolicyNum = _policyNum.ToString(),
-                Date = _date.ToString(),
-                Time = _time.ToString(),
-                Location = _location.ToString(),
-                Type = _selectedType.ToString(),
-                Injury = _selectedInjury.ToString(),
-                Cmt = _cmt.ToString(),
-                Bytes = _bytes
+                //Id = 12,
+                FullName = "Heelo",
+                DoB = "Heelo",
+                PolicyNum = "Heelo",
+                Date = "Heelo",
+                Time = "Heelo",
+                Location = "Heelo",
+                Type = "Heelo",
+                Injury = "Heelo",
+                Cmt = "Heelo"
+                //Bytes = _bytes
             };
+
+            await _savedClaimDatabase.InsertClaim(newClaim);
         }
-        public async void DoSave()
+
+        private readonly ISavedClaimsDatabase _savedClaimDatabase;
+        public MakeAClaimViewModel(ISavedClaimsDatabase saveClaimDatabase)
         {
-            var claim = CreateNewClaim();
-            await database1.SaveClaim(claim);
+            _savedClaimDatabase = saveClaimDatabase;
         }
-
-        private readonly ISavedClaimsDatabase database1;
-        public MakeAClaimViewModel(ISavedClaimsDatabase data)
-        {
-            database1 = data;
-        }
-
-
+        
     }
 
     

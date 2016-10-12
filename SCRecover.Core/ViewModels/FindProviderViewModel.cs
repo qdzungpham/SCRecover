@@ -1,7 +1,10 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Plugins.PhoneCall;
+
+using System.Collections.ObjectModel;
 using System.Windows.Input;
+using SCRecover.Core.Models;
 
 namespace SCRecover.Core.ViewModels
 {
@@ -30,6 +33,10 @@ namespace SCRecover.Core.ViewModels
                 return new MvxCommand(() => ShowViewModel<ProviderMapViewModel>());
             }
         }
+
+        
+
+        
 
 
 

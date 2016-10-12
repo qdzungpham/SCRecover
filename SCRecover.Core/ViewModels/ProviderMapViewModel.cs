@@ -11,8 +11,8 @@ namespace SCRecover.Core.ViewModels
     {
         
 
-        private ProviderDetails _provider;
-        public ProviderDetails Provider
+        private LocationDetails _provider;
+        public LocationDetails Provider
         {
             get { return _provider; }
             set { _provider = value;  RaisePropertyChanged(() => _provider); }
@@ -20,7 +20,7 @@ namespace SCRecover.Core.ViewModels
 
         public ProviderMapViewModel()
         {
-            _provider = new ProviderDetails()
+            _provider = new LocationDetails()
             {
                 Name = _providerName,
                 Address = _providerAddress,
@@ -95,7 +95,7 @@ namespace SCRecover.Core.ViewModels
         }
     }
 
-    public class ProviderDetails
+    public class LocationDetails
         : MvxNotifyPropertyChanged
     {
         private string _name;

@@ -14,7 +14,7 @@ namespace SCRecover.Droid.Views
     {
         private delegate IOnMapReadyCallback OnMapReadyCallback();
         private GoogleMap map;
-        //private Marker _provider;
+        
         ProviderMapViewModel vm;
         protected override void OnCreate(Bundle bundle)
         {
