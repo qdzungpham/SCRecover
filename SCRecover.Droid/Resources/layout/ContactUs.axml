@@ -22,7 +22,7 @@
             p1:id="@+id/linearLayoutTopBar"
             p1:background="#006863">
             <ImageButton
-                p1:src="@drawable/back"
+                p1:src="@drawable/arrow_left"
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
@@ -37,7 +37,6 @@
                 p1:layout_height="wrap_content"
                 p1:id="@+id/textView1"
                 p1:textColor="@android:color/white"
-                p1:fontFamily="open-sands"
                 p1:textStyle="bold"
                 p1:layout_weight="1"
                 p1:layout_gravity="center" />
@@ -73,15 +72,13 @@
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView2"
-                        p1:fontFamily="open-sands"
                         p1:textStyle="bold" />
                     <TextView
                         p1:text="7am - 10pm, 7 days"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView3"
-                        p1:fontFamily="open-sands" />
+                        p1:id="@+id/textView3" />
                 </LinearLayout>
                 <Button
                     p1:text="13 25 24"
@@ -92,7 +89,8 @@
                     p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
                     p1:background="@drawable/yellow_button"
-                    local:MvxBind="Click CallGeneralCommand" />
+                    local:MvxBind="Click CallGeneralCommand"
+                    p1:drawableLeft="@drawable/phone1" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -118,15 +116,13 @@
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView4"
-                        p1:fontFamily="open-sands"
                         p1:textStyle="bold" />
                     <TextView
                         p1:text="24 hours, 7 days"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView5"
-                        p1:fontFamily="open-sands" />
+                        p1:id="@+id/textView5" />
                 </LinearLayout>
                 <Button
                     p1:text="113 113"
@@ -134,10 +130,10 @@
                     p1:layout_height="wrap_content"
                     p1:id="@+id/button1"
                     p1:layout_gravity="center"
-                    p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
                     p1:background="@drawable/yellow_button"
-                    local:MvxBind="Click CallPaymentCommand" />
+                    local:MvxBind="Click CallPaymentCommand"
+                    p1:drawableLeft="@drawable/phone1" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -161,15 +157,13 @@
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView6"
-                        p1:fontFamily="open-sands"
                         p1:textStyle="bold" />
                     <TextView
                         p1:text="24 hours, 7 days"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView7"
-                        p1:fontFamily="open-sands" />
+                        p1:id="@+id/textView7" />
                 </LinearLayout>
                 <Button
                     p1:text="61 7 3362 1222"
@@ -177,10 +171,10 @@
                     p1:layout_height="wrap_content"
                     p1:id="@+id/button1"
                     p1:layout_gravity="center"
-                    p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
                     p1:background="@drawable/yellow_button"
-                    local:MvxBind="Click CallInterCommand" />
+                    local:MvxBind="Click CallInterCommand"
+                    p1:drawableLeft="@drawable/phone1" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -204,15 +198,13 @@
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView8"
-                        p1:fontFamily="open-sands"
                         p1:textStyle="bold" />
                     <TextView
                         p1:text="24 hours, 7 days"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView9"
-                        p1:fontFamily="open-sands" />
+                        p1:id="@+id/textView9" />
                 </LinearLayout>
                 <Button
                     p1:text="113 113"
@@ -220,10 +212,10 @@
                     p1:layout_height="wrap_content"
                     p1:id="@+id/button1"
                     p1:layout_gravity="center"
-                    p1:fontFamily="open-sands"
                     p1:layout_marginRight="10dp"
                     p1:background="@drawable/yellow_button"
-                    local:MvxBind="Click CallMedicalCommand" />
+                    local:MvxBind="Click CallMedicalCommand"
+                    p1:drawableLeft="@drawable/phone1" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

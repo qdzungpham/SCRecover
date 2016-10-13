@@ -7,6 +7,7 @@ namespace SCRecover.Core.ViewModels
     public class ClaimSummaryViewModel
         : MvxViewModel
     {
+        #region Properties
         private string _type;
         public string Type
         {
@@ -146,7 +147,7 @@ namespace SCRecover.Core.ViewModels
             get { return _bytes; }
             set { _bytes = value; RaisePropertyChanged(() => Bytes); }
         }
-
+        #endregion
         public void Init(string fullName, string doB, string policyNum, string date, string time, string location, string type, string injury, string cmt, byte[] bytes)
         {
             _fullName = fullName;

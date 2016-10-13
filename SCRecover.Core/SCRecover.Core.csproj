@@ -35,9 +35,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Interfaces\IProvidersDatabase.cs" />
+    <Compile Include="Database\ProvidersDatabase.cs" />
     <Compile Include="Database\SavedClaimsDatabase.cs" />
     <Compile Include="Interfaces\IAzureDatabase.cs" />
     <Compile Include="Interfaces\ISavedClaimsDatabase.cs" />
+    <Compile Include="Interfaces\ISqlite.cs" />
     <Compile Include="Models\ClaimDetails.cs" />
     <Compile Include="Models\ProviderDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

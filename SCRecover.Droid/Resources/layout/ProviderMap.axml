@@ -22,7 +22,7 @@
             p1:id="@+id/linearLayoutTopBar"
             p1:background="#006863">
             <ImageButton
-                p1:src="@drawable/back"
+                p1:src="@drawable/arrow_left"
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
@@ -59,21 +59,21 @@
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/textView2"
-                local:MvxBind="Text ProviderName"/>
+                local:MvxBind="Text ProviderName" />
             <TextView
                 p1:text="Small Text"
                 p1:textAppearance="?android:attr/textAppearanceSmall"
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/textView3"
-                local:MvxBind="Text ProviderAddress"/>
+                local:MvxBind="Text ProviderAddress" />
             <TextView
                 p1:text="Small Text"
                 p1:textAppearance="?android:attr/textAppearanceSmall"
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
-                p1:id="@+id/textView4" 
-                local:MvxBind="Text ProviderPhoneNum"/>
+                p1:id="@+id/textView4"
+                local:MvxBind="Text ProviderPhoneNum" />
             <Button
                 p1:text="Button"
                 p1:layout_width="match_parent"

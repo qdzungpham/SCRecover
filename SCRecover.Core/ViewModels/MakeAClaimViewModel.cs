@@ -15,7 +15,7 @@ namespace SCRecover.Core.ViewModels
     public class MakeAClaimViewModel
         : MvxViewModel
     {
-
+        
         // Datepicker and timepicker
         private DateTime _date = DateTime.Now;
         private TimeSpan _time = DateTime.Now.TimeOfDay;
@@ -174,10 +174,7 @@ namespace SCRecover.Core.ViewModels
         // Take photo and choose photo
         private readonly IMvxPictureChooserTask _pictureChooserTask;
 
-        public MakeAClaimViewModel(IMvxPictureChooserTask pictureChooserTask)
-        {
-            _pictureChooserTask = pictureChooserTask;
-        }
+        
 
         private MvxCommand _takePictureCommand;
 
@@ -265,23 +262,28 @@ namespace SCRecover.Core.ViewModels
         {
             get
             {
-                return new MvxCommand(() => ShowViewModel<ClaimSummaryViewModel>(new {
-                    fullName = _fullName.ToString(),
-                    doB = _doB.ToString(),
-                    policyNum = _policyNum.ToString(),
-                    date = _date.GetDateTimeFormats('d')[1],
-                    time = _time.ToString(),
-                    location = _location.ToString(),
-                    type = _selectedType.ToString(),
-                    injury = _selectedInjury.ToString(),
-                    cmt = _cmt.ToString(),
-                    bytes = _bytes}));
+                return new MvxCommand(() => 
+                {
+                    ShowViewModel<ClaimSummaryViewModel>(new
+                    {
+                        fullName = _fullName.ToString(),
+                        doB = _doB.ToString(),
+                        policyNum = _policyNum.ToString(),
+                        date = _date.GetDateTimeFormats('d')[1],
+                        time = _time.ToString(),
+                        location = _location.ToString(),
+                        type = _selectedType.ToString(),
+                        injury = _selectedInjury.ToString(),
+                        cmt = _cmt.ToString(),
+                        bytes = _bytes
+                    });
+                        });
             }
         }
 
-        
 
-        //private MvxCommand _saveClaimCommand;
+        private readonly ISavedClaimsDatabase _savedClaimDatabase;
+
         public ICommand SaveClaimCommand
         {
             get
@@ -296,27 +298,29 @@ namespace SCRecover.Core.ViewModels
             ClaimDetails newClaim = new ClaimDetails()      
             {
                 //Id = 12,
-                FullName = "Heelo",
-                DoB = "Heelo",
-                PolicyNum = "Heelo",
-                Date = "Heelo",
-                Time = "Heelo",
-                Location = "Heelo",
-                Type = "Heelo",
-                Injury = "Heelo",
-                Cmt = "Heelo"
+                FullName = _fullName.ToString(),
+                DoB = _doB.ToString(),
+                PolicyNum = _policyNum.ToString(),
+                Date = _date.ToString(),
+                Time = _time.ToString(),
+                Location = _location.ToString(),
+                Type = _selectedType.ToString(),
+                Injury = _selectedInjury.ToString(),
+                Cmt = _cmt.ToString()
                 //Bytes = _bytes
             };
 
             await _savedClaimDatabase.InsertClaim(newClaim);
         }
 
-        private readonly ISavedClaimsDatabase _savedClaimDatabase;
-        public MakeAClaimViewModel(ISavedClaimsDatabase saveClaimDatabase)
+        
+
+        public MakeAClaimViewModel(IMvxPictureChooserTask pictureChooserTask, ISavedClaimsDatabase saveClaimDatabase)
         {
+            _pictureChooserTask = pictureChooserTask;
             _savedClaimDatabase = saveClaimDatabase;
         }
-        
+
     }
 
     

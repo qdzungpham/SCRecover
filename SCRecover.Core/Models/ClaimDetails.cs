@@ -10,7 +10,7 @@ namespace SCRecover.Core.Models
     public class ClaimDetails
     {
         [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string FullName { get; set; }
         public string DoB { get; set; }
         public string PolicyNum { get; set; }

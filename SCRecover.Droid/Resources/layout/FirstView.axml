@@ -22,14 +22,14 @@
             p1:id="@+id/linearLayoutStatusBar"
             p1:background="#006863">
             <ImageButton
-                p1:src="@drawable/menu"
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
                 p1:layout_marginTop="7.0dp"
                 p1:layout_marginLeft="5.0dp"
-                p1:background="#006863"
-                p1:layout_weight="0.2" />
+                p1:layout_weight="0.2"
+                p1:src="@drawable/menu"
+                p1:background="#006863" />
             <ImageView
                 p1:src="@drawable/logo"
                 p1:layout_width="wrap_content"
@@ -64,22 +64,20 @@
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/buttonMakeAClaim"
-                    p1:drawableTop="@drawable/pencil"
                     p1:layout_weight="1"
                     p1:background="@drawable/homebutton"
                     p1:textColor="@android:color/white"
                     p1:textStyle="bold"
                     p1:textAllCaps="false"
-                    p1:fontFamily="open-sands"
-                    local:MvxBind=" Click GoCommand" />
+                    local:MvxBind=" Click GoCommand"
+                    p1:drawableTop="@drawable/pen" />
                 <Button
                     p1:text="Accident history"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button2"
-                    p1:drawableTop="@drawable/calender"
+                    p1:drawableTop="@drawable/history"
                     p1:layout_weight="1"
-                    p1:fontFamily="open-sands"
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
                     p1:textStyle="bold"
@@ -92,11 +90,10 @@
                     p1:drawableTop="@drawable/map"
                     p1:layout_weight="1"
                     p1:background="@drawable/homebutton"
-                    p1:fontFamily="open-sands"
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
                     p1:textStyle="bold"
-                    local:MvxBind="Click FindProviderGoCommand"/>
+                    local:MvxBind="Click FindProviderGoCommand" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="horizontal"
@@ -110,7 +107,7 @@
                     p1:layout_height="match_parent"
                     p1:id="@+id/button4"
                     p1:background="@drawable/homebutton"
-                    p1:drawableTop="@drawable/user"
+                    p1:drawableTop="@drawable/account_outline"
                     p1:layout_weight="1"
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
@@ -121,7 +118,7 @@
                     p1:layout_height="match_parent"
                     p1:id="@+id/button5"
                     p1:background="@drawable/homebutton"
-                    p1:drawableTop="@drawable/aid"
+                    p1:drawableTop="@drawable/hospital"
                     p1:layout_weight="1"
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"

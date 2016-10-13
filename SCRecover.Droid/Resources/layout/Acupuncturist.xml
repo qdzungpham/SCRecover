@@ -22,7 +22,7 @@
         p1:id="@+id/linearLayoutTopBar"
         p1:background="#006863">
       <ImageButton
-          p1:src="@drawable/back"
+          p1:src="@drawable/arrow_left"
           p1:layout_width="wrap_content"
           p1:layout_height="wrap_content"
           p1:id="@+id/imageButton1"

@@ -9,7 +9,7 @@ namespace SCRecover.Core.Models
 {
     public class ProviderDetails
     {
-        //[PrimaryKey, AutoIncrement]
+        [PrimaryKey, AutoIncrement]
         public string Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }

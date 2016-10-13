@@ -172,6 +172,7 @@
     <Compile Include="Bootstrap\PhoneCallPluginBootstrap.cs" />
     <Compile Include="Bootstrap\PictureChooserPluginBootstrap.cs" />
     <Compile Include="Database\AzureDatabase.cs" />
+    <Compile Include="Database\SqliteDroid.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="MainApplication.cs" />
@@ -232,30 +233,10 @@
     <AndroidResource Include="Resources\values\SplashStyle.xml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\drawable\logo.png" />
-    <AndroidResource Include="Resources\drawable\menu.png" />
     <AndroidResource Include="Resources\drawable\family.png" />
     <AndroidResource Include="Resources\drawable\homeButton.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\towtruck.png" />
-    <AndroidResource Include="Resources\drawable\user.png" />
-    <AndroidResource Include="Resources\drawable\calender.png" />
-    <AndroidResource Include="Resources\drawable\map.png" />
-    <AndroidResource Include="Resources\drawable\Pencil.png" />
-    <AndroidResource Include="Resources\drawable\phone.png" />
-    <AndroidResource Include="Resources\drawable\save.png" />
-    <AndroidResource Include="Resources\drawable\back.png" />
-    <AndroidResource Include="Resources\drawable\clock.png" />
-    <AndroidResource Include="Resources\drawable\checked.png" />
-    <AndroidResource Include="Resources\drawable\blankCircle.png" />
-    <AndroidResource Include="Resources\drawable\wheel.png" />
-    <AndroidResource Include="Resources\drawable\car.png" />
-    <AndroidResource Include="Resources\drawable\group.png" />
-    <AndroidResource Include="Resources\drawable\maker.png" />
-    <AndroidResource Include="Resources\drawable\multimedia.png" />
-    <AndroidResource Include="Resources\drawable\question.png" />
-    <AndroidResource Include="Resources\drawable\traffic1.png" />
-    <AndroidResource Include="Resources\drawable\user1.png" />
     <AndroidResource Include="Resources\drawable\contactUus.png" />
     <AndroidResource Include="Resources\drawable\btn_style.xml" />
     <AndroidResource Include="Resources\drawable\button_normal.xml" />
@@ -269,14 +250,21 @@
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\yellow_button.xml" />
     <AndroidResource Include="Resources\drawable\grey_button.xml" />
-    <AndroidResource Include="Resources\drawable\aid.png" />
-    <AndroidResource Include="Resources\drawable\dentist.png" />
-    <AndroidResource Include="Resources\drawable\hospital.png" />
-    <AndroidResource Include="Resources\drawable\massage.png" />
-    <AndroidResource Include="Resources\drawable\meditation.png" />
-    <AndroidResource Include="Resources\drawable\arrowright.png" />
     <AndroidResource Include="Resources\layout\Acupuncturist.xml" />
     <AndroidResource Include="Resources\layout\providerLayout.xml" />
+    <AndroidResource Include="Resources\drawable\arrow_left.xml" />
+    <AndroidResource Include="Resources\drawable\content_save.xml" />
+    <AndroidResource Include="Resources\drawable\menu.xml" />
+    <AndroidResource Include="Resources\drawable\pen.xml" />
+    <AndroidResource Include="Resources\drawable\map.xml" />
+    <AndroidResource Include="Resources\drawable\phone.xml" />
+    <AndroidResource Include="Resources\drawable\hospital.xml" />
+    <AndroidResource Include="Resources\drawable\history.xml" />
+    <AndroidResource Include="Resources\drawable\account_outline.xml" />
+    <AndroidResource Include="Resources\drawable\splash1.png" />
+    <AndroidResource Include="Resources\drawable\image_multiple.xml" />
+    <AndroidResource Include="Resources\drawable\camera.xml" />
+    <AndroidResource Include="Resources\drawable\phone1.xml" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

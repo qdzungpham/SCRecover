@@ -25,7 +25,7 @@ namespace SCRecover.Droid.Database
         public MobileServiceClient GetMobileServiceClient()
         {
             CurrentPlatform.Init();
-            azureDatabase = new MobileServiceClient("http://qutmadsem22016wednesday3.azurewebsites.net/");
+            azureDatabase = new MobileServiceClient("http://screcover.azurewebsites.net/");
             InitializeLocal();
             return azureDatabase;
 
@@ -33,7 +33,7 @@ namespace SCRecover.Droid.Database
 
         private void InitializeLocal()
         {
-            var sqliteFilename = "SavedClaimsSQLite.db3";
+            var sqliteFilename = "SCRecoverySQLite.db3";
             string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
             var path = Path.Combine(documentsPath, sqliteFilename);
             if (!File.Exists(path))
@@ -41,7 +41,7 @@ namespace SCRecover.Droid.Database
                 File.Create(path).Dispose();
             }
             var store = new MobileServiceSQLiteStore(path);
-            store.DefineTable<ClaimDetails>();
+            store.DefineTable<ProviderDetails>();
             azureDatabase.SyncContext.InitializeAsync(store);
         }
     }
