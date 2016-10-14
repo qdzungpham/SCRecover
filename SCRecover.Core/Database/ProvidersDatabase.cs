@@ -39,6 +39,14 @@ namespace SCRecover.Core.Database
             return theCollection;
         }
 
+        public async Task<ObservableCollection<ProviderDetails>> Filter(string type)
+        {
+            await SyncAsync(true);
+            ObservableCollection<ProviderDetails> theCollection = new ObservableCollection<ProviderDetails>();
+            theCollection = await azureSyncTable.Where(x => x.Type == type).ToCollectionAsync();
+            return theCollection;
+        }
+
         public async Task<int> InsertProvider(ObservableCollection<ProviderDetails> entities)
         {
             await SyncAsync(true);

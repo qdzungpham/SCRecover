@@ -16,15 +16,15 @@ namespace SCRecover.Droid.Views
         }
     }
 
-    [Activity(Label = "Acupuncturist")]
-    public class AcupuncturistView : MvxActivity
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
-            SetContentView(Resource.Layout.Acupuncturist);
+    //[Activity(Label = "Acupuncturist")]
+    //public class AcupuncturistView : MvxActivity
+    //{
+    //    protected override void OnCreate(Bundle bundle)
+    //    {
+    //        base.OnCreate(bundle);
+    //        SetContentView(Resource.Layout.Acupuncturist);
 
 
-        }
-    }
+    //    }
+    //}
 }

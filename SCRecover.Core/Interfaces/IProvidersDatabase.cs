@@ -8,6 +8,7 @@ namespace SCRecover.Core.Interfaces
     public interface IProvidersDatabase
     {
         Task<ObservableCollection<ProviderDetails>> GetAll();
+        Task<ObservableCollection<ProviderDetails>> Filter(string type);
         Task<int> InsertProvider(ObservableCollection<ProviderDetails> provider);
         Task<bool> CheckIfExists(ProviderDetails provider);
     }

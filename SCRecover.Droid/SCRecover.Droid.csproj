@@ -203,9 +203,6 @@
     <AndroidResource Include="Resources\layout\ContactUs.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FindMedicalProvider.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\ProviderMap.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -250,7 +247,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\yellow_button.xml" />
     <AndroidResource Include="Resources\drawable\grey_button.xml" />
-    <AndroidResource Include="Resources\layout\Acupuncturist.xml" />
+    <AndroidResource Include="Resources\layout\FindMedicalProvider.xml" />
     <AndroidResource Include="Resources\layout\providerLayout.xml" />
     <AndroidResource Include="Resources\drawable\arrow_left.xml" />
     <AndroidResource Include="Resources\drawable\content_save.xml" />

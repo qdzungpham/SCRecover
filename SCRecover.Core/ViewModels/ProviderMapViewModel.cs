@@ -1,7 +1,7 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Plugins.PhoneCall;
-
+using System;
 using System.Windows.Input;
 
 namespace SCRecover.Core.ViewModels
@@ -9,29 +9,17 @@ namespace SCRecover.Core.ViewModels
     public class ProviderMapViewModel
         : MvxViewModel
     {
-        
+        public double _lat;
+        public double _lng;
 
         private LocationDetails _provider;
         public LocationDetails Provider
         {
             get { return _provider; }
-            set { _provider = value;  RaisePropertyChanged(() => _provider); }
+            set { _provider = value;  RaisePropertyChanged(() => Provider); }
         }
 
-        public ProviderMapViewModel()
-        {
-            _provider = new LocationDetails()
-            {
-                Name = _providerName,
-                Address = _providerAddress,
-                PhoneNum = _providerPhoneNum,
-                Location = new Location()
-                {
-                    Lat = -27.477353,
-                    Lng = 153.028421
-                }
-            };
-        }
+       
 
         public string _providerName = "QUT Gardens Point Campus";
         public string ProviderName
@@ -54,8 +42,28 @@ namespace SCRecover.Core.ViewModels
             set { _providerPhoneNum = value; RaisePropertyChanged(() => ProviderPhoneNum); }
         }
 
+        public void Init(string name, string address, string phoneNum, string lat, string lng)
+        {
+            _providerName = name;
+            _providerAddress = address;
+            _providerPhoneNum = Int32.Parse(phoneNum);
+            _lat = Double.Parse(lat);
+            _lng = Double.Parse(lng);
 
+            _provider = new LocationDetails()
+            {
+                Name = _providerName,
+                Address = _providerAddress,
+                PhoneNum = _providerPhoneNum,
+                Location = new Location()
+                {
+                    Lat = _lat,
+                    Lng = _lng
+                }
+            };
+        }
 
+        
     }
 
     public class Location

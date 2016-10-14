@@ -465,65 +465,65 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f07000c
 			public const int auto = 2131165196;
 			
-			// aapt resource value: 0x7f070014
-			public const int button1 = 2131165204;
-			
-			// aapt resource value: 0x7f070037
-			public const int button2 = 2131165239;
-			
-			// aapt resource value: 0x7f070038
-			public const int button3 = 2131165240;
+			// aapt resource value: 0x7f07002f
+			public const int button1 = 2131165231;
 			
 			// aapt resource value: 0x7f070039
-			public const int button4 = 2131165241;
+			public const int button2 = 2131165241;
 			
 			// aapt resource value: 0x7f07003a
-			public const int button5 = 2131165242;
+			public const int button3 = 2131165242;
 			
 			// aapt resource value: 0x7f07003b
-			public const int button6 = 2131165243;
+			public const int button4 = 2131165243;
+			
+			// aapt resource value: 0x7f07003c
+			public const int button5 = 2131165244;
+			
+			// aapt resource value: 0x7f07003d
+			public const int button6 = 2131165245;
+			
+			// aapt resource value: 0x7f070052
+			public const int buttonClaim = 2131165266;
+			
+			// aapt resource value: 0x7f070046
+			public const int buttonDateDone = 2131165254;
+			
+			// aapt resource value: 0x7f070038
+			public const int buttonMakeAClaim = 2131165240;
 			
 			// aapt resource value: 0x7f070051
-			public const int buttonClaim = 2131165265;
+			public const int buttonSummary = 2131165265;
 			
-			// aapt resource value: 0x7f070044
-			public const int buttonDateDone = 2131165252;
-			
-			// aapt resource value: 0x7f070036
-			public const int buttonMakeAClaim = 2131165238;
-			
-			// aapt resource value: 0x7f070050
-			public const int buttonSummary = 2131165264;
-			
-			// aapt resource value: 0x7f070048
-			public const int buttonTimeDone = 2131165256;
+			// aapt resource value: 0x7f07004a
+			public const int buttonTimeDone = 2131165258;
 			
 			// aapt resource value: 0x7f07000d
 			public const int dark = 2131165197;
 			
+			// aapt resource value: 0x7f070047
+			public const int datePicker = 2131165255;
+			
+			// aapt resource value: 0x7f07004e
+			public const int editTextComments = 2131165262;
+			
 			// aapt resource value: 0x7f070045
-			public const int datePicker = 2131165253;
+			public const int editTextDate = 2131165253;
 			
-			// aapt resource value: 0x7f07004d
-			public const int editTextComments = 2131165261;
+			// aapt resource value: 0x7f070041
+			public const int editTextDoB = 2131165249;
 			
-			// aapt resource value: 0x7f070043
-			public const int editTextDate = 2131165251;
-			
-			// aapt resource value: 0x7f07003f
-			public const int editTextDoB = 2131165247;
-			
-			// aapt resource value: 0x7f07004a
-			public const int editTextLocation = 2131165258;
-			
-			// aapt resource value: 0x7f07003e
-			public const int editTextName = 2131165246;
+			// aapt resource value: 0x7f07004c
+			public const int editTextLocation = 2131165260;
 			
 			// aapt resource value: 0x7f070040
-			public const int editTextPolicyNum = 2131165248;
+			public const int editTextName = 2131165248;
 			
-			// aapt resource value: 0x7f070047
-			public const int editTextTime = 2131165255;
+			// aapt resource value: 0x7f070042
+			public const int editTextPolicyNum = 2131165250;
+			
+			// aapt resource value: 0x7f070049
+			public const int editTextTime = 2131165257;
 			
 			// aapt resource value: 0x7f070002
 			public const int hybrid = 2131165186;
@@ -534,14 +534,17 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f070012
 			public const int imageButton1 = 2131165202;
 			
-			// aapt resource value: 0x7f07003c
-			public const int imageButton2 = 2131165244;
+			// aapt resource value: 0x7f07003e
+			public const int imageButton2 = 2131165246;
 			
-			// aapt resource value: 0x7f07002e
-			public const int imageView1 = 2131165230;
+			// aapt resource value: 0x7f07002d
+			public const int imageView1 = 2131165229;
 			
 			// aapt resource value: 0x7f07000e
 			public const int light = 2131165198;
+			
+			// aapt resource value: 0x7f070035
+			public const int linear2 = 2131165237;
 			
 			// aapt resource value: 0x7f070010
 			public const int linearLayout1 = 2131165200;
@@ -549,17 +552,17 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f070034
 			public const int linearLayout10 = 2131165236;
 			
+			// aapt resource value: 0x7f070014
+			public const int linearLayout2 = 2131165204;
+			
 			// aapt resource value: 0x7f070015
-			public const int linearLayout2 = 2131165205;
+			public const int linearLayout3 = 2131165205;
 			
-			// aapt resource value: 0x7f070016
-			public const int linearLayout3 = 2131165206;
+			// aapt resource value: 0x7f07001d
+			public const int linearLayout4 = 2131165213;
 			
-			// aapt resource value: 0x7f07001e
-			public const int linearLayout4 = 2131165214;
-			
-			// aapt resource value: 0x7f07002c
-			public const int linearLayout5 = 2131165228;
+			// aapt resource value: 0x7f07002b
+			public const int linearLayout5 = 2131165227;
 			
 			// aapt resource value: 0x7f070030
 			public const int linearLayout6 = 2131165232;
@@ -573,35 +576,35 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f070033
 			public const int linearLayout9 = 2131165235;
 			
+			// aapt resource value: 0x7f070050
+			public const int linearLayoutButtons = 2131165264;
+			
+			// aapt resource value: 0x7f070043
+			public const int linearLayoutClaimDetails = 2131165251;
+			
+			// aapt resource value: 0x7f070044
+			public const int linearLayoutDate = 2131165252;
+			
+			// aapt resource value: 0x7f07002e
+			public const int linearLayoutGeneral = 2131165230;
+			
+			// aapt resource value: 0x7f07003f
+			public const int linearLayoutPersonalDetails = 2131165247;
+			
 			// aapt resource value: 0x7f07004f
-			public const int linearLayoutButtons = 2131165263;
+			public const int linearLayoutPhotos = 2131165263;
 			
-			// aapt resource value: 0x7f070041
-			public const int linearLayoutClaimDetails = 2131165249;
+			// aapt resource value: 0x7f070037
+			public const int linearLayoutStatusBar = 2131165239;
 			
-			// aapt resource value: 0x7f070042
-			public const int linearLayoutDate = 2131165250;
-			
-			// aapt resource value: 0x7f07002f
-			public const int linearLayoutGeneral = 2131165231;
-			
-			// aapt resource value: 0x7f07003d
-			public const int linearLayoutPersonalDetails = 2131165245;
-			
-			// aapt resource value: 0x7f07004e
-			public const int linearLayoutPhotos = 2131165262;
-			
-			// aapt resource value: 0x7f070035
-			public const int linearLayoutStatusBar = 2131165237;
-			
-			// aapt resource value: 0x7f070046
-			public const int linearLayoutTime = 2131165254;
+			// aapt resource value: 0x7f070048
+			public const int linearLayoutTime = 2131165256;
 			
 			// aapt resource value: 0x7f070011
 			public const int linearLayoutTopBar = 2131165201;
 			
-			// aapt resource value: 0x7f070052
-			public const int map = 2131165266;
+			// aapt resource value: 0x7f070053
+			public const int map = 2131165267;
 			
 			// aapt resource value: 0x7f070003
 			public const int none = 2131165187;
@@ -615,11 +618,11 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f070005
 			public const int satellite = 2131165189;
 			
-			// aapt resource value: 0x7f07004b
-			public const int spinner1 = 2131165259;
+			// aapt resource value: 0x7f07004d
+			public const int spinner1 = 2131165261;
 			
-			// aapt resource value: 0x7f07004c
-			public const int spinner2 = 2131165260;
+			// aapt resource value: 0x7f070036
+			public const int spinner2 = 2131165238;
 			
 			// aapt resource value: 0x7f07000a
 			public const int standard = 2131165194;
@@ -630,71 +633,71 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f070013
 			public const int textView1 = 2131165203;
 			
+			// aapt resource value: 0x7f07001f
+			public const int textView10 = 2131165215;
+			
 			// aapt resource value: 0x7f070020
-			public const int textView10 = 2131165216;
+			public const int textView11 = 2131165216;
 			
 			// aapt resource value: 0x7f070021
-			public const int textView11 = 2131165217;
+			public const int textView12 = 2131165217;
 			
 			// aapt resource value: 0x7f070022
-			public const int textView12 = 2131165218;
+			public const int textView13 = 2131165218;
 			
 			// aapt resource value: 0x7f070023
-			public const int textView13 = 2131165219;
+			public const int textView14 = 2131165219;
 			
 			// aapt resource value: 0x7f070024
-			public const int textView14 = 2131165220;
+			public const int textView15 = 2131165220;
 			
 			// aapt resource value: 0x7f070025
-			public const int textView15 = 2131165221;
+			public const int textView16 = 2131165221;
 			
 			// aapt resource value: 0x7f070026
-			public const int textView16 = 2131165222;
+			public const int textView17 = 2131165222;
 			
 			// aapt resource value: 0x7f070027
-			public const int textView17 = 2131165223;
+			public const int textView18 = 2131165223;
 			
 			// aapt resource value: 0x7f070028
-			public const int textView18 = 2131165224;
+			public const int textView19 = 2131165224;
+			
+			// aapt resource value: 0x7f070016
+			public const int textView2 = 2131165206;
 			
 			// aapt resource value: 0x7f070029
-			public const int textView19 = 2131165225;
-			
-			// aapt resource value: 0x7f070017
-			public const int textView2 = 2131165207;
+			public const int textView20 = 2131165225;
 			
 			// aapt resource value: 0x7f07002a
-			public const int textView20 = 2131165226;
+			public const int textView21 = 2131165226;
 			
-			// aapt resource value: 0x7f07002b
-			public const int textView21 = 2131165227;
+			// aapt resource value: 0x7f07002c
+			public const int textView22 = 2131165228;
 			
-			// aapt resource value: 0x7f07002d
-			public const int textView22 = 2131165229;
+			// aapt resource value: 0x7f070017
+			public const int textView3 = 2131165207;
 			
 			// aapt resource value: 0x7f070018
-			public const int textView3 = 2131165208;
+			public const int textView4 = 2131165208;
 			
 			// aapt resource value: 0x7f070019
-			public const int textView4 = 2131165209;
+			public const int textView5 = 2131165209;
 			
 			// aapt resource value: 0x7f07001a
-			public const int textView5 = 2131165210;
+			public const int textView6 = 2131165210;
 			
 			// aapt resource value: 0x7f07001b
-			public const int textView6 = 2131165211;
+			public const int textView7 = 2131165211;
 			
 			// aapt resource value: 0x7f07001c
-			public const int textView7 = 2131165212;
+			public const int textView8 = 2131165212;
 			
-			// aapt resource value: 0x7f07001d
-			public const int textView8 = 2131165213;
+			// aapt resource value: 0x7f07001e
+			public const int textView9 = 2131165214;
 			
-			// aapt resource value: 0x7f07001f
-			public const int textView9 = 2131165215;
-			
-			// aapt resource value: 0x7f070049
-			public const int timePicker = 2131165257;
+			// aapt resource value: 0x7f07004b
+			public const int timePicker = 2131165259;
 			
 			// aapt resource value: 0x7f07000b
 			public const int wide = 2131165195;
@@ -729,31 +732,28 @@ namespace SCRecover.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Acupuncturist = 2130903040;
+			public const int ClaimSummary = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int ClaimSummary = 2130903041;
+			public const int ContactUs = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int ContactUs = 2130903042;
+			public const int FindMedicalProvider = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int FindMedicalProvider = 2130903043;
+			public const int FirstView = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int FirstView = 2130903044;
+			public const int MakeAClaim = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int MakeAClaim = 2130903045;
+			public const int providerLayout = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int providerLayout = 2130903046;
+			public const int ProviderMap = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int ProviderMap = 2130903047;
-			
-			// aapt resource value: 0x7f030008
-			public const int SplashScreen = 2130903048;
+			public const int SplashScreen = 2130903047;
 			
 			static Layout()
 			{
