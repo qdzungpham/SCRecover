@@ -26,10 +26,9 @@
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
-                p1:background="#006863"
-                p1:layout_weight="0.2"
-                p1:layout_marginTop="7dp"
-                p1:layout_marginBottom="6dp" />
+                p1:background="@drawable/nav_btn"
+                p1:layout_weight="0.2" 
+                local:MvxBind="Click NavBackCommand"/>
             <TextView
                 p1:text="Make a Claim"
                 p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -48,7 +47,7 @@
                 p1:layout_weight="0.2"
                 local:MvxBind="Click SaveClaimCommand"
                 p1:layout_gravity="center"
-                p1:background="#006863" />
+                p1:background="@drawable/nav_btn" />
         </LinearLayout>
         <ScrollView
             p1:layout_width="fill_parent"
@@ -57,14 +56,17 @@
                 p1:orientation="vertical"
                 p1:layout_width="match_parent"
                 p1:layout_height="match_parent"
-                p1:id="@+id/linearLayout2"
-                p1:padding="5dp">
+                p1:id="@+id/linearLayout2">
                 <LinearLayout
                     p1:orientation="vertical"
                     p1:layout_width="match_parent"
                     p1:layout_height="wrap_content"
                     p1:id="@+id/linearLayoutPersonalDetails"
-                    p1:layout_margin="10px">
+                    p1:background="@drawable/bottom_border"
+                    p1:paddingTop="10dp"
+                    p1:paddingRight="10dp"
+                    p1:paddingLeft="10dp"
+                    p1:paddingBottom="5dp">
                     <TextView
                         p1:text="PERSONAL DETAILS"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -119,7 +121,11 @@
                     p1:layout_width="match_parent"
                     p1:layout_height="wrap_content"
                     p1:id="@+id/linearLayoutClaimDetails"
-                    p1:layout_margin="10px">
+                    p1:background="@drawable/bottom_border"
+                    p1:paddingBottom="5dp"
+                    p1:paddingLeft="10dp"
+                    p1:paddingRight="10dp"
+                    p1:paddingTop="5dp">
                     <TextView
                         p1:text="CLAIM DETAILS"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -253,7 +259,10 @@
                     p1:layout_width="match_parent"
                     p1:layout_height="wrap_content"
                     p1:id="@+id/linearLayoutPhotos"
-                    p1:layout_marginBottom="10dp">
+                    p1:paddingBottom="5dp"
+                    p1:paddingTop="10dp"
+                    p1:paddingRight="10dp"
+                    p1:paddingLeft="10dp">
                     <TextView
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
@@ -271,29 +280,29 @@
                         <Button
                             p1:text="Take photo"
                             p1:layout_width="match_parent"
-                            p1:layout_height="match_parent"
+                            p1:layout_height="wrap_content"
                             p1:id="@+id/button1"
                             p1:background="@drawable/blue_button"
                             p1:layout_weight="1"
-                            p1:layout_marginRight="10dp"
                             p1:textColor="@android:color/white"
                             p1:textStyle="bold"
                             p1:fontFamily="open-sands"
                             local:MvxBind="Click TakePictureCommand"
-                            p1:drawableLeft="@drawable/camera" />
+                            p1:drawableLeft="@drawable/camera"
+                            p1:layout_marginRight="5dp" />
                         <Button
                             p1:text="From library"
                             p1:layout_width="match_parent"
-                            p1:layout_height="match_parent"
+                            p1:layout_height="wrap_content"
                             p1:id="@+id/button2"
                             p1:layout_weight="1"
                             p1:background="@drawable/blue_button"
-                            p1:layout_marginLeft="10dp"
                             p1:textColor="@android:color/white"
                             p1:textStyle="bold"
                             p1:fontFamily="open-sands"
                             local:MvxBind="Click ChoosePictureCommand"
-                            p1:drawableLeft="@drawable/image_multiple" />
+                            p1:drawableLeft="@drawable/image_multiple"
+                            p1:layout_marginLeft="5dp" />
                     </LinearLayout>
                     <ImageView
                         p1:layout_width="fill_parent"
@@ -305,7 +314,8 @@
                     p1:orientation="vertical"
                     p1:layout_width="match_parent"
                     p1:layout_height="wrap_content"
-                    p1:id="@+id/linearLayoutButtons">
+                    p1:id="@+id/linearLayoutButtons"
+                    p1:padding="5dp">
                     <Button
                         p1:text="view summary"
                         p1:layout_width="match_parent"
@@ -324,7 +334,8 @@
                         p1:layout_weight="1"
                         p1:background="@drawable/yellow_button"
                         p1:textStyle="bold"
-                        p1:fontFamily="open-sands" />
+                        p1:fontFamily="open-sands"
+                        local:MvxBind="Click SubmitClaimCommand" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

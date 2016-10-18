@@ -20,6 +20,7 @@ namespace SCRecover.Core.Models
         public string Type { get; set; }
         public string Injury { get; set; }
         public string Cmt { get; set; }
-        //public byte[] Bytes { get; set; }
+        public string Extra { get; set; }
+        public byte[] Bytes { get; set; }
     }
 }

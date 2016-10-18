@@ -6,11 +6,19 @@ namespace SCRecover.Core.ViewModels
     public class FirstViewModel 
         : MvxViewModel
     {
-        public ICommand GoCommand
+        public ICommand MakeAClaimGoCommand
         {
             get
             {
                 return new MvxCommand(() => ShowViewModel<MakeAClaimViewModel>());
+            }
+        }
+
+        public ICommand AccidentHistoryGoCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<AccidentHistoryViewModel>());
             }
         }
 

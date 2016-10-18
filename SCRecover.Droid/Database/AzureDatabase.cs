@@ -25,7 +25,7 @@ namespace SCRecover.Droid.Database
         public MobileServiceClient GetMobileServiceClient()
         {
             CurrentPlatform.Init();
-            azureDatabase = new MobileServiceClient("http://screcover.azurewebsites.net/");
+            azureDatabase = new MobileServiceClient("http://suncorphealth.azurewebsites.net");
             InitializeLocal();
             return azureDatabase;
 
@@ -41,7 +41,7 @@ namespace SCRecover.Droid.Database
                 File.Create(path).Dispose();
             }
             var store = new MobileServiceSQLiteStore(path);
-            store.DefineTable<ProviderDetails>();
+            store.DefineTable<ClaimDetails>();
             azureDatabase.SyncContext.InitializeAsync(store);
         }
     }

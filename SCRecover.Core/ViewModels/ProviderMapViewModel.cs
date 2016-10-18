@@ -9,6 +9,13 @@ namespace SCRecover.Core.ViewModels
     public class ProviderMapViewModel
         : MvxViewModel
     {
+        public ICommand NavBackCommand
+        {
+            get
+            {
+                return new MvxCommand(() => Close(this));
+            }
+        }
         public double _lat;
         public double _lng;
 
@@ -40,6 +47,17 @@ namespace SCRecover.Core.ViewModels
         {
             get { return _providerPhoneNum; }
             set { _providerPhoneNum = value; RaisePropertyChanged(() => ProviderPhoneNum); }
+        }
+
+        public ICommand CallCommand
+        {
+            get
+            {
+                return new MvxCommand(() => {
+                    MvvmCross.Plugins.PhoneCall.PluginLoader.Instance.EnsureLoaded();
+                    Mvx.Resolve<IMvxPhoneCallTask>().MakePhoneCall("General enquiries", _providerPhoneNum.ToString());
+                });
+            }
         }
 
         public void Init(string name, string address, string phoneNum, string lat, string lng)

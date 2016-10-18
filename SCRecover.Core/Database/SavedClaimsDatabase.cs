@@ -33,6 +33,13 @@ namespace SCRecover.Core.Database
             return claims;
         }
 
+        public async Task<ObservableCollection<ClaimDetails>> Filter(string extra)
+        {
+            await SyncAsync(true);
+            ObservableCollection<ClaimDetails> theCollection = new ObservableCollection<ClaimDetails>();
+            theCollection = await azureSyncTable.Where(x => x.Extra == extra).OrderByDescending(x => x.Date).ToCollectionAsync();
+            return theCollection;
+        }
         public async Task<int> InsertClaim(ClaimDetails claim)
         {
             await SyncAsync(true);

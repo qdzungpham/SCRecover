@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    p1:orientation="horizontal"
+    p1:layout_width="match_parent"
+    p1:layout_height="wrap_content"
+    p1:padding="5dp">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:layout_weight="1">
+        <TextView
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            local:MvxBind="Text Name" />
+        <TextView
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            local:MvxBind="Text Address" />
+        <TextView
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            local:MvxBind="Text PhoneNum" />
+    </LinearLayout>
+    <ImageView
+        p1:src="@drawable/chevron_right"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:layout_weight="5"
+        p1:layout_gravity="center" />
+</LinearLayout>

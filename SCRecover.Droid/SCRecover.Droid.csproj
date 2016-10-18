@@ -180,6 +180,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
+    <Compile Include="Views\AccidentHistory.cs" />
     <Compile Include="Views\ClaimSummaryView.cs" />
     <Compile Include="Views\ContactUsView.cs" />
     <Compile Include="Views\FindProviderView.cs" />
@@ -207,6 +208,18 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ClaimSummary.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AccidentHistory.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\savedClaimLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\submittedClaimLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\providerLayout1.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -247,8 +260,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\yellow_button.xml" />
     <AndroidResource Include="Resources\drawable\grey_button.xml" />
-    <AndroidResource Include="Resources\layout\FindMedicalProvider.xml" />
-    <AndroidResource Include="Resources\layout\providerLayout.xml" />
+    <AndroidResource Include="Resources\layout\FindMedicalProvider.axml" />
     <AndroidResource Include="Resources\drawable\arrow_left.xml" />
     <AndroidResource Include="Resources\drawable\content_save.xml" />
     <AndroidResource Include="Resources\drawable\menu.xml" />
@@ -262,6 +274,17 @@
     <AndroidResource Include="Resources\drawable\image_multiple.xml" />
     <AndroidResource Include="Resources\drawable\camera.xml" />
     <AndroidResource Include="Resources\drawable\phone1.xml" />
+    <AndroidResource Include="Resources\drawable\file_document.xml" />
+    <AndroidResource Include="Resources\drawable\plus.xml" />
+    <AndroidResource Include="Resources\drawable\note_multiple.xml" />
+    <AndroidResource Include="Resources\drawable\google_maps.xml" />
+    <AndroidResource Include="Resources\drawable\file_check.xml" />
+    <AndroidResource Include="Resources\drawable\chevron_right.xml" />
+    <AndroidResource Include="Resources\drawable\phone2.xml" />
+    <AndroidResource Include="Resources\drawable\map_marker.xml" />
+    <AndroidResource Include="Resources\drawable\bottom_border.xml" />
+    <AndroidResource Include="Resources\drawable\nav_btn.xml" />
+    <AndroidResource Include="Resources\drawable\logo1.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

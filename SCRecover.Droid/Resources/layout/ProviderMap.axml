@@ -26,10 +26,9 @@
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
-                p1:background="#006863"
-                p1:layout_weight="0.2"
-                p1:layout_marginTop="7dp"
-                p1:layout_marginBottom="6dp" />
+                p1:background="@drawable/nav_btn"
+                p1:layout_weight="0.2" 
+          local:MvxBind="Click NavBackCommand"/>
             <TextView
                 p1:text="Find Medical Provider"
                 p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -51,34 +50,47 @@
         <LinearLayout
             p1:orientation="vertical"
             p1:layout_width="match_parent"
-            p1:layout_height="match_parent"
+            p1:layout_height="wrap_content"
             p1:id="@+id/linearLayout2"
-            p1:layout_weight="4">
+            p1:paddingBottom="5dp"
+            p1:paddingLeft="10dp"
+            p1:paddingRight="10dp"
+            p1:paddingTop="5dp">
             <TextView
                 p1:text="Text"
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/textView2"
-                local:MvxBind="Text ProviderName" />
+                local:MvxBind="Text ProviderName"
+                p1:textStyle="bold"
+                p1:layout_marginBottom="5dp" />
             <TextView
                 p1:text="Small Text"
                 p1:textAppearance="?android:attr/textAppearanceSmall"
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/textView3"
-                local:MvxBind="Text ProviderAddress" />
+                local:MvxBind="Text ProviderAddress"
+                p1:drawableLeft="@drawable/map_marker"
+                p1:drawablePadding="5dp"
+                p1:layout_marginBottom="5dp" />
             <TextView
                 p1:text="Small Text"
                 p1:textAppearance="?android:attr/textAppearanceSmall"
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/textView4"
-                local:MvxBind="Text ProviderPhoneNum" />
+                local:MvxBind="Text ProviderPhoneNum"
+                p1:drawableLeft="@drawable/phone2"
+                p1:drawablePadding="5dp"
+                p1:layout_marginBottom="5dp" />
             <Button
-                p1:text="Button"
+                p1:text="CALL US"
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
-                p1:id="@+id/button1" />
+                p1:id="@+id/button1"
+                p1:background="@drawable/yellow_button"
+                local:MvxBind="Click CallCommand" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

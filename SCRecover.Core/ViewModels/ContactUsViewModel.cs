@@ -8,7 +8,13 @@ namespace SCRecover.Core.ViewModels
     public class ContactUsViewModel
         : MvxViewModel
     {
-
+        public ICommand NavBackCommand
+        {
+            get
+            {
+                return new MvxCommand(() => Close(this));
+            }
+        }
         public ICommand CallGeneralCommand
         {
             get

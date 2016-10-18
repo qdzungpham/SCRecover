@@ -11,8 +11,9 @@ namespace SCRecover.Core.Interfaces
     public interface ISavedClaimsDatabase
     {
         Task<IEnumerable<ClaimDetails>> GetSavedClaims();
-        
-        
+        Task<ObservableCollection<ClaimDetails>> Filter(string type);
+
+
         Task<int> InsertClaim(ClaimDetails newClaim);
     }
     

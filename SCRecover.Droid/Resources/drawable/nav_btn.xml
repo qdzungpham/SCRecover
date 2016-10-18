@@ -17,7 +17,7 @@
     </shape>
   </item>
   <item android:id="@android:id/mask">
-    <shape>
+    <shape android:shape="oval">
       <solid android:color="?android:colorAccent" />
     </shape>
   </item>

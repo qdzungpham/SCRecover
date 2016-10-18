@@ -1,6 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
 using System.Linq;
-
+using System.Windows.Input;
 
 namespace SCRecover.Core.ViewModels
 {
@@ -161,8 +161,14 @@ namespace SCRecover.Core.ViewModels
             _cmt = cmt;
             _bytes = bytes;
         }
-        
 
+        public ICommand NavBackCommand
+        {
+            get
+            {
+                return new MvxCommand(() => Close(this));
+            }
+        }
 
     }
 }

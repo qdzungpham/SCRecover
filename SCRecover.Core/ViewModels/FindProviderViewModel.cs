@@ -14,25 +14,19 @@ namespace SCRecover.Core.ViewModels
     public class FindProviderViewModel
         : MvxViewModel
     {
-        public ICommand MapViewCommand
+        public ICommand NavBackCommand
         {
             get
             {
-                return new MvxCommand(() => ShowViewModel<ProviderMapViewModel>());
+                return new MvxCommand(() => Close(this));
             }
         }
+        
 
-        private readonly IProvidersDatabase _providerDatabase;
-
-        public FindProviderViewModel(/*IProvidersDatabase providerDatabase*/)
+        public FindProviderViewModel()
         {
-            //_providerDatabase = providerDatabase;
-            //if (this.Providers == null || this.Providers.Count == 0)
-            //{
-            //    PopulateProviders();
-            //}
-            //LoadProviders();
-            PopulateProvidersLocal();
+           
+            LoadProviders(); 
         }
 
         private ObservableCollection<ProviderDetails> _providers;
@@ -40,34 +34,6 @@ namespace SCRecover.Core.ViewModels
         {
             get { return _providers; }
             set { if (_providers != value) { _providers = value; RaisePropertyChanged(() => Providers); } }
-        }
-
-        public void PopulateProviders()
-        {
-            ObservableCollection<ProviderDetails> newProviders = new ObservableCollection<ProviderDetails>();
-            newProviders.Add(new ProviderDetails() { Name = "Mrs Anjeleen Koklas", Address = "586 Stanley St, Woolloongabba QLD 4102", Type = "Acupuncturist", Lat = "-27.485337", Lng = "153.029057", PhoneNum = "0738461222" });
-            newProviders.Add(new ProviderDetails() { Name = "Dr Miki Humphrey", Address = "300 Elizabeth St, Brisbane City QLD 4000", Type = "Chiropractor", Lat = "-27.467840", Lng = "153.029038", PhoneNum = "0424785699" });
-
-            _providerDatabase.InsertProvider(newProviders);
-        }
-
-        public void PopulateProvidersLocal()
-        {
-            ObservableCollection<ProviderDetails> newProviders = new ObservableCollection<ProviderDetails>();
-            newProviders.Add(new ProviderDetails() { Name = "Mrs Anjeleen Koklas", Address = "586 Stanley St, Woolloongabba QLD 4102", Type = "Acupuncturist", Lat = "-27.485337", Lng = "153.029057", PhoneNum = "0738461222" });
-            newProviders.Add(new ProviderDetails() { Name = "Dr Miki Humphrey", Address = "300 Elizabeth St, Brisbane City QLD 4000", Type = "Chiropractor", Lat = "-27.467840", Lng = "153.029038", PhoneNum = "0424785699" });
-            Providers = newProviders;
-        }
-        public async void LoadProviders()
-        {
-            this.Providers = await _providerDatabase.Filter(_selectedType.ToString());
-
-            //if (this.Providers == null || this.Providers.Count == 0)
-            //{
-            //    PopulateProviders();
-            //    this.Providers = await _providerDatabase.Filter(_selectedType.ToString());
-            //}
-
         }
 
         public class Thing
@@ -129,7 +95,7 @@ namespace SCRecover.Core.ViewModels
             set
             {
                 _selectedType = value; RaisePropertyChanged(() => SelectedType);
-                //LoadProviders();
+                LoadProviders();
                 RaisePropertyChanged(() => Providers);
             }
         }
@@ -148,6 +114,35 @@ namespace SCRecover.Core.ViewModels
 
                 }));
             }
+        }
+
+        public void LoadProviders()
+        {
+            if (_selectedType.ToString() == "Acupuncturist")
+            {
+                Acupuncturist();
+            } else if (_selectedType.ToString() == "Chiropractor")
+            {
+                Chiropractor();
+            }
+        }
+
+        public void Acupuncturist()
+        {
+            ObservableCollection<ProviderDetails> newProviders = new ObservableCollection<ProviderDetails>();
+            newProviders.Add(new ProviderDetails() { Name = "Mrs Anjeleen Koklas", Address = "586 Stanley St, Woolloongabba QLD 4102", Type = "Acupuncturist", Lat = "-27.485337", Lng = "153.029057", PhoneNum = "0738461222" });
+            newProviders.Add(new ProviderDetails() { Name = "Mrs Gavin Scott", Address = "61 Petrie Terrace, Brisbane City QLD 4000", Type = "Acupuncturist", Lat = "-27.465533", Lng = "153.013358", PhoneNum = "0733670333" });
+
+            Providers = newProviders;
+        }
+
+        public void Chiropractor()
+        {
+            ObservableCollection<ProviderDetails> newProviders = new ObservableCollection<ProviderDetails>();
+            
+            newProviders.Add(new ProviderDetails() { Name = "Dr Miki Humphrey", Address = "300 Elizabeth St, Brisbane City QLD 4000", Type = "Chiropractor", Lat = "-27.467840", Lng = "153.029038", PhoneNum = "0424785699" });
+
+            Providers = newProviders;
         }
 
 

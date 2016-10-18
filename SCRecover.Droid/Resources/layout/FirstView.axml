@@ -25,19 +25,18 @@
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
-                p1:layout_marginTop="7.0dp"
-                p1:layout_marginLeft="5.0dp"
-                p1:layout_weight="0.2"
+                p1:layout_weight="0.1"
                 p1:src="@drawable/menu"
-                p1:background="#006863" />
+                p1:background="@drawable/nav_btn" />
             <ImageView
-                p1:src="@drawable/logo"
-                p1:layout_width="wrap_content"
-                p1:layout_height="wrap_content"
+                p1:src="@drawable/logo1"
+                p1:layout_width="match_parent"
+                p1:layout_height="35dp"
                 p1:id="@+id/imageView1"
                 p1:layout_weight="2"
                 p1:layout_marginLeft="0.0dp"
-                p1:layout_marginRight="47.0dp" />
+                p1:layout_gravity="center"
+                p1:layout_marginRight="40dp" />
         </LinearLayout>
         <LinearLayout
             p1:orientation="vertical"
@@ -69,7 +68,7 @@
                     p1:textColor="@android:color/white"
                     p1:textStyle="bold"
                     p1:textAllCaps="false"
-                    local:MvxBind=" Click GoCommand"
+                    local:MvxBind=" Click MakeAClaimGoCommand"
                     p1:drawableTop="@drawable/pen" />
                 <Button
                     p1:text="Accident history"
@@ -81,13 +80,14 @@
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
                     p1:textStyle="bold"
-                    p1:background="@drawable/homebutton" />
+                    p1:background="@drawable/homebutton"
+                    local:MvxBind=" Click AccidentHistoryGoCommand" />
                 <Button
                     p1:text="Find medical provider"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button3"
-                    p1:drawableTop="@drawable/map"
+                    p1:drawableTop="@drawable/google_maps"
                     p1:layout_weight="1"
                     p1:background="@drawable/homebutton"
                     p1:textColor="@android:color/white"
