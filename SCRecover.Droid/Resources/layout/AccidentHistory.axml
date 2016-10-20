@@ -27,7 +27,6 @@
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
                 p1:background="@drawable/nav_btn"
-                p1:layout_weight="0.2"
                 local:MvxBind="Click NavBackCommand" />
             <TextView
                 p1:text="Accident History"
@@ -44,7 +43,6 @@
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton2"
-                p1:layout_weight="0.2"
                 local:MvxBind="Click AddClaimCommand"
                 p1:layout_gravity="center"
                 p1:background="@drawable/nav_btn" />

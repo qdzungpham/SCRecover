@@ -25,8 +25,7 @@
     </LinearLayout>
     <ImageView
         p1:src="@drawable/chevron_right"
-        p1:layout_width="match_parent"
+        p1:layout_width="wrap_content"
         p1:layout_height="wrap_content"
-        p1:layout_weight="5"
         p1:layout_gravity="center" />
 </LinearLayout>

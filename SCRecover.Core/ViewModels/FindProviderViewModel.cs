@@ -124,7 +124,7 @@ namespace SCRecover.Core.ViewModels
             } else if (_selectedType.ToString() == "Chiropractor")
             {
                 Chiropractor();
-            }
+            } 
         }
 
         public void Acupuncturist()

@@ -2,6 +2,7 @@ using Android.App;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
+using Java.Lang;
 using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Droid.Views;
 using System;
@@ -22,6 +23,8 @@ namespace SCRecover.Droid.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.MakeAClaim);
+
+            #region DatePicker and TimePicker
             _datePicker = FindViewById<MvxDatePicker>(Resource.Id.datePicker);
             _editTextDate = FindViewById<EditText>(Resource.Id.editTextDate);
             _buttonDateDone = FindViewById<Button>(Resource.Id.buttonDateDone);
@@ -56,9 +59,14 @@ namespace SCRecover.Droid.Views
                 _buttonTimeDone.Visibility = ViewStates.Gone;
             };
 
+            #endregion
 
+      
+            
+
+         
         }
 
-        
+
     }
 }

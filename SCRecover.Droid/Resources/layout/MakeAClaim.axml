@@ -27,8 +27,7 @@
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
                 p1:background="@drawable/nav_btn"
-                p1:layout_weight="0.2" 
-                local:MvxBind="Click NavBackCommand"/>
+                local:MvxBind="Click NavBackCommand" />
             <TextView
                 p1:text="Make a Claim"
                 p1:textAppearance="?android:attr/textAppearanceMedium"
@@ -43,8 +42,7 @@
                 p1:src="@drawable/content_save"
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
-                p1:id="@+id/imageButton2"
-                p1:layout_weight="0.2"
+                p1:id="@+id/saveClaimBtn"
                 local:MvxBind="Click SaveClaimCommand"
                 p1:layout_gravity="center"
                 p1:background="@drawable/nav_btn" />
@@ -77,7 +75,7 @@
                         p1:textStyle="bold" />
                     <TextView
                         p1:text="Name"
-                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView5"
@@ -90,7 +88,7 @@
                         local:MvxBind="Text FullName" />
                     <TextView
                         p1:text="Date of Birth"
-                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView6"
@@ -103,7 +101,7 @@
                         local:MvxBind="Text DateOfBirth" />
                     <TextView
                         p1:text="Policy Number"
-                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView7" />
@@ -137,7 +135,7 @@
                         p1:textStyle="bold" />
                     <TextView
                         p1:text="Date"
-                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView8"
@@ -170,7 +168,7 @@
                         p1:id="@+id/datePicker" />
                     <TextView
                         p1:text="Time"
-                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView9"
@@ -203,7 +201,7 @@
                         p1:id="@+id/timePicker" />
                     <TextView
                         p1:text="Location"
-                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView10"
@@ -216,7 +214,7 @@
                         local:MvxBind="Text Location" />
                     <TextView
                         p1:text="Accident Type"
-                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView11"
@@ -228,7 +226,7 @@
                         local:MvxBind="ItemsSource Types;SelectedItem SelectedType" />
                     <TextView
                         p1:text="Specified Injury"
-                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView13"
@@ -240,7 +238,7 @@
                         local:MvxBind="ItemsSource Injuries;SelectedItem SelectedInjury" />
                     <TextView
                         p1:text="Comments"
-                        p1:textAppearance="?android:attr/textAppearanceMedium"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView12"

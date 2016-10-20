@@ -12,6 +12,7 @@ namespace SCRecover.Core.ViewModels
         : MvxViewModel
     {
         private readonly ISavedClaimsDatabase _database;
+        private readonly IProgressDialogService _progressDialog;
 
         private ObservableCollection<ClaimDetails> _savedClaims;
         public ObservableCollection<ClaimDetails> SavedClaims
@@ -28,8 +29,10 @@ namespace SCRecover.Core.ViewModels
         }
         public async void LoadClaims()
         {
+            await _progressDialog.Show("Loading...");
             SavedClaims = await _database.Filter("saved");
             SubmittedClaims = await _database.Filter("submitted");
+            await _progressDialog.Dismiss();
         }
         public ICommand SelectSavedClaimCommand
         {
@@ -87,9 +90,10 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
-        public AccidentHistoryViewModel(ISavedClaimsDatabase database)
+        public AccidentHistoryViewModel(ISavedClaimsDatabase database, IProgressDialogService progressDialog)
         {
             _database = database;
+            _progressDialog = progressDialog;
             LoadClaims();
         }
 

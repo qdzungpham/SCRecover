@@ -7,6 +7,7 @@ using SCRecover.Core.Interfaces;
 using SCRecover.Droid.Database;
 using Microsoft.WindowsAzure.MobileServices;
 using SCRecover.Core.Database;
+using SCRecover.Droid.Services;
 
 namespace SCRecover.Droid
 {
@@ -29,7 +30,7 @@ namespace SCRecover.Droid
 
         protected override void InitializeFirstChance()
         {
-            
+            Mvx.LazyConstructAndRegisterSingleton<IProgressDialogService, ProgressDialogService>();
             Mvx.LazyConstructAndRegisterSingleton<ISqlite, SqliteDroid>();
             Mvx.LazyConstructAndRegisterSingleton<IAzureDatabase, AzureDatabase>();
             Mvx.LazyConstructAndRegisterSingleton<ISavedClaimsDatabase, SavedClaimsDatabase>();

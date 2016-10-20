@@ -25,7 +25,6 @@
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
-                p1:layout_weight="0.1"
                 p1:src="@drawable/menu"
                 p1:background="@drawable/nav_btn" />
             <ImageView

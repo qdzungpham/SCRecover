@@ -299,6 +299,7 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
+        private readonly IProgressDialogService _progressDialog;
         public async void SaveClaim()
         {
             ClaimDetails newClaim = new ClaimDetails()      
@@ -316,7 +317,11 @@ namespace SCRecover.Core.ViewModels
                 //Bytes = _bytes
             };
 
+            await _progressDialog.Show("Save Claim", "Synchronising...");
+
             await _savedClaimDatabase.InsertClaim(newClaim);
+
+            await _progressDialog.Dismiss();
         }
 
         public ICommand SubmitClaimCommand
@@ -344,13 +349,18 @@ namespace SCRecover.Core.ViewModels
                 //Bytes = _bytes
             };
 
+            await _progressDialog.Show("Submitting...");
             await _savedClaimDatabase.InsertClaim(newClaim);
+            await _progressDialog.Dismiss();
+            ShowViewModel<FirstViewModel>();
+
         }
 
-        public MakeAClaimViewModel(IMvxPictureChooserTask pictureChooserTask, ISavedClaimsDatabase saveClaimDatabase)
+        public MakeAClaimViewModel(IMvxPictureChooserTask pictureChooserTask, ISavedClaimsDatabase saveClaimDatabase, IProgressDialogService progressDialog)
         {
             _pictureChooserTask = pictureChooserTask;
             _savedClaimDatabase = saveClaimDatabase;
+            _progressDialog = progressDialog;
         }
 
         public void Init(string fullName, string dob, string policyNum, string date, string time, string location, string type, string injury, string cmt)
@@ -358,8 +368,11 @@ namespace SCRecover.Core.ViewModels
             _fullName = fullName;
             _doB = dob;
             _policyNum = policyNum;
-            //_date = date;
-            //_time = time;
+            if (date != null && time != null)
+            {
+                _date = Convert.ToDateTime(date);
+                _time = Convert.ToDateTime(time).TimeOfDay;
+            }
             _location = location;
             _selectedType = new Thing(type);
             _selectedInjury = new Thing(injury);

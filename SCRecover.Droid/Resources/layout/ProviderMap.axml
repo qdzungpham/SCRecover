@@ -27,8 +27,7 @@
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton1"
                 p1:background="@drawable/nav_btn"
-                p1:layout_weight="0.2" 
-          local:MvxBind="Click NavBackCommand"/>
+                local:MvxBind="Click NavBackCommand" />
             <TextView
                 p1:text="Find Medical Provider"
                 p1:textAppearance="?android:attr/textAppearanceMedium"

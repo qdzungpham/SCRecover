@@ -178,6 +178,7 @@
     <Compile Include="MainApplication.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ProgressDialogService.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\AccidentHistory.cs" />
@@ -285,6 +286,7 @@
     <AndroidResource Include="Resources\drawable\bottom_border.xml" />
     <AndroidResource Include="Resources\drawable\nav_btn.xml" />
     <AndroidResource Include="Resources\drawable\logo1.png" />
+    <AndroidResource Include="Resources\drawable\hospital_marker.xml" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
