@@ -10,11 +10,12 @@ namespace SCRecover.Core.Interfaces
 {
     public interface ISavedClaimsDatabase
     {
-        Task<IEnumerable<ClaimDetails>> GetSavedClaims();
         Task<ObservableCollection<ClaimDetails>> Filter(string type);
-
-
         Task<int> InsertClaim(ClaimDetails newClaim);
+        Task<int> DeleteClaim(object id);
+
+        Task<ClaimDetails> GetProfile();
+        Task<int> UpdateProfile(ClaimDetails newProfile, ClaimDetails oldProfile);
     }
     
 }

@@ -22,5 +22,7 @@ namespace SCRecover.Core.Models
         public string Cmt { get; set; }
         public string Extra { get; set; }
         public byte[] Bytes { get; set; }
+        public string PhoneNum { get; set; }
+        public string Email { get; set; }
     }
 }

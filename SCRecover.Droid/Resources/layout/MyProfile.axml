@@ -29,7 +29,7 @@
                 p1:background="@drawable/nav_btn"
                 local:MvxBind="Click NavBackCommand" />
             <TextView
-                p1:text="Accident History"
+                p1:text="My Profile"
                 p1:textAppearance="?android:attr/textAppearanceMedium"
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
@@ -39,16 +39,11 @@
                 p1:layout_weight="1"
                 p1:layout_gravity="center" />
             <ImageButton
-                p1:src="@android:drawable/ic_menu_gallery"
-                p1:layout_width="wrap_content"
-                p1:layout_height="match_parent"
-                p1:id="@+id/btnDelete" />
-            <ImageButton
                 p1:src="@drawable/plus"
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/imageButton2"
-                local:MvxBind="Click AddClaimCommand"
+                local:MvxBind="Click UpdateProfileCommand"
                 p1:layout_gravity="center"
                 p1:background="@drawable/nav_btn" />
         </LinearLayout>
@@ -79,13 +74,13 @@
                     p1:layout_gravity="center"
                     p1:paddingLeft="5dp">
                     <TextView
-                        p1:text="Edit drafts and view incident records"
+                        p1:text="Setting up your policyholder details will save"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView2" />
                     <TextView
-                        p1:text="submitted to Suncorp Insurance"
+                        p1:text="your time when submitting a claim"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
@@ -103,46 +98,75 @@
                 p1:layout_weight="1"
                 p1:background="@drawable/bottom_border">
                 <TextView
-                    p1:text="DRAFT CLAIMS"
+                    p1:text="ABOUT"
                     p1:layout_width="match_parent"
                     p1:layout_height="wrap_content"
                     p1:id="@+id/textView4"
-                    p1:textColor="#006863"
-                    p1:textStyle="bold" />
-                <MvxListView
-                    p1:id="@+id/listViewDelete"
-                    p1:layout_width="fill_parent"
-                    p1:layout_height="wrap_content"
-                    local:MvxBind="ItemsSource SavedClaims; ItemClick DeleteClaimCommand"
-                    local:MvxItemTemplate="@layout/savedclaimdeletelayout" />
-                <MvxListView
-                    p1:id="@+id/listViewNormal"
-                    p1:layout_width="fill_parent"
-                    p1:layout_height="wrap_content"
-                    local:MvxBind="ItemsSource SavedClaims; ItemClick SelectSavedClaimCommand"
-                    local:MvxItemTemplate="@layout/savedclaimlayout" />
-            </LinearLayout>
-            <LinearLayout
-                p1:orientation="vertical"
-                p1:minWidth="25px"
-                p1:minHeight="25px"
-                p1:layout_width="match_parent"
-                p1:layout_height="match_parent"
-                p1:id="@+id/linearLayout6"
-                p1:padding="10dp"
-                p1:layout_weight="1">
+                    p1:textStyle="bold"
+                    p1:textColor="#006863" />
+                <android.support.design.widget.TextInputLayout
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content">
+                    <EditText
+                        p1:id="@+id/fullName"
+                        p1:inputType="textPersonName"
+                        p1:layout_width="fill_parent"
+                        p1:layout_height="wrap_content"
+                        p1:hint="Full Name"
+                        local:MvxBind="Text FullName" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content">
+                    <EditText
+                        p1:id="@+id/dob"
+                        p1:inputType="date"
+                        p1:layout_width="fill_parent"
+                        p1:layout_height="wrap_content"
+                        p1:hint="Date Of Birth"
+                        local:MvxBind="Text DateOfBirth" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content">
+                    <EditText
+                        p1:id="@+id/policyNum"
+                        p1:inputType="number"
+                        p1:layout_width="fill_parent"
+                        p1:layout_height="wrap_content"
+                        p1:hint="Policy Number"
+                        local:MvxBind="Text PolicyNum" />
+                </android.support.design.widget.TextInputLayout>
                 <TextView
-                    p1:text="SUBMMITTED CLAIMS"
+                    p1:text="CONTACT"
                     p1:layout_width="match_parent"
                     p1:layout_height="wrap_content"
                     p1:id="@+id/textView5"
+                    p1:textStyle="bold"
                     p1:textColor="#006863"
-                    p1:textStyle="bold" />
-                <MvxListView
-                    p1:layout_width="fill_parent"
-                    p1:layout_height="wrap_content"
-                    local:MvxBind="ItemsSource SubmittedClaims; ItemClick SelectSubmittedClaimCommand"
-                    local:MvxItemTemplate="@layout/submittedclaimlayout" />
+                    p1:layout_marginTop="10dp" />
+                <android.support.design.widget.TextInputLayout
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content">
+                    <EditText
+                        p1:id="@+id/phoneNum"
+                        p1:inputType="number"
+                        p1:layout_width="fill_parent"
+                        p1:layout_height="wrap_content"
+                        p1:hint="Phone Number"
+                        local:MvxBind="Text PhoneNum" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content">
+                    <EditText
+                        p1:id="@+id/email"
+                        p1:inputType="textEmailAddress"
+                        p1:layout_width="fill_parent"
+                        p1:layout_height="wrap_content"
+                        p1:hint="Email Address"
+                        local:MvxBind="Text Email" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

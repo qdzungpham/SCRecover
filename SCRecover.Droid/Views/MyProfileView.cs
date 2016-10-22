@@ -4,13 +4,13 @@ using MvvmCross.Droid.Views;
 
 namespace SCRecover.Droid.Views
 {
-    [Activity(Label = "Accident history")]
-    public class AccidentHistoryView : MvxActivity
+    [Activity(Label = "My profile")]
+    public class MyProfileView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.AccidentHistory);
+            SetContentView(Resource.Layout.MyProfile);
 
 
         }

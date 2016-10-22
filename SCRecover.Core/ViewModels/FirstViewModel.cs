@@ -38,6 +38,14 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
+        public ICommand MyProfileGoCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<MyProfileViewModel>());
+            }
+        }
+
 
     }
 }

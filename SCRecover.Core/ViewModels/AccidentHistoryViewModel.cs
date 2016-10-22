@@ -12,7 +12,7 @@ namespace SCRecover.Core.ViewModels
         : MvxViewModel
     {
         private readonly ISavedClaimsDatabase _database;
-        private readonly IProgressDialogService _progressDialog;
+        private readonly IDialogService _progressDialog;
 
         private ObservableCollection<ClaimDetails> _savedClaims;
         public ObservableCollection<ClaimDetails> SavedClaims
@@ -74,6 +74,17 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
+        public async void DeleteClaim(ClaimDetails claim)
+        {
+            await _database.DeleteClaim(claim.Id);
+        }
+        public ICommand DeleteClaimCommand
+        {
+            get
+            {
+                return new MvxCommand<ClaimDetails>(seletedClaim => { DeleteClaim(seletedClaim); });
+            }
+        }
         public ICommand AddClaimCommand
         {
             get
@@ -90,7 +101,7 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
-        public AccidentHistoryViewModel(ISavedClaimsDatabase database, IProgressDialogService progressDialog)
+        public AccidentHistoryViewModel(ISavedClaimsDatabase database, IDialogService progressDialog)
         {
             _database = database;
             _progressDialog = progressDialog;

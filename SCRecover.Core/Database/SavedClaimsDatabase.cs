@@ -26,12 +26,6 @@ namespace SCRecover.Core.Database
             azureSyncTable = azureDatabase.GetSyncTable<ClaimDetails>();
         } 
 
-        public async Task<IEnumerable<ClaimDetails>> GetSavedClaims()
-        {
-            await SyncAsync(true);
-            var claims = await azureSyncTable.ToListAsync();
-            return claims;
-        }
 
         public async Task<ObservableCollection<ClaimDetails>> Filter(string extra)
         {
@@ -40,12 +34,59 @@ namespace SCRecover.Core.Database
             theCollection = await azureSyncTable.Where(x => x.Extra == extra).OrderByDescending(x => x.Date).ToCollectionAsync();
             return theCollection;
         }
+
+        public async Task<int> UpdateProfile(ClaimDetails newProfile, ClaimDetails oldProfile)
+        {
+            await SyncAsync(true);
+            var profile = await azureSyncTable.Where(x => x.Extra == "profile").ToListAsync();
+            if (profile.Any())
+            {
+                await azureSyncTable.UpdateAsync(oldProfile);
+                await SyncAsync();
+            }
+            else
+            {
+                await azureSyncTable.InsertAsync(newProfile);
+                await SyncAsync();
+            }
+        
+            return 1;
+        } 
+        
+        public async Task<ClaimDetails> GetProfile()
+        {
+            await SyncAsync(true);
+            ClaimDetails myProfile = new ClaimDetails();
+            var profile = await azureSyncTable.Where(x => x.Extra == "profile").ToListAsync();
+            if (profile.Any())
+            {
+                myProfile = profile.FirstOrDefault();
+            }
+            return myProfile;
+        }
         public async Task<int> InsertClaim(ClaimDetails claim)
         {
             await SyncAsync(true);
             await azureSyncTable.InsertAsync(claim);
             await SyncAsync();
             return 1;
+        }
+
+        public async Task<int> DeleteClaim(object id)
+        {
+            await SyncAsync(true);
+            var claim = await azureSyncTable.Where(x => x.Id == (string)id).ToListAsync();
+            if (claim.Any())
+            {
+                await azureSyncTable.DeleteAsync(claim.FirstOrDefault());
+                //await SyncAsync();
+                return 1;
+            }
+            else
+            {
+                return 0;
+
+            }
         }
 
         private async Task SyncAsync(bool pullData = false) 

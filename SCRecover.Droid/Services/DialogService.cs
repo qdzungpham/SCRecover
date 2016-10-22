@@ -16,12 +16,10 @@ using MvvmCross.Platform.Droid.Platform;
 
 namespace SCRecover.Droid.Services
 {
-    public class ProgressDialogService : IProgressDialogService
+    public class DialogService : IDialogService
     {
         ProgressDialog pd;
-
-
-
+        
         public async Task Show(string title, string message)
         {
             Application.SynchronizationContext.Post(_ =>
@@ -56,6 +54,14 @@ namespace SCRecover.Droid.Services
         public async Task Dismiss()
         {
             pd.Dismiss();
+        }
+
+        public async Task ShowToast(string message)
+        {
+            var mvxTopActivity = Mvx.Resolve<IMvxAndroidCurrentTopActivity>();
+            Toast toast = Toast.MakeText(mvxTopActivity.Activity, message, ToastLength.Short);
+            toast.Show();
+            
         }
     }
 }

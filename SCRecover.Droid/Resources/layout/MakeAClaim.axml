@@ -74,7 +74,7 @@
                         p1:textColor="#006863"
                         p1:textStyle="bold" />
                     <TextView
-                        p1:text="Name"
+                        p1:text="Full Name"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
@@ -207,7 +207,7 @@
                         p1:id="@+id/textView10"
                         p1:fontFamily="open-sands" />
                     <EditText
-                        p1:inputType="textMultiLine"
+                        p1:inputType="textPostalAddress"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content"
                         p1:id="@+id/editTextLocation"

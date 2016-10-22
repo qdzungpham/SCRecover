@@ -110,7 +110,8 @@
                     p1:layout_weight="1"
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
-                    p1:textStyle="bold" />
+                    p1:textStyle="bold"
+                    local:MvxBind="Click MyProfileGoCommand"/>
                 <Button
                     p1:text="Medical assistance"
                     p1:layout_width="match_parent"

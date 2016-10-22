@@ -272,15 +272,15 @@ namespace SCRecover.Core.ViewModels
                 {
                     ShowViewModel<ClaimSummaryViewModel>(new
                     {
-                        fullName = _fullName.ToString(),
-                        doB = _doB.ToString(),
-                        policyNum = _policyNum.ToString(),
+                        fullName = _fullName,
+                        doB = _doB,
+                        policyNum = _policyNum,
                         date = _date.GetDateTimeFormats('d')[1],
                         time = _time.ToString(),
-                        location = _location.ToString(),
+                        location = _location,
                         type = _selectedType.ToString(),
                         injury = _selectedInjury.ToString(),
-                        cmt = _cmt.ToString(),
+                        cmt = _cmt,
                         bytes = _bytes
                     });
                         });
@@ -299,29 +299,29 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
-        private readonly IProgressDialogService _progressDialog;
+        private readonly IDialogService _dialog;
         public async void SaveClaim()
         {
+
             ClaimDetails newClaim = new ClaimDetails()      
             {
-                FullName = _fullName.ToString(),
-                DoB = _doB.ToString(),
-                PolicyNum = _policyNum.ToString(),
+                FullName = _fullName,
+                DoB = _doB,
+                PolicyNum = _policyNum,
                 Date = _date.ToString(),
                 Time = _time.ToString(),
-                Location = _location.ToString(),
+                Location = _location,
                 Type = _selectedType.ToString(),
                 Injury = _selectedInjury.ToString(),
-                Cmt = _cmt.ToString(),
+                Cmt = _cmt,
                 Extra = "saved"
                 //Bytes = _bytes
             };
 
-            await _progressDialog.Show("Save Claim", "Synchronising...");
-
+            await _dialog.Show("Save Claim", "Synchronising...");
             await _savedClaimDatabase.InsertClaim(newClaim);
-
-            await _progressDialog.Dismiss();
+            await _dialog.Dismiss();
+            await _dialog.ShowToast("Claim saved.");
         }
 
         public ICommand SubmitClaimCommand
@@ -334,33 +334,41 @@ namespace SCRecover.Core.ViewModels
         }
         public async void SubmitClaim()
         {
-            ClaimDetails newClaim = new ClaimDetails()      
+            if (string.IsNullOrWhiteSpace(_fullName) || string.IsNullOrWhiteSpace(_doB) || string.IsNullOrWhiteSpace(_policyNum)
+                || string.IsNullOrWhiteSpace(_location) || string.IsNullOrWhiteSpace(_cmt))
             {
-                FullName = _fullName.ToString(),
-                DoB = _doB.ToString(),
-                PolicyNum = _policyNum.ToString(),
-                Date = _date.ToString(),
-                Time = _time.ToString(),
-                Location = _location.ToString(),
-                Type = _selectedType.ToString(),
-                Injury = _selectedInjury.ToString(),
-                Cmt = _cmt.ToString(),
-                Extra = "submitted"
-                //Bytes = _bytes
-            };
+                await _dialog.ShowToast("Please enter all fields.");
+            }
+            else
+            {
+                ClaimDetails newClaim = new ClaimDetails()
+                {
+                    FullName = _fullName,
+                    DoB = _doB,
+                    PolicyNum = _policyNum,
+                    Date = _date.ToString(),
+                    Time = _time.ToString(),
+                    Location = _location,
+                    Type = _selectedType.ToString(),
+                    Injury = _selectedInjury.ToString(),
+                    Cmt = _cmt,
+                    Extra = "submitted"
+                    //Bytes = _bytes
+                };
 
-            await _progressDialog.Show("Submitting...");
-            await _savedClaimDatabase.InsertClaim(newClaim);
-            await _progressDialog.Dismiss();
-            ShowViewModel<FirstViewModel>();
-
+                await _dialog.Show("Lodging claim...");
+                await _savedClaimDatabase.InsertClaim(newClaim);
+                await _dialog.Dismiss();
+                ShowViewModel<FirstViewModel>();
+                await _dialog.ShowToast("Claim lodged.");
+            }
         }
 
-        public MakeAClaimViewModel(IMvxPictureChooserTask pictureChooserTask, ISavedClaimsDatabase saveClaimDatabase, IProgressDialogService progressDialog)
+        public MakeAClaimViewModel(IMvxPictureChooserTask pictureChooserTask, ISavedClaimsDatabase saveClaimDatabase, IDialogService progressDialog)
         {
             _pictureChooserTask = pictureChooserTask;
             _savedClaimDatabase = saveClaimDatabase;
-            _progressDialog = progressDialog;
+            _dialog = progressDialog;
         }
 
         public void Init(string fullName, string dob, string policyNum, string date, string time, string location, string type, string injury, string cmt)

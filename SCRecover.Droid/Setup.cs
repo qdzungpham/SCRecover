@@ -30,7 +30,7 @@ namespace SCRecover.Droid
 
         protected override void InitializeFirstChance()
         {
-            Mvx.LazyConstructAndRegisterSingleton<IProgressDialogService, ProgressDialogService>();
+            Mvx.LazyConstructAndRegisterSingleton<IDialogService, DialogService>();
             Mvx.LazyConstructAndRegisterSingleton<ISqlite, SqliteDroid>();
             Mvx.LazyConstructAndRegisterSingleton<IAzureDatabase, AzureDatabase>();
             Mvx.LazyConstructAndRegisterSingleton<ISavedClaimsDatabase, SavedClaimsDatabase>();

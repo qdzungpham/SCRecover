@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Interfaces\IProgressDialogService.cs" />
+    <Compile Include="Interfaces\IDialogService.cs" />
     <Compile Include="Interfaces\IProvidersDatabase.cs" />
     <Compile Include="Database\ProvidersDatabase.cs" />
     <Compile Include="Database\SavedClaimsDatabase.cs" />
@@ -51,6 +51,7 @@
     <Compile Include="ViewModels\FindProviderViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\MakeAClaimViewModel.cs" />
+    <Compile Include="ViewModels\MyProfileViewModel.cs" />
     <Compile Include="ViewModels\ProviderMapViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
