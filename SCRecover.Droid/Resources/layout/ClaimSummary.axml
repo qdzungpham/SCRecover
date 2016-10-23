@@ -113,6 +113,36 @@
                     p1:layout_marginLeft="15dp"
                     p1:fontFamily="open-sands"
                     local:MvxBind="Text PolicyNum" />
+                <TextView
+                    p1:text="Phone Number"
+                    p1:textAppearance="?android:attr/textAppearanceSmall"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:fontFamily="open-sands"
+                    p1:textStyle="bold" />
+                <TextView
+                    p1:text="1111111111"
+                    p1:textAppearance="?android:attr/textAppearanceSmall"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:layout_marginLeft="15dp"
+                    p1:fontFamily="open-sands"
+                    local:MvxBind="Text PhoneNum" />
+                <TextView
+                    p1:text="Email Address"
+                    p1:textAppearance="?android:attr/textAppearanceSmall"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:fontFamily="open-sands"
+                    p1:textStyle="bold" />
+                <TextView
+                    p1:text="1111111111"
+                    p1:textAppearance="?android:attr/textAppearanceSmall"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:layout_marginLeft="15dp"
+                    p1:fontFamily="open-sands"
+                    local:MvxBind="Text Email" />
             </LinearLayout>
             <LinearLayout
                 p1:orientation="vertical"

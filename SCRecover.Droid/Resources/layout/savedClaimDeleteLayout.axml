@@ -7,7 +7,7 @@
     p1:paddingTop="5dp"
     p1:paddingBottom="5dp">
     <ImageView
-        p1:src="@drawable/file_document"
+        p1:src="@drawable/delete_red"
         p1:layout_width="wrap_content"
         p1:layout_height="wrap_content" />
     <LinearLayout

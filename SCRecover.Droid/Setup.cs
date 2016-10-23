@@ -39,5 +39,7 @@ namespace SCRecover.Droid
             base.InitializeFirstChance();
         }
 
+
+
     }
 }

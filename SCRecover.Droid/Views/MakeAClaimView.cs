@@ -1,4 +1,5 @@
 using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -9,7 +10,7 @@ using System;
 
 namespace SCRecover.Droid.Views
 {
-    [Activity(Label = "Claim information")]
+    [Activity(Label = "Claim information", ScreenOrientation = ScreenOrientation.Portrait)]
     public class MakeAClaimView : MvxActivity
     {
         private MvxDatePicker _datePicker;

@@ -54,7 +54,9 @@ namespace SCRecover.Core.ViewModels
 
         public async void LoadProfile()
         {
+            await _dialog.Show("Loading...");
             MyProfile = await _savedClaimDatabase.GetProfile();
+            await _dialog.Dismiss();
             FullName = _myProfile.FullName;
             DateOfBirth = _myProfile.DoB;
             PolicyNum = _myProfile.PolicyNum;
@@ -64,23 +66,33 @@ namespace SCRecover.Core.ViewModels
 
         public async void UpdateProfile()
         {
-
-            ClaimDetails newProfile = new ClaimDetails()
+            if (string.IsNullOrWhiteSpace(_fullName) || string.IsNullOrWhiteSpace(_doB) || string.IsNullOrWhiteSpace(_policyNum)
+                || string.IsNullOrWhiteSpace(_phoneNum) || string.IsNullOrWhiteSpace(_email))
             {
-                FullName = _fullName,
-                DoB = _doB,
-                PolicyNum = _policyNum,
-                PhoneNum = _phoneNum,
-                Email = _email,
-                Extra = "profile"
-            };
+                await _dialog.ShowToast("Please enter all fields.");
+            }
+            else
+            {
+                ClaimDetails newProfile = new ClaimDetails()
+                {
+                    FullName = _fullName,
+                    DoB = _doB,
+                    PolicyNum = _policyNum,
+                    PhoneNum = _phoneNum,
+                    Email = _email,
+                    Extra = "profile"
+                };
 
-            MyProfile.FullName = _fullName;
-            MyProfile.DoB = _doB;
-            MyProfile.PolicyNum = _policyNum;
-            MyProfile.PhoneNum = _phoneNum;
-            MyProfile.Email = _email;
-            await _savedClaimDatabase.UpdateProfile(newProfile, _myProfile);
+                MyProfile.FullName = _fullName;
+                MyProfile.DoB = _doB;
+                MyProfile.PolicyNum = _policyNum;
+                MyProfile.PhoneNum = _phoneNum;
+                MyProfile.Email = _email;
+                await _dialog.Show("Save Profile Details", "Synchronising...");
+                await _savedClaimDatabase.UpdateProfile(newProfile, _myProfile);
+                await _dialog.Dismiss();
+                await _dialog.ShowToast("Profile details saved.");
+            }
         }
 
         public ICommand UpdateProfileCommand
@@ -92,10 +104,12 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
+        private readonly IDialogService _dialog;
         private readonly ISavedClaimsDatabase _savedClaimDatabase;
-        public MyProfileViewModel(ISavedClaimsDatabase saveClaimDatabase)
+        public MyProfileViewModel(ISavedClaimsDatabase saveClaimDatabase, IDialogService dialog)
         {
             _savedClaimDatabase = saveClaimDatabase;
+            _dialog = dialog;
             LoadProfile();
         }
     }

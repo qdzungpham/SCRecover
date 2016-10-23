@@ -79,7 +79,7 @@ namespace SCRecover.Core.Database
             if (claim.Any())
             {
                 await azureSyncTable.DeleteAsync(claim.FirstOrDefault());
-                //await SyncAsync();
+                await SyncAsync();
                 return 1;
             }
             else

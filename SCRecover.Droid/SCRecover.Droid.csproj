@@ -250,6 +250,9 @@
     <AndroidResource Include="Resources\layout\MyProfile.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\submittedClaimDeleteLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -323,6 +326,14 @@
     <AndroidResource Include="Resources\values-v21\style.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\plus1.xml" />
+    <AndroidResource Include="Resources\drawable\frame_btn.xml" />
+    <AndroidResource Include="Resources\drawable\account_box.xml" />
+    <AndroidResource Include="Resources\drawable\pen1.xml" />
+    <AndroidResource Include="Resources\drawable\lead_pencil.xml" />
+    <AndroidResource Include="Resources\drawable\check.xml" />
+    <AndroidResource Include="Resources\drawable\delete.xml" />
+    <AndroidResource Include="Resources\drawable\delete_red.xml" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

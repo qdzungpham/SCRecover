@@ -264,6 +264,21 @@ namespace SCRecover.Core.ViewModels
             get { return _cmt; }
             set { _cmt = value; RaisePropertyChanged(() => Comment); }
         }
+
+        private string _phoneNum = "";
+        public string PhoneNum
+        {
+            get { return _phoneNum; }
+            set { _phoneNum = value; RaisePropertyChanged(() => PhoneNum); }
+        }
+
+        private string _email = "";
+        public string Email
+        {
+            get { return _email; }
+            set { _email = value; RaisePropertyChanged(() => Email); }
+        }
+
         public ICommand ViewSummaryCommand
         {
             get
@@ -275,6 +290,8 @@ namespace SCRecover.Core.ViewModels
                         fullName = _fullName,
                         doB = _doB,
                         policyNum = _policyNum,
+                        phoneNum = _phoneNum,
+                        email = _email,
                         date = _date.GetDateTimeFormats('d')[1],
                         time = _time.ToString(),
                         location = _location,
@@ -308,6 +325,8 @@ namespace SCRecover.Core.ViewModels
                 FullName = _fullName,
                 DoB = _doB,
                 PolicyNum = _policyNum,
+                PhoneNum = _phoneNum,
+                Email = _email,
                 Date = _date.ToString(),
                 Time = _time.ToString(),
                 Location = _location,
@@ -335,6 +354,7 @@ namespace SCRecover.Core.ViewModels
         public async void SubmitClaim()
         {
             if (string.IsNullOrWhiteSpace(_fullName) || string.IsNullOrWhiteSpace(_doB) || string.IsNullOrWhiteSpace(_policyNum)
+                || string.IsNullOrWhiteSpace(_phoneNum) || string.IsNullOrWhiteSpace(_email)
                 || string.IsNullOrWhiteSpace(_location) || string.IsNullOrWhiteSpace(_cmt))
             {
                 await _dialog.ShowToast("Please enter all fields.");
@@ -346,6 +366,8 @@ namespace SCRecover.Core.ViewModels
                     FullName = _fullName,
                     DoB = _doB,
                     PolicyNum = _policyNum,
+                    PhoneNum = _phoneNum,
+                    Email = _email,
                     Date = _date.ToString(),
                     Time = _time.ToString(),
                     Location = _location,
@@ -364,6 +386,35 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
+        public async void UseProfileDetails()
+        {
+            ClaimDetails MyProfile = new ClaimDetails();
+            MyProfile = await _savedClaimDatabase.GetProfile();
+            FullName = MyProfile.FullName;
+            DateOfBirth = MyProfile.DoB;
+            PolicyNum = MyProfile.PolicyNum;
+            PhoneNum = MyProfile.PhoneNum;
+            Email = MyProfile.Email;
+            if (string.IsNullOrWhiteSpace(MyProfile.FullName))
+            {
+                await _dialog.ShowToast("Profile details have not been entered.");
+            }
+            else
+            {
+                await _dialog.ShowToast("Profile details used.");
+            }
+            
+        }
+
+        public ICommand UseProfileDetailsCommand
+        {
+            get
+            {
+
+                return new MvxCommand(UseProfileDetails);
+            }
+        }
+
         public MakeAClaimViewModel(IMvxPictureChooserTask pictureChooserTask, ISavedClaimsDatabase saveClaimDatabase, IDialogService progressDialog)
         {
             _pictureChooserTask = pictureChooserTask;
@@ -371,11 +422,13 @@ namespace SCRecover.Core.ViewModels
             _dialog = progressDialog;
         }
 
-        public void Init(string fullName, string dob, string policyNum, string date, string time, string location, string type, string injury, string cmt)
+        public void Init(string fullName, string dob, string policyNum, string phoneNum, string email, string date, string time, string location, string type, string injury, string cmt)
         {
             _fullName = fullName;
             _doB = dob;
             _policyNum = policyNum;
+            _phoneNum = phoneNum;
+            _email = email;
             if (date != null && time != null)
             {
                 _date = Convert.ToDateTime(date);

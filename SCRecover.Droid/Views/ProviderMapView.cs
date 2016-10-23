@@ -1,4 +1,5 @@
 using Android.App;
+using Android.Content.PM;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.OS;
@@ -8,7 +9,7 @@ using SCRecover.Core.ViewModels;
 
 namespace SCRecover.Droid.Views
 {
-    [Activity(Label = "Contact info")]
+    [Activity(Label = "Contact info", ScreenOrientation = ScreenOrientation.Portrait)]
     public class ProviderMapView : MvxActivity, IOnMapReadyCallback
 
     {

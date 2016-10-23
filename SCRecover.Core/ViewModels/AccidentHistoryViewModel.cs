@@ -43,6 +43,8 @@ namespace SCRecover.Core.ViewModels
                     fullName = selectedSavedClaim.FullName,
                     dob = selectedSavedClaim.DoB,
                     policyNum = selectedSavedClaim.PolicyNum,
+                    phoneNum = selectedSavedClaim.PhoneNum,
+                    email = selectedSavedClaim.Email,
                     date = selectedSavedClaim.Date,
                     time = selectedSavedClaim.Time,
                     location = selectedSavedClaim.Location,
@@ -63,6 +65,8 @@ namespace SCRecover.Core.ViewModels
                     fullName = selectedSavedClaim.FullName,
                     doB = selectedSavedClaim.DoB,
                     policyNum = selectedSavedClaim.PolicyNum,
+                    phoneNum = selectedSavedClaim.PhoneNum,
+                    email = selectedSavedClaim.Email,
                     date = selectedSavedClaim.Date,
                     time = selectedSavedClaim.Time,
                     location = selectedSavedClaim.Location,
@@ -78,11 +82,19 @@ namespace SCRecover.Core.ViewModels
         {
             await _database.DeleteClaim(claim.Id);
         }
-        public ICommand DeleteClaimCommand
+        public ICommand DeleteSavedClaimCommand
         {
             get
             {
                 return new MvxCommand<ClaimDetails>(seletedClaim => { DeleteClaim(seletedClaim); });
+            }
+        }
+
+        public ICommand DoneCommand
+        {
+            get
+            {
+                return new MvxCommand(LoadClaims);
             }
         }
         public ICommand AddClaimCommand

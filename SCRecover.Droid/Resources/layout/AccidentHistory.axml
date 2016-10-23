@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:p1="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     p1:minWidth="25px"
     p1:minHeight="25px"
@@ -39,16 +39,17 @@
                 p1:layout_weight="1"
                 p1:layout_gravity="center" />
             <ImageButton
-                p1:src="@android:drawable/ic_menu_gallery"
+                p1:src="@drawable/delete"
                 p1:layout_width="wrap_content"
                 p1:layout_height="match_parent"
-                p1:id="@+id/btnDelete" />
+                p1:id="@+id/btnDelete"
+                p1:background="@drawable/nav_btn" />
             <ImageButton
-                p1:src="@drawable/plus"
+                p1:src="@drawable/check"
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
-                p1:id="@+id/imageButton2"
-                local:MvxBind="Click AddClaimCommand"
+                p1:id="@+id/btnDone"
+                local:MvxBind="Click DoneCommand"
                 p1:layout_gravity="center"
                 p1:background="@drawable/nav_btn" />
         </LinearLayout>
@@ -110,13 +111,13 @@
                     p1:textColor="#006863"
                     p1:textStyle="bold" />
                 <MvxListView
-                    p1:id="@+id/listViewDelete"
+                    p1:id="@+id/savedClaimDelete"
                     p1:layout_width="fill_parent"
                     p1:layout_height="wrap_content"
-                    local:MvxBind="ItemsSource SavedClaims; ItemClick DeleteClaimCommand"
+                    local:MvxBind="ItemsSource SavedClaims; ItemClick DeleteSavedClaimCommand"
                     local:MvxItemTemplate="@layout/savedclaimdeletelayout" />
                 <MvxListView
-                    p1:id="@+id/listViewNormal"
+                    p1:id="@+id/savedClaimNormal"
                     p1:layout_width="fill_parent"
                     p1:layout_height="wrap_content"
                     local:MvxBind="ItemsSource SavedClaims; ItemClick SelectSavedClaimCommand"
@@ -138,7 +139,14 @@
                     p1:id="@+id/textView5"
                     p1:textColor="#006863"
                     p1:textStyle="bold" />
+              <MvxListView
+                p1:id="@+id/submittedClaimDelete"
+                    p1:layout_width="fill_parent"
+                    p1:layout_height="wrap_content"
+                    local:MvxBind="ItemsSource SubmittedClaims; ItemClick DeleteSubmittedClaimCommand"
+                    local:MvxItemTemplate="@layout/submittedclaimdeletelayout" />
                 <MvxListView
+                  p1:id="@+id/submittedClaimNormal"
                     p1:layout_width="fill_parent"
                     p1:layout_height="wrap_content"
                     local:MvxBind="ItemsSource SubmittedClaims; ItemClick SelectSubmittedClaimCommand"
@@ -146,4 +154,13 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+    <ImageView
+        p1:id="@+id/fab"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_gravity="bottom|right"
+        p1:layout_margin="16dp"
+        p1:src="@drawable/plus1"
+        local:MvxBind="Click AddClaimCommand"
+        p1:background="@drawable/frame_btn" />
+</FrameLayout>

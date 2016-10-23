@@ -147,12 +147,48 @@ namespace SCRecover.Core.ViewModels
             get { return _bytes; }
             set { _bytes = value; RaisePropertyChanged(() => Bytes); }
         }
+
+        private string _phoneNum = "";
+        public string PhoneNum
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_phoneNum))
+                {
+                    return "No Information";
+                }
+                else
+                {
+                    return _phoneNum;
+                }
+            }
+            set { _phoneNum = value; RaisePropertyChanged(() => PhoneNum); }
+        }
+
+        private string _email = "";
+        public string Email
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_email))
+                {
+                    return "No Information";
+                }
+                else
+                {
+                    return _email;
+                }
+            }
+            set { _email = value; RaisePropertyChanged(() => Email); }
+        }
         #endregion
-        public void Init(string fullName, string doB, string policyNum, string date, string time, string location, string type, string injury, string cmt, byte[] bytes)
+        public void Init(string fullName, string doB, string policyNum, string phoneNum, string email, string date, string time, string location, string type, string injury, string cmt, byte[] bytes)
         {
             _fullName = fullName;
             _doB = doB;
             _policyNum = policyNum;
+            _phoneNum = phoneNum;
+            _email = email;
             _date = date;
             _time = time;
             _location = location;

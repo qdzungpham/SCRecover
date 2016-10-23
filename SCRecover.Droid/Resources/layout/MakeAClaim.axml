@@ -56,6 +56,39 @@
                 p1:layout_height="match_parent"
                 p1:id="@+id/linearLayout2">
                 <LinearLayout
+                    p1:orientation="horizontal"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/linearLayout4"
+                    p1:padding="10dp"
+                    p1:background="@drawable/bottom_border">
+                    <ImageView
+                        p1:src="@drawable/pen1"
+                        p1:layout_width="wrap_content"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/imageView1" />
+                    <LinearLayout
+                        p1:orientation="vertical"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        p1:id="@+id/linearLayout3"
+                        p1:layout_gravity="center"
+                        p1:paddingLeft="5dp">
+                        <TextView
+                            p1:text="Gather details of accident to lodge a claim."
+                            p1:textAppearance="?android:attr/textAppearanceSmall"
+                            p1:layout_width="match_parent"
+                            p1:layout_height="wrap_content"
+                            p1:id="@+id/textView2" />
+                        <TextView
+                            p1:textAppearance="?android:attr/textAppearanceSmall"
+                            p1:layout_width="match_parent"
+                            p1:layout_height="wrap_content"
+                            p1:id="@+id/textView3"
+                            p1:text="Press &quot;Use Profile Details&quot; if required." />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
                     p1:orientation="vertical"
                     p1:layout_width="match_parent"
                     p1:layout_height="wrap_content"
@@ -65,14 +98,28 @@
                     p1:paddingRight="10dp"
                     p1:paddingLeft="10dp"
                     p1:paddingBottom="5dp">
-                    <TextView
-                        p1:text="PERSONAL DETAILS"
-                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                    <LinearLayout
+                        p1:orientation="horizontal"
                         p1:layout_width="match_parent"
-                        p1:layout_height="wrap_content"
-                        p1:id="@+id/textView2"
-                        p1:textColor="#006863"
-                        p1:textStyle="bold" />
+                        p1:layout_height="wrap_content">
+                        <TextView
+                            p1:text="PERSONAL DETAILS"
+                            p1:textAppearance="?android:attr/textAppearanceSmall"
+                            p1:layout_width="match_parent"
+                            p1:layout_height="wrap_content"
+                            p1:id="@+id/textView2"
+                            p1:textColor="#006863"
+                            p1:textStyle="bold"
+                            p1:layout_weight="1" />
+                        <TextView
+                            p1:text="Use Profile Details"
+                            p1:textAppearance="?android:attr/textAppearanceSmall"
+                            p1:layout_width="wrap_content"
+                            p1:layout_height="match_parent"
+                            p1:id="@+id/textView14"
+                            local:MvxBind="Click UseProfileDetailsCommand"
+                            p1:clickable="true" />
+                    </LinearLayout>
                     <TextView
                         p1:text="Full Name"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -111,6 +158,26 @@
                         p1:layout_height="wrap_content"
                         p1:id="@+id/editTextPolicyNum"
                         local:MvxBind="Text PolicyNum" />
+                    <TextView
+                        p1:text="Phone Number"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content" />
+                    <EditText
+                        p1:inputType="number"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        local:MvxBind="Text PhoneNum" />
+                    <TextView
+                        p1:text="Email Address"
+                        p1:textAppearance="?android:attr/textAppearanceSmall"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content" />
+                    <EditText
+                        p1:inputType="textEmailAddress"
+                        p1:layout_width="match_parent"
+                        p1:layout_height="wrap_content"
+                        local:MvxBind="Text Email" />
                 </LinearLayout>
                 <LinearLayout
                     p1:orientation="vertical"
