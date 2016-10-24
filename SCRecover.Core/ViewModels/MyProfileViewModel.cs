@@ -10,6 +10,14 @@ namespace SCRecover.Core.ViewModels
         : MvxViewModel
     {
 
+        public ICommand NavBackCommand
+        {
+            get
+            {
+                return new MvxCommand(() => Close(this));
+            }
+        }
+
         private string _fullName = "";
         public string FullName
         {

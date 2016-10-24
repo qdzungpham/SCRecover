@@ -15,6 +15,7 @@
         p1:layout_width="match_parent"
         p1:layout_height="match_parent"
         p1:id="@+id/linearLayout1">
+        
         <LinearLayout
             p1:orientation="horizontal"
             p1:layout_width="match_parent"
@@ -111,7 +112,7 @@
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
                     p1:textStyle="bold"
-                    local:MvxBind="Click MyProfileGoCommand"/>
+                    local:MvxBind="Click MyProfileGoCommand" />
                 <Button
                     p1:text="Medical assistance"
                     p1:layout_width="match_parent"

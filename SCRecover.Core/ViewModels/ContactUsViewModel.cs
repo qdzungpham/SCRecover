@@ -1,6 +1,7 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Plugins.PhoneCall;
+using MvvmCross.Plugins.WebBrowser;
 using System.Windows.Input;
 
 namespace SCRecover.Core.ViewModels
@@ -59,6 +60,40 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
+        public ICommand GooglePlusCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
+                    Mvx.Resolve<IMvxWebBrowserTask>().ShowWebPage("https://plus.google.com/+SuncorpInsuranceBrisbane");
+                });
+            }
+        }
 
+        public ICommand FacebookCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
+                    Mvx.Resolve<IMvxWebBrowserTask>().ShowWebPage("https://www.facebook.com/SuncorpInsurance/");
+                });
+            }
+        }
+
+        public ICommand YoutubeCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
+                    Mvx.Resolve<IMvxWebBrowserTask>().ShowWebPage("https://www.youtube.com/user/suncorpinsurance");
+                });
+            }
+        }
     }
 }

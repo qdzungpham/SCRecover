@@ -99,26 +99,27 @@
                     p1:paddingLeft="10dp"
                     p1:paddingBottom="5dp">
                     <LinearLayout
+                        p1:id="@+id/linearLayout13"
                         p1:orientation="horizontal"
                         p1:layout_width="match_parent"
                         p1:layout_height="wrap_content">
                         <TextView
                             p1:text="PERSONAL DETAILS"
                             p1:textAppearance="?android:attr/textAppearanceSmall"
-                            p1:layout_width="match_parent"
+                            p1:layout_width="wrap_content"
                             p1:layout_height="wrap_content"
                             p1:id="@+id/textView2"
                             p1:textColor="#006863"
                             p1:textStyle="bold"
                             p1:layout_weight="1" />
-                        <TextView
+                        <Button
                             p1:text="Use Profile Details"
-                            p1:textAppearance="?android:attr/textAppearanceSmall"
                             p1:layout_width="wrap_content"
-                            p1:layout_height="match_parent"
-                            p1:id="@+id/textView14"
+                            p1:layout_height="32dp"
+                            p1:id="@+id/button12"
                             local:MvxBind="Click UseProfileDetailsCommand"
-                            p1:clickable="true" />
+                            p1:textSize="10dp"
+                            p1:textAppearance="?android:attr/textAppearanceSmall" />
                     </LinearLayout>
                     <TextView
                         p1:text="Full Name"

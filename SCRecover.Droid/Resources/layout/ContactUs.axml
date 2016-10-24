@@ -178,45 +178,54 @@
                     p1:drawableLeft="@drawable/phone1" />
             </LinearLayout>
             <LinearLayout
-                p1:orientation="horizontal"
+                p1:orientation="vertical"
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/linearLayout9"
-                p1:layout_weight="1">
+                p1:paddingTop="10dp">
+                <TextView
+                    p1:text="Social"
+                    p1:textAppearance="?android:attr/textAppearanceSmall"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/textView8"
+                    p1:layout_gravity="center"
+                    p1:textStyle="bold" />
+                <TextView
+                    p1:text="24 hours, 7 days"
+                    p1:textAppearance="?android:attr/textAppearanceSmall"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="wrap_content"
+                    p1:id="@+id/textView9"
+                    p1:layout_gravity="center" />
                 <LinearLayout
-                    p1:orientation="vertical"
-                    p1:minWidth="25px"
-                    p1:minHeight="25px"
+                    p1:orientation="horizontal"
                     p1:layout_width="wrap_content"
                     p1:layout_height="wrap_content"
                     p1:id="@+id/linearLayout10"
-                    p1:layout_weight="1"
-                    p1:layout_gravity="center"
-                    p1:layout_marginLeft="10dp">
-                    <TextView
-                        p1:text="Call for medical assistance"
-                        p1:textAppearance="?android:attr/textAppearanceSmall"
-                        p1:layout_width="match_parent"
+                    p1:layout_gravity="center">
+                    <ImageButton
+                        p1:src="@drawable/google_plus"
+                        p1:layout_width="wrap_content"
                         p1:layout_height="wrap_content"
-                        p1:id="@+id/textView8"
-                        p1:textStyle="bold" />
-                    <TextView
-                        p1:text="24 hours, 7 days"
-                        p1:textAppearance="?android:attr/textAppearanceSmall"
-                        p1:layout_width="match_parent"
-                        p1:layout_height="wrap_content"
-                        p1:id="@+id/textView9" />
+                        p1:id="@+id/imageButton2"
+                        p1:background="@drawable/frame_btn"
+                        local:MvxBind="Click GooglePlusCommand" />
+                    <ImageButton
+                        p1:src="@drawable/facebook"
+                        p1:layout_width="wrap_content"
+                        p1:layout_height="match_parent"
+                        p1:id="@+id/imageButton3"
+                        p1:background="@drawable/frame_btn"
+                        local:MvxBind="Click FacebookCommand" />
+                    <ImageButton
+                        p1:src="@drawable/youtube"
+                        p1:layout_width="wrap_content"
+                        p1:layout_height="match_parent"
+                        p1:id="@+id/imageButton4"
+                        p1:background="@drawable/frame_btn"
+                        local:MvxBind="Click YoutubeCommand" />
                 </LinearLayout>
-                <Button
-                    p1:text="113 113"
-                    p1:layout_width="150dp"
-                    p1:layout_height="wrap_content"
-                    p1:id="@+id/button1"
-                    p1:layout_gravity="center"
-                    p1:layout_marginRight="10dp"
-                    p1:background="@drawable/yellow_button"
-                    local:MvxBind="Click CallMedicalCommand"
-                    p1:drawableLeft="@drawable/phone1" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
