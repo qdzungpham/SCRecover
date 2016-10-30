@@ -12,7 +12,7 @@ namespace SCRecover.Core.Interfaces
     {
         Task<ObservableCollection<ClaimDetails>> Filter(string type);
         Task<int> InsertClaim(ClaimDetails newClaim);
-        Task<int> DeleteClaim(object id);
+        Task<int> DeleteClaim(ClaimDetails claim);
 
         Task<ClaimDetails> GetProfile();
         Task<int> UpdateProfile(ClaimDetails newProfile, ClaimDetails oldProfile);

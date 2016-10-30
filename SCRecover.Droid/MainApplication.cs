@@ -4,7 +4,8 @@ using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Plugin.CurrentActivity;
-
+using Plugin.Permissions;
+using Android.Content.PM;
 
 namespace SCRecover.Droid
 {
@@ -60,6 +61,10 @@ namespace SCRecover.Droid
         public void OnActivityStopped(Activity activity)
         {
         }
-        
+
+        public void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        {
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
 }

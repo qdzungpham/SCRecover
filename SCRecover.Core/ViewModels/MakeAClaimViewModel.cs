@@ -9,6 +9,8 @@ using SCRecover.Core.Database;
 using SCRecover.Core.Models;
 
 using System.Collections.ObjectModel;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 
 namespace SCRecover.Core.ViewModels
 {
@@ -193,9 +195,21 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
-        private void DoTakePicture()
+        private async void DoTakePicture()
         {
-            _pictureChooserTask.TakePicture(400, 95, OnPicture, () => { });
+            var cameraStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Camera);
+            var storageStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Storage);
+            if (cameraStatus != PermissionStatus.Granted || storageStatus != PermissionStatus.Granted)
+            {
+                var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Camera, Permission.Storage });
+                cameraStatus = results[Permission.Camera];
+                storageStatus = results[Permission.Storage];
+            }
+
+            if ((cameraStatus == PermissionStatus.Granted) && (storageStatus == PermissionStatus.Granted))
+            {
+                _pictureChooserTask.TakePicture(400, 95, OnPicture, () => { });
+            } 
         }
 
         private MvxCommand _choosePictureCommand;

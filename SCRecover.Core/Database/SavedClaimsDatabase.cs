@@ -72,21 +72,25 @@ namespace SCRecover.Core.Database
             return 1;
         }
 
-        public async Task<int> DeleteClaim(object id)
+        public async Task<int> DeleteClaim(ClaimDetails claim)
         {
             await SyncAsync(true);
-            var claim = await azureSyncTable.Where(x => x.Id == (string)id).ToListAsync();
-            if (claim.Any())
-            {
-                await azureSyncTable.DeleteAsync(claim.FirstOrDefault());
-                await SyncAsync();
-                return 1;
-            }
-            else
-            {
-                return 0;
+            await azureSyncTable.DeleteAsync(claim);
+            await SyncAsync();
+            return 0;
+            //await SyncAsync(true);
+            //var claim = await azureSyncTable.Where(x => x.Id == (string)id).ToListAsync();
+            //if (claim.Any())
+            //{              
+            //    await azureSyncTable.DeleteAsync(claim.FirstOrDefault());
+            //    await SyncAsync();
+            //    return 1;
+            //}
+            //else
+            //{
+            //    return 0;
 
-            }
+            //}
         }
 
         private async Task SyncAsync(bool pullData = false) 

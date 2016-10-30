@@ -80,7 +80,8 @@ namespace SCRecover.Core.ViewModels
 
         public async void DeleteClaim(ClaimDetails claim)
         {
-            await _database.DeleteClaim(claim.Id);
+            
+            await _database.DeleteClaim(claim);
         }
         public ICommand DeleteSavedClaimCommand
         {

@@ -40,11 +40,11 @@
                 p1:layout_gravity="center" />
         </LinearLayout>
         <ImageView
-            p1:src="@drawable/contactuus"
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"
             p1:id="@+id/imageView1"
-            p1:adjustViewBounds="true" />
+            p1:adjustViewBounds="true"
+            p1:src="@drawable/contactuus" />
         <LinearLayout
             p1:orientation="vertical"
             p1:layout_width="match_parent"

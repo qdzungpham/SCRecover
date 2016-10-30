@@ -287,7 +287,6 @@
     <AndroidResource Include="Resources\drawable\homeButton.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\contactUus.png" />
     <AndroidResource Include="Resources\drawable\ripple_effect.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -342,6 +341,7 @@
     <AndroidResource Include="Resources\drawable\facebook.xml" />
     <AndroidResource Include="Resources\drawable\google_plus.xml" />
     <AndroidResource Include="Resources\drawable\youtube.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\contactUus.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
