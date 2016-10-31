@@ -342,6 +342,8 @@
     <AndroidResource Include="Resources\drawable\google_plus.xml" />
     <AndroidResource Include="Resources\drawable\youtube.xml" />
     <AndroidResource Include="Resources\drawable-xhdpi\contactUus.png" />
+    <AndroidResource Include="Resources\drawable\file_find.xml" />
+    <AndroidResource Include="Resources\drawable\suncorp_logo.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

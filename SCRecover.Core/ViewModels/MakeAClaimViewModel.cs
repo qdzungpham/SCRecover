@@ -25,16 +25,16 @@ namespace SCRecover.Core.ViewModels
             }
         }
         // Datepicker and timepicker
-        private DateTime _date = DateTime.Now;
-        private TimeSpan _time = DateTime.Now.TimeOfDay;
+        private string _date = DateTime.Now.ToString("dd MMM yyyy");
+        private string _time = DateTime.Now.ToString("hh:mm:00");
 
-        public DateTime Date
+        public string Date
         {
             get { return _date; }
             set { _date = value; RaisePropertyChanged(() => Date); }
         }
 
-        public TimeSpan Time
+        public string Time
         {
             get { return _time; }
             set { _time = value; RaisePropertyChanged(() => Time); }
@@ -306,8 +306,8 @@ namespace SCRecover.Core.ViewModels
                         policyNum = _policyNum,
                         phoneNum = _phoneNum,
                         email = _email,
-                        date = _date.GetDateTimeFormats('d')[1],
-                        time = _time.ToString(),
+                        date = _date,
+                        time = _time,
                         location = _location,
                         type = _selectedType.ToString(),
                         injury = _selectedInjury.ToString(),
@@ -445,8 +445,8 @@ namespace SCRecover.Core.ViewModels
             _email = email;
             if (date != null && time != null)
             {
-                _date = Convert.ToDateTime(date);
-                _time = Convert.ToDateTime(time).TimeOfDay;
+                _date = date;
+                _time = time;
             }
             _location = location;
             _selectedType = new Thing(type);

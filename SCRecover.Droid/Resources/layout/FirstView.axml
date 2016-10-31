@@ -15,7 +15,6 @@
         p1:layout_width="match_parent"
         p1:layout_height="match_parent"
         p1:id="@+id/linearLayout1">
-        
         <LinearLayout
             p1:orientation="horizontal"
             p1:layout_width="match_parent"
@@ -59,7 +58,7 @@
                 p1:id="@+id/linearLayout3"
                 p1:layout_weight="1">
                 <Button
-                    p1:text="Make a claim"
+                    p1:text="Make a Claim"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/buttonMakeAClaim"
@@ -71,7 +70,7 @@
                     local:MvxBind=" Click MakeAClaimGoCommand"
                     p1:drawableTop="@drawable/pen" />
                 <Button
-                    p1:text="Accident history"
+                    p1:text="Accident History"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button2"
@@ -83,7 +82,7 @@
                     p1:background="@drawable/homebutton"
                     local:MvxBind=" Click AccidentHistoryGoCommand" />
                 <Button
-                    p1:text="Find medical provider"
+                    p1:text="Find Medical Provider"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button3"
@@ -102,7 +101,7 @@
                 p1:id="@+id/linearLayout4"
                 p1:layout_weight="1">
                 <Button
-                    p1:text="My profile"
+                    p1:text="My Profile"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button4"
@@ -114,18 +113,19 @@
                     p1:textStyle="bold"
                     local:MvxBind="Click MyProfileGoCommand" />
                 <Button
-                    p1:text="Medical assistance"
+                    p1:text="Retrieve a Quote"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button5"
                     p1:background="@drawable/homebutton"
-                    p1:drawableTop="@drawable/hospital"
+                    p1:drawableTop="@drawable/file_find"
                     p1:layout_weight="1"
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
-                    p1:textStyle="bold" />
+                    p1:textStyle="bold"
+              local:MvxBind=" Click RetrieveQuoteCommand"/>
                 <Button
-                    p1:text="Contact us"
+                    p1:text="Contact Us"
                     p1:layout_width="match_parent"
                     p1:layout_height="match_parent"
                     p1:id="@+id/button6"

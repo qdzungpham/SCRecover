@@ -1,4 +1,6 @@
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Plugins.WebBrowser;
 using System.Windows.Input;
 
 namespace SCRecover.Core.ViewModels
@@ -46,6 +48,17 @@ namespace SCRecover.Core.ViewModels
             }
         }
 
+        public ICommand RetrieveQuoteCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
+                    Mvx.Resolve<IMvxWebBrowserTask>().ShowWebPage("https://insurance.suncorp.com.au/directlife/pub/suncorp/injury/retrieveapplication");
+                });
+            }
+        }
 
     }
 }

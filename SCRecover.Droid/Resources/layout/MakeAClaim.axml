@@ -208,32 +208,15 @@
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView8"
                         p1:fontFamily="open-sands" />
-                    <LinearLayout
-                        p1:orientation="horizontal"
-                        p1:minWidth="25px"
-                        p1:minHeight="25px"
-                        p1:layout_width="match_parent"
-                        p1:layout_height="wrap_content"
-                        p1:id="@+id/linearLayoutDate">
+                    
                         <EditText
                             p1:inputType="date"
                             p1:layout_width="match_parent"
                             p1:layout_height="wrap_content"
                             p1:id="@+id/editTextDate"
-                            local:MvxBind="Text Format('{0:dd MMM yyyy}',Date)"
+                            local:MvxBind="Text Date"
                             p1:layout_weight="1" />
-                        <Button
-                            p1:text="Done"
-                            p1:layout_width="match_parent"
-                            p1:layout_height="match_parent"
-                            p1:id="@+id/buttonDateDone"
-                            p1:layout_weight="3" />
-                    </LinearLayout>
-                    <MvxDatePicker
-                        p1:layout_width="fill_parent"
-                        p1:layout_height="wrap_content"
-                        local:MvxBind="Value Date"
-                        p1:id="@+id/datePicker" />
+                   
                     <TextView
                         p1:text="Time"
                         p1:textAppearance="?android:attr/textAppearanceSmall"
@@ -241,32 +224,15 @@
                         p1:layout_height="wrap_content"
                         p1:id="@+id/textView9"
                         p1:fontFamily="open-sands" />
-                    <LinearLayout
-                        p1:orientation="horizontal"
-                        p1:minWidth="25px"
-                        p1:minHeight="25px"
-                        p1:layout_width="match_parent"
-                        p1:layout_height="wrap_content"
-                        p1:id="@+id/linearLayoutTime">
+                    
                         <EditText
                             p1:inputType="time"
                             p1:layout_width="match_parent"
                             p1:layout_height="wrap_content"
                             p1:id="@+id/editTextTime"
                             p1:layout_weight="1"
-                            local:MvxBind="Text Format('{0:hhmm}',Time)" />
-                        <Button
-                            p1:text="Done"
-                            p1:layout_width="match_parent"
-                            p1:layout_height="match_parent"
-                            p1:id="@+id/buttonTimeDone"
-                            p1:layout_weight="3" />
-                    </LinearLayout>
-                    <MvxTimePicker
-                        p1:layout_width="fill_parent"
-                        p1:layout_height="wrap_content"
-                        local:MvxBind="Value Time"
-                        p1:id="@+id/timePicker" />
+                            local:MvxBind="Text Time" />
+                        
                     <TextView
                         p1:text="Location"
                         p1:textAppearance="?android:attr/textAppearanceSmall"

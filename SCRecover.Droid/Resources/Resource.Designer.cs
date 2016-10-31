@@ -2169,94 +2169,100 @@ namespace SCRecover.Droid
 			public const int file_document = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int frame_btn = 2130837639;
+			public const int file_find = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int google_maps = 2130837640;
+			public const int frame_btn = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int google_plus = 2130837641;
+			public const int google_maps = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int grey_button = 2130837642;
+			public const int google_plus = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int history = 2130837643;
+			public const int grey_button = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int homeButton = 2130837644;
+			public const int history = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int hospital = 2130837645;
+			public const int homeButton = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int hospital_marker = 2130837646;
+			public const int hospital = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int Icon = 2130837647;
+			public const int hospital_marker = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int image_multiple = 2130837648;
+			public const int Icon = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int lead_pencil = 2130837649;
+			public const int image_multiple = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int logo1 = 2130837650;
+			public const int lead_pencil = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int map = 2130837651;
+			public const int logo1 = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int map_marker = 2130837652;
+			public const int map = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int menu = 2130837653;
+			public const int map_marker = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int nav_btn = 2130837654;
+			public const int menu = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int note_multiple = 2130837655;
-			
-			// aapt resource value: 0x7f0200a4
-			public const int notification_template_icon_bg = 2130837668;
+			public const int nav_btn = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int pen = 2130837656;
+			public const int note_multiple = 2130837656;
+			
+			// aapt resource value: 0x7f0200a6
+			public const int notification_template_icon_bg = 2130837670;
 			
 			// aapt resource value: 0x7f020099
-			public const int pen1 = 2130837657;
+			public const int pen = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int phone = 2130837658;
+			public const int pen1 = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int phone1 = 2130837659;
+			public const int phone = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int phone2 = 2130837660;
+			public const int phone1 = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int plus = 2130837661;
+			public const int phone2 = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int plus1 = 2130837662;
+			public const int plus = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ripple_effect = 2130837663;
+			public const int plus1 = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int splash2 = 2130837664;
+			public const int ripple_effect = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int startup = 2130837665;
+			public const int splash2 = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int yellow_button = 2130837666;
+			public const int startup = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int youtube = 2130837667;
+			public const int suncorp_logo = 2130837667;
+			
+			// aapt resource value: 0x7f0200a4
+			public const int yellow_button = 2130837668;
+			
+			// aapt resource value: 0x7f0200a5
+			public const int youtube = 2130837669;
 			
 			static Drawable()
 			{
@@ -2277,8 +2283,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f09000c
 			public const int MvxBindingTagUnique = 2131296268;
 			
-			// aapt resource value: 0x7f0900d6
-			public const int action0 = 2131296470;
+			// aapt resource value: 0x7f0900d0
+			public const int action0 = 2131296464;
 			
 			// aapt resource value: 0x7f090067
 			public const int action_bar = 2131296359;
@@ -2304,8 +2310,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f090068
 			public const int action_context_bar = 2131296360;
 			
-			// aapt resource value: 0x7f0900da
-			public const int action_divider = 2131296474;
+			// aapt resource value: 0x7f0900d4
+			public const int action_divider = 2131296468;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -2373,11 +2379,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f0900b7
 			public const int button6 = 2131296439;
 			
-			// aapt resource value: 0x7f0900ce
-			public const int buttonClaim = 2131296462;
-			
-			// aapt resource value: 0x7f0900c2
-			public const int buttonDateDone = 2131296450;
+			// aapt resource value: 0x7f0900c8
+			public const int buttonClaim = 2131296456;
 			
 			// aapt resource value: 0x7f0900b2
 			public const int buttonMakeAClaim = 2131296434;
@@ -2385,14 +2388,11 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f090051
 			public const int buttonPanel = 2131296337;
 			
-			// aapt resource value: 0x7f0900cd
-			public const int buttonSummary = 2131296461;
+			// aapt resource value: 0x7f0900c7
+			public const int buttonSummary = 2131296455;
 			
-			// aapt resource value: 0x7f0900c6
-			public const int buttonTimeDone = 2131296454;
-			
-			// aapt resource value: 0x7f0900d7
-			public const int cancel_action = 2131296471;
+			// aapt resource value: 0x7f0900d1
+			public const int cancel_action = 2131296465;
 			
 			// aapt resource value: 0x7f090038
 			public const int center = 2131296312;
@@ -2406,8 +2406,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f09005f
 			public const int checkbox = 2131296351;
 			
-			// aapt resource value: 0x7f0900dd
-			public const int chronometer = 2131296477;
+			// aapt resource value: 0x7f0900d7
+			public const int chronometer = 2131296471;
 			
 			// aapt resource value: 0x7f090040
 			public const int clip_horizontal = 2131296320;
@@ -2429,9 +2429,6 @@ namespace SCRecover.Droid
 			
 			// aapt resource value: 0x7f090018
 			public const int dark = 2131296280;
-			
-			// aapt resource value: 0x7f0900c3
-			public const int datePicker = 2131296451;
 			
 			// aapt resource value: 0x7f090065
 			public const int decor_content_parent = 2131296357;
@@ -2457,23 +2454,23 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f09001c
 			public const int disableHome = 2131296284;
 			
-			// aapt resource value: 0x7f0900d2
-			public const int dob = 2131296466;
-			
-			// aapt resource value: 0x7f0900d0
-			public const int edit = 2131296464;
+			// aapt resource value: 0x7f0900cc
+			public const int dob = 2131296460;
 			
 			// aapt resource value: 0x7f0900ca
-			public const int editTextComments = 2131296458;
+			public const int edit = 2131296458;
 			
-			// aapt resource value: 0x7f0900c1
-			public const int editTextDate = 2131296449;
+			// aapt resource value: 0x7f0900c4
+			public const int editTextComments = 2131296452;
+			
+			// aapt resource value: 0x7f0900c0
+			public const int editTextDate = 2131296448;
 			
 			// aapt resource value: 0x7f0900bd
 			public const int editTextDoB = 2131296445;
 			
-			// aapt resource value: 0x7f0900c8
-			public const int editTextLocation = 2131296456;
+			// aapt resource value: 0x7f0900c2
+			public const int editTextLocation = 2131296450;
 			
 			// aapt resource value: 0x7f0900bc
 			public const int editTextName = 2131296444;
@@ -2481,20 +2478,20 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f0900be
 			public const int editTextPolicyNum = 2131296446;
 			
-			// aapt resource value: 0x7f0900c5
-			public const int editTextTime = 2131296453;
+			// aapt resource value: 0x7f0900c1
+			public const int editTextTime = 2131296449;
 			
 			// aapt resource value: 0x7f090069
 			public const int edit_query = 2131296361;
 			
-			// aapt resource value: 0x7f0900d5
-			public const int email = 2131296469;
+			// aapt resource value: 0x7f0900cf
+			public const int email = 2131296463;
 			
 			// aapt resource value: 0x7f090029
 			public const int end = 2131296297;
 			
-			// aapt resource value: 0x7f0900e2
-			public const int end_padder = 2131296482;
+			// aapt resource value: 0x7f0900dc
+			public const int end_padder = 2131296476;
 			
 			// aapt resource value: 0x7f090030
 			public const int enterAlways = 2131296304;
@@ -2526,8 +2523,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f090045
 			public const int @fixed = 2131296325;
 			
-			// aapt resource value: 0x7f0900d1
-			public const int fullName = 2131296465;
+			// aapt resource value: 0x7f0900cb
+			public const int fullName = 2131296459;
 			
 			// aapt resource value: 0x7f090005
 			public const int home = 2131296261;
@@ -2565,8 +2562,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f09007f
 			public const int imageView1 = 2131296383;
 			
-			// aapt resource value: 0x7f0900e1
-			public const int info = 2131296481;
+			// aapt resource value: 0x7f0900db
+			public const int info = 2131296475;
 			
 			// aapt resource value: 0x7f090000
 			public const int item_touch_helper_previous_elevation = 2131296256;
@@ -2577,11 +2574,11 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f090019
 			public const int light = 2131296281;
 			
-			// aapt resource value: 0x7f0900db
-			public const int line1 = 2131296475;
+			// aapt resource value: 0x7f0900d5
+			public const int line1 = 2131296469;
 			
-			// aapt resource value: 0x7f0900df
-			public const int line3 = 2131296479;
+			// aapt resource value: 0x7f0900d9
+			public const int line3 = 2131296473;
 			
 			// aapt resource value: 0x7f0900af
 			public const int linear2 = 2131296431;
@@ -2619,14 +2616,11 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f0900a1
 			public const int linearLayout9 = 2131296417;
 			
-			// aapt resource value: 0x7f0900cc
-			public const int linearLayoutButtons = 2131296460;
+			// aapt resource value: 0x7f0900c6
+			public const int linearLayoutButtons = 2131296454;
 			
 			// aapt resource value: 0x7f0900bf
 			public const int linearLayoutClaimDetails = 2131296447;
-			
-			// aapt resource value: 0x7f0900c0
-			public const int linearLayoutDate = 2131296448;
 			
 			// aapt resource value: 0x7f09009d
 			public const int linearLayoutGeneral = 2131296413;
@@ -2634,14 +2628,11 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f0900b9
 			public const int linearLayoutPersonalDetails = 2131296441;
 			
-			// aapt resource value: 0x7f0900cb
-			public const int linearLayoutPhotos = 2131296459;
+			// aapt resource value: 0x7f0900c5
+			public const int linearLayoutPhotos = 2131296453;
 			
 			// aapt resource value: 0x7f0900b1
 			public const int linearLayoutStatusBar = 2131296433;
-			
-			// aapt resource value: 0x7f0900c4
-			public const int linearLayoutTime = 2131296452;
 			
 			// aapt resource value: 0x7f090078
 			public const int linearLayoutTopBar = 2131296376;
@@ -2652,11 +2643,11 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f09004e
 			public const int list_item = 2131296334;
 			
-			// aapt resource value: 0x7f0900e3
-			public const int map = 2131296483;
+			// aapt resource value: 0x7f0900dd
+			public const int map = 2131296477;
 			
-			// aapt resource value: 0x7f0900d9
-			public const int media_actions = 2131296473;
+			// aapt resource value: 0x7f0900d3
+			public const int media_actions = 2131296467;
 			
 			// aapt resource value: 0x7f09002a
 			public const int middle = 2131296298;
@@ -2685,14 +2676,14 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f090053
 			public const int parentPanel = 2131296339;
 			
-			// aapt resource value: 0x7f0900d4
-			public const int phoneNum = 2131296468;
+			// aapt resource value: 0x7f0900ce
+			public const int phoneNum = 2131296462;
 			
 			// aapt resource value: 0x7f090036
 			public const int pin = 2131296310;
 			
-			// aapt resource value: 0x7f0900d3
-			public const int policyNum = 2131296467;
+			// aapt resource value: 0x7f0900cd
+			public const int policyNum = 2131296461;
 			
 			// aapt resource value: 0x7f090006
 			public const int progress_circular = 2131296262;
@@ -2712,8 +2703,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f090010
 			public const int satellite = 2131296272;
 			
-			// aapt resource value: 0x7f0900cf
-			public const int save = 2131296463;
+			// aapt resource value: 0x7f0900c9
+			public const int save = 2131296457;
 			
 			// aapt resource value: 0x7f0900b8
 			public const int saveClaimBtn = 2131296440;
@@ -2799,8 +2790,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f090052
 			public const int spacer = 2131296338;
 			
-			// aapt resource value: 0x7f0900c9
-			public const int spinner1 = 2131296457;
+			// aapt resource value: 0x7f0900c3
+			public const int spinner1 = 2131296451;
 			
 			// aapt resource value: 0x7f0900b0
 			public const int spinner2 = 2131296432;
@@ -2823,8 +2814,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f09003e
 			public const int start = 2131296318;
 			
-			// aapt resource value: 0x7f0900d8
-			public const int status_bar_latest_event_content = 2131296472;
+			// aapt resource value: 0x7f0900d2
+			public const int status_bar_latest_event_content = 2131296466;
 			
 			// aapt resource value: 0x7f090072
 			public const int submit_area = 2131296370;
@@ -2841,11 +2832,11 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f090011
 			public const int terrain = 2131296273;
 			
-			// aapt resource value: 0x7f0900e0
-			public const int text = 2131296480;
+			// aapt resource value: 0x7f0900da
+			public const int text = 2131296474;
 			
-			// aapt resource value: 0x7f0900de
-			public const int text2 = 2131296478;
+			// aapt resource value: 0x7f0900d8
+			public const int text2 = 2131296472;
 			
 			// aapt resource value: 0x7f09005a
 			public const int textSpacerNoButtons = 2131296346;
@@ -2916,11 +2907,8 @@ namespace SCRecover.Droid
 			// aapt resource value: 0x7f09008f
 			public const int textView9 = 2131296399;
 			
-			// aapt resource value: 0x7f0900dc
-			public const int time = 2131296476;
-			
-			// aapt resource value: 0x7f0900c7
-			public const int timePicker = 2131296455;
+			// aapt resource value: 0x7f0900d6
+			public const int time = 2131296470;
 			
 			// aapt resource value: 0x7f090050
 			public const int title = 2131296336;

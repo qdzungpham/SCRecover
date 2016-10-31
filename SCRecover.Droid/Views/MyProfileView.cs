@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Droid.Views;
+using System;
 
 namespace SCRecover.Droid.Views
 {
@@ -36,7 +37,9 @@ namespace SCRecover.Droid.Views
             _policyNum.Enabled = false;
             _phoneNum.Enabled = false;
             _email.Enabled = false;
+            _dob.Focusable = false;
 
+            _dob.Click += DoBSelect_OnClick;
             _edit.Click += delegate
             {
                 _fullName.Enabled = true;
@@ -58,6 +61,17 @@ namespace SCRecover.Droid.Views
                 _edit.Visibility = ViewStates.Visible;
                 _save.Visibility = ViewStates.Gone;
             };
+
+
+        }
+
+        void DoBSelect_OnClick(object sender, EventArgs eventArgs)
+        {
+            DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime time)
+            {
+                _dob.Text = time.ToString("dd MMM yyyy");
+            });
+            frag.Show(FragmentManager, DatePickerFragment.TAG);
         }
     }
 }
