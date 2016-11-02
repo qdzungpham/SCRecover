@@ -50,8 +50,8 @@ namespace SCRecover.Core.ViewModels
                     location = selectedSavedClaim.Location,
                     type = selectedSavedClaim.Type,
                     injury = selectedSavedClaim.Injury,
-                    cmt = selectedSavedClaim.Cmt
-
+                    cmt = selectedSavedClaim.Cmt,
+                    bytes = selectedSavedClaim.Bytes
                 }));
             }
         }
@@ -72,7 +72,8 @@ namespace SCRecover.Core.ViewModels
                     location = selectedSavedClaim.Location,
                     type = selectedSavedClaim.Type,
                     injury = selectedSavedClaim.Injury,
-                    cmt = selectedSavedClaim.Cmt
+                    cmt = selectedSavedClaim.Cmt,
+                    bytes = selectedSavedClaim.Bytes
 
                 }));
             }

@@ -1,5 +1,7 @@
 ﻿using MvvmCross.Core.ViewModels;
+using System;
 using System.Linq;
+using System.Text;
 using System.Windows.Input;
 
 namespace SCRecover.Core.ViewModels
@@ -182,7 +184,7 @@ namespace SCRecover.Core.ViewModels
             set { _email = value; RaisePropertyChanged(() => Email); }
         }
         #endregion
-        public void Init(string fullName, string doB, string policyNum, string phoneNum, string email, string date, string time, string location, string type, string injury, string cmt, byte[] bytes)
+        public void Init(string fullName, string doB, string policyNum, string phoneNum, string email, string date, string time, string location, string type, string injury, string cmt, string bytes)
         {
             _fullName = fullName;
             _doB = doB;
@@ -195,9 +197,15 @@ namespace SCRecover.Core.ViewModels
             _type = type;
             _injury = injury;
             _cmt = cmt;
-            _bytes = bytes;
+            _bytes = GetBytes(bytes);
         }
 
+        static byte[] GetBytes(string str)
+        {
+            byte[] bytes = new byte[str.Length /** sizeof(char)*/];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
+        }
         public ICommand NavBackCommand
         {
             get

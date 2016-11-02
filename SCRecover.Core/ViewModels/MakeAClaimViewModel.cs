@@ -11,6 +11,7 @@ using SCRecover.Core.Models;
 using System.Collections.ObjectModel;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
+using System.Text;
 
 namespace SCRecover.Core.ViewModels
 {
@@ -228,7 +229,7 @@ namespace SCRecover.Core.ViewModels
             _pictureChooserTask.ChoosePictureFromLibrary(400, 95, OnPicture, () => { });
         }
 
-        private byte[] _bytes;
+        private byte[] _bytes = new byte[0];
 
         public byte[] Bytes
         {
@@ -312,12 +313,25 @@ namespace SCRecover.Core.ViewModels
                         type = _selectedType.ToString(),
                         injury = _selectedInjury.ToString(),
                         cmt = _cmt,
-                        bytes = _bytes
-                    });
+                        bytes = GetString(_bytes)
+                });
                         });
             }
         }
 
+        static string GetString(byte[] bytes)
+        {
+            char[] chars = new char[bytes.Length /*/ sizeof(char)*/];
+            System.Buffer.BlockCopy(bytes, 0, chars, 0, bytes.Length);
+            return new string(chars);
+        }
+
+        static byte[] GetBytes(string str)
+        {
+            byte[] bytes = new byte[str.Length /** sizeof(char)*/];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
+        }
 
         private readonly ISavedClaimsDatabase _savedClaimDatabase;
 
@@ -347,8 +361,8 @@ namespace SCRecover.Core.ViewModels
                 Type = _selectedType.ToString(),
                 Injury = _selectedInjury.ToString(),
                 Cmt = _cmt,
-                Extra = "saved"
-                //Bytes = _bytes
+                Extra = "saved",
+                Bytes = GetString(_bytes)
             };
 
             await _dialog.Show("Saving Claim", "Synchronising...");
@@ -388,8 +402,8 @@ namespace SCRecover.Core.ViewModels
                     Type = _selectedType.ToString(),
                     Injury = _selectedInjury.ToString(),
                     Cmt = _cmt,
-                    Extra = "submitted"
-                    //Bytes = _bytes
+                    Extra = "submitted",
+                    Bytes = GetString(_bytes)
                 };
 
                 await _dialog.Show("Lodging claim...");
@@ -436,7 +450,7 @@ namespace SCRecover.Core.ViewModels
             _dialog = progressDialog;
         }
 
-        public void Init(string fullName, string dob, string policyNum, string phoneNum, string email, string date, string time, string location, string type, string injury, string cmt)
+        public void Init(string fullName, string dob, string policyNum, string phoneNum, string email, string date, string time, string location, string type, string injury, string cmt, string bytes)
         {
             _fullName = fullName;
             _doB = dob;
@@ -452,6 +466,10 @@ namespace SCRecover.Core.ViewModels
             _selectedType = new Thing(type);
             _selectedInjury = new Thing(injury);
             _cmt = cmt;
+            if (bytes != null)
+            {
+                _bytes = GetBytes(bytes);
+            }
 
         }
 

@@ -40,6 +40,9 @@
                 p1:layout_weight="1"
                 p1:layout_gravity="center" />
         </LinearLayout>
+      <ScrollView
+            p1:layout_width="fill_parent"
+            p1:layout_height="fill_parent">
         <LinearLayout
             p1:orientation="vertical"
             p1:layout_width="match_parent"
@@ -284,5 +287,6 @@
                     p1:paddingTop="10dp" />
             </LinearLayout>
         </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </RelativeLayout>
