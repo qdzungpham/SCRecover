@@ -29,7 +29,7 @@ namespace SCRecover.Core.ViewModels
         }
         public async void LoadClaims()
         {
-            await _progressDialog.Show("Loading...");
+            await _progressDialog.Show("Synchronising...");
             SavedClaims = await _database.Filter("saved");
             SubmittedClaims = await _database.Filter("submitted");
             await _progressDialog.Dismiss();
@@ -87,7 +87,7 @@ namespace SCRecover.Core.ViewModels
         {
             get
             {
-                return new MvxCommand<ClaimDetails>(seletedClaim => { DeleteClaim(seletedClaim); });
+                return new MvxCommand<ClaimDetails>(seletedClaim => DeleteClaim(seletedClaim) );
             }
         }
 

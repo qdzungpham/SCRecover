@@ -351,7 +351,7 @@ namespace SCRecover.Core.ViewModels
                 //Bytes = _bytes
             };
 
-            await _dialog.Show("Save Claim", "Synchronising...");
+            await _dialog.Show("Saving Claim", "Synchronising...");
             await _savedClaimDatabase.InsertClaim(newClaim);
             await _dialog.Dismiss();
             await _dialog.ShowToast("Claim saved.");

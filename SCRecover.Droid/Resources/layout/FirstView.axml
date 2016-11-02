@@ -123,7 +123,7 @@
                     p1:textColor="@android:color/white"
                     p1:textAllCaps="false"
                     p1:textStyle="bold"
-              local:MvxBind=" Click RetrieveQuoteCommand"/>
+                    local:MvxBind=" Click RetrieveQuoteCommand" />
                 <Button
                     p1:text="Contact Us"
                     p1:layout_width="match_parent"

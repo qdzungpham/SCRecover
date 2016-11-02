@@ -29,13 +29,12 @@
                 p1:background="@drawable/nav_btn"
                 local:MvxBind="Click NavBackCommand" />
             <TextView
-                p1:text="Provider Results"
+                p1:text="Find Medical Provider"
                 p1:textAppearance="?android:attr/textAppearanceMedium"
                 p1:layout_width="wrap_content"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/textView1"
                 p1:textColor="@android:color/white"
-                p1:fontFamily="open-sands"
                 p1:textStyle="bold"
                 p1:layout_weight="1"
                 p1:layout_gravity="center" />

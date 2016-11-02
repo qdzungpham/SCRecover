@@ -336,14 +336,13 @@
     <AndroidResource Include="Resources\drawable\check.xml" />
     <AndroidResource Include="Resources\drawable\delete.xml" />
     <AndroidResource Include="Resources\drawable\delete_red.xml" />
-    <AndroidResource Include="Resources\drawable\startup.png" />
     <AndroidResource Include="Resources\drawable\splash2.png" />
     <AndroidResource Include="Resources\drawable\facebook.xml" />
     <AndroidResource Include="Resources\drawable\google_plus.xml" />
     <AndroidResource Include="Resources\drawable\youtube.xml" />
     <AndroidResource Include="Resources\drawable-xhdpi\contactUus.png" />
     <AndroidResource Include="Resources\drawable\file_find.xml" />
-    <AndroidResource Include="Resources\drawable\suncorp_logo.png" />
+    <AndroidResource Include="Resources\drawable\light_bulb.png" />
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

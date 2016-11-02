@@ -192,6 +192,16 @@ namespace SCRecover.Core.ViewModels
 
             newProviders.Add(new ProviderDetails() { Name = "Dr Denzel Smith", Address = "738 Main St, Kangaroo Point QLD 4169", Type = "Acupuncturist", Lat = "-27.482205", Lng = "153.036073", PhoneNum = "0734417095" });
 
+            newProviders.Add(new ProviderDetails() { Name = "Mr Maurizio Bontempi", Address = "50 Weatherhead Avenue, Ashgrove QLD 4060", Type = "Acupuncturist", Lat = "-27.432450", Lng = "152.993838", PhoneNum = "0403200197" });
+
+            newProviders.Add(new ProviderDetails() { Name = "Ms Patricia McNab", Address = "Suite 1, 711-713 Stafford Road, Everton Park QLD 4053", Type = "Acupuncturist", Lat = "-27.406841", Lng = "152.993741", PhoneNum = "0733543111" });
+
+            newProviders.Add(new ProviderDetails() { Name = "Mr Mark Crain", Address = "Suit 1 Benson House, Benson Street Toowong QLD 4066", Type = "Acupuncturist", Lat = "-27.485332", Lng = "152.993781", PhoneNum = "0738703800" });
+
+            newProviders.Add(new ProviderDetails() { Name = "Ms Anjaleen Koklas", Address = "Anjeleen's Natural Medicine Clinic, 104 Dawson Road, Upper MT Gravatt QLD 4122", Type = "Acupuncturist", Lat = "-27.553572", Lng = "153.085561", PhoneNum = "0411257164" });
+
+            newProviders.Add(new ProviderDetails() { Name = "Ms Eliza Lau", Address = "Shop 6, 101 Wickham Tce, Spring Hill QLD 4000", Type = "Acupuncturist", Lat = "-27.464211", Lng = "153.026322", PhoneNum = "073822125" });
+
             Providers = newProviders;
         }
 
