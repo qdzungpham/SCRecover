@@ -1,7 +1,7 @@
-# SCRecovery
-# Psyber Void
-# Rick Pham - 09579249
-# Anneyashan Dey - 09534849
-# Hang Su - 09326448
+# SCRecover
+An Android native mobile app is developed using Xamarin.
 
-For marking the Assignment 2, please see the "Assignment 2 Release" in https://github.com/rickpham/SCRecover/releases 
+## Screenshots
+![](https://github.com/qdzungpham/SCRecover/blob/master/screenshots/1.gif)
+![](https://github.com/qdzungpham/SCRecover/blob/master/screenshots/2.gif)
+![](https://github.com/qdzungpham/SCRecover/blob/master/screenshots/3.gif)
